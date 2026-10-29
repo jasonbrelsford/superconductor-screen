@@ -75,6 +75,7 @@ def main():
                 r = {"status": f"calculation failed ({type(ex).__name__})"}
             r["checked"] = today
             r["by"] = "tower"
+            r["method"] = 2
             mine[row["formula"]] = r
             db.execute("insert or replace into checks values (?,?,?,?,?,?,?,?,?,?)",
                        (row["formula"], row["parent"], float(row["score"]), float(row["pred_Tc_K"]), r["status"],

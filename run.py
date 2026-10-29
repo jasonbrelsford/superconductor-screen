@@ -16,6 +16,7 @@ from sc.features import featurize
 
 TOP = 50
 PER_PARENT = 2          # at most two candidates built from the same parent compound per list
+METHOD = 2                          # bump when the stability check changes, to redo host failures
 STRUCTURE_CHECKS_PER_RUN = 45      # CHGNet stability calculations per run (results are kept across runs)
 STRUCTURE_BUDGET_S = 100 * 60
 LEADERBOARD_MIN_SCORE = 80.0   # keep candidates scoring at least this (K) on the running leaderboard
@@ -100,20 +101,24 @@ def main():
     # Stability: CHGNet on a real crystal structure, for full substitutions; kept across runs.
     checks_path = os.path.join(ROOT, "results", "structure_checks.json")
     checks = json.load(open(checks_path)) if os.path.exists(checks_path) else {}
-    # Keep only results from the current method: computed ones carry "match"; host failures stay valid.
-    final = ("no host structure", "closest host too different")
-    checks = {k: v for k, v in checks.items() if "match" in v or str(v.get("status", "")).startswith(final)}
+    # Keep only results from the current method: computed ones carry "match"; host failures only
+    # if they came from the current host search (older ones are retried).
+    checks = {k: v for k, v in checks.items() if "match" in v or v.get("method", 0) >= METHOD}
     tower_path = os.path.join(ROOT, "results", "structure_checks_tower.json")
     tower = json.load(open(tower_path)) if os.path.exists(tower_path) else {}
     swaps_of = dict(zip(res["formula"], res["swaps"]))
+    # Take turns between the lists (biggest gain first, then non-cuprates, then highest Tc), so the
+    # rarer families get checked every run instead of waiting behind hundreds of cuprates.
+    per_list = []
+    for name in ("gain", "noncuprate", "highest"):
+        tl = lists[name][2]
+        per_list.append([(f, p) for f, p in zip(tl["formula"], tl["parent"])
+                         if f not in checks and f not in tower and isinstance(swaps_of.get(f), str)])
     queue = []
-    for _, _, tl in lists.values():
-        for f, parent in zip(tl["formula"], tl["parent"]):
-            sw = swaps_of.get(f)
-            if f in checks or f in tower or not isinstance(sw, str):
-                continue
-            if (f, parent) not in queue:
-                queue.append((f, parent))
+    for i in range(max(map(len, per_list), default=0)):
+        for items in per_list:
+            if i < len(items) and items[i] not in queue:
+                queue.append(items[i])
     key = os.environ.get("MP_API_KEY", "").strip()
     if key and queue:
         chk = structure.Checker(key, os.path.join(ROOT, "results", "chgnet_cache.json"), STRUCTURE_BUDGET_S)
@@ -128,6 +133,7 @@ def main():
                 except Exception as ex:   # one bad structure must not stop the run
                     r = {"status": f"calculation failed ({type(ex).__name__})"}
                 r["checked"] = today
+                r["method"] = METHOD
                 checks[f] = r
                 print("structure check:", f, r)
         finally:
