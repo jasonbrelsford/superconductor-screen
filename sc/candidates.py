@@ -77,3 +77,50 @@ def generate(train_df):
                         out[f] = {"parent": row["reduced"], "parent_Tc": float(row["Tc"]),
                                   "change": f"{sym} partly -> {sub}" if v.get(sym) else f"{sym} -> {sub}"}
     return out
+
+
+def _swap(amt, sym, sub, x):
+    """Move fraction x (1.0 = all) of element sym to sub; anions are never fully swapped."""
+    if x >= 1.0 and sym in ANIONS:
+        return None
+    d = dict(amt)
+    a = d.pop(sym) if x >= 1.0 else d[sym]
+    if x < 1.0:
+        d[sym] = a * (1 - x)
+    d[sub] = d.get(sub, 0) + a * x
+    return d
+
+
+def explore(train_df, seed, per_parent=40):
+    """Today's random batch: two substitutions at once, drawn with a date-based seed so every
+    daily run looks somewhere new (and any run can be reproduced from its date)."""
+    import random
+    rng = random.Random(seed)
+    allowed = allowed_elements(train_df)
+    known = set(train_df["reduced"])
+    parents = (train_df[train_df["Tc"] >= MIN_PARENT_TC]
+               .assign(sys=lambda d: d["reduced"].map(lambda f: "-".join(sorted(str(e) for e in Composition(f).elements))))
+               .sort_values("Tc", ascending=False)
+               .drop_duplicates("sys"))
+    out = {}
+    for _, row in parents.iterrows():
+        amt = Composition(row["reduced"]).get_el_amt_dict()
+        if not set(amt) <= allowed or len(amt) < 2:
+            continue
+        options = [(s, t) for s in amt for t in similar(s, allowed)]
+        if len(options) < 2:
+            continue
+        for _ in range(per_parent):
+            (s1, t1), (s2, t2) = rng.sample(options, 2)
+            if s1 == s2:
+                continue
+            x1, x2 = rng.choice((1.0, 0.1, 0.2, 0.3)), rng.choice((1.0, 0.1, 0.2, 0.3))
+            d = _swap(amt, s1, t1, x1)
+            d = d and _swap(d, s2, t2, x2) if d and s2 in d else None
+            if not d:
+                continue
+            f = _fmt(d)
+            if f not in known and f not in out:
+                out[f] = {"parent": row["reduced"], "parent_Tc": float(row["Tc"]),
+                          "change": f"{s1} {'->' if x1 >= 1 else 'partly ->'} {t1}; {s2} {'->' if x2 >= 1 else 'partly ->'} {t2}"}
+    return out

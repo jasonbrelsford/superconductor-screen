@@ -1,6 +1,6 @@
 """Superconductor screen: train, generate, rank, check stability, publish.
 
-    python run.py            # writes results/<date>/*.csv, results/latest.json and site/index.html
+    python run.py            # writes results/<date>/*.csv, results/leaderboard.csv, results/latest.json, site/index.html
 """
 import datetime as dt
 import html
@@ -17,8 +17,9 @@ from sc.features import featurize
 TOP = 50
 PER_PARENT = 2          # at most two candidates built from the same parent compound per list
 STABILITY_CHECKS = 150
+LEADERBOARD_MIN_SCORE = 80.0   # keep candidates scoring at least this (K) on the running leaderboard
 ROOT = os.path.dirname(os.path.abspath(__file__))
-COLS = ["formula", "pred_Tc_K", "uncertainty_K", "score", "vs_parent_K", "parent", "parent_Tc", "change",
+COLS = ["formula", "first_seen", "pred_Tc_K", "uncertainty_K", "score", "vs_parent_K", "parent", "parent_Tc", "change",
         "stability", "e_above_hull_eV"]
 
 
@@ -42,6 +43,9 @@ def main():
     print("metrics:", metrics)
 
     cands = candidates.generate(df)
+    fresh = candidates.explore(df, seed=dt.date.fromisoformat(today).toordinal())
+    print(f"single substitutions: {len(cands)}, today's random double substitutions: {len(fresh)}")
+    cands.update({f: v for f, v in fresh.items() if f not in cands})
     forms = list(cands)
     X = np.vstack([featurize(f, elements) for f in forms])
     mean, std = model.predict(models, X)
@@ -53,10 +57,20 @@ def main():
     # Only element combinations nobody has measured yet: a 1% tweak of a known compound tells us nothing.
     known_systems = set(df["reduced"].map(model.chemsys))
     res = res[~res["system"].isin(known_systems)].copy()
+    print(f"in new chemical systems today: {len(res)}")
+    # Running leaderboard: every strong candidate any run has found, with the date it first appeared.
+    board_path = os.path.join(ROOT, "results", "leaderboard.csv")
+    res["first_seen"] = today
+    if os.path.exists(board_path):
+        old = pd.read_csv(board_path)
+        res = pd.concat([old, res[~res["formula"].isin(set(old["formula"]))]], ignore_index=True)
+    res = res[res["score"] >= LEADERBOARD_MIN_SCORE].copy()
+    os.makedirs(os.path.dirname(board_path), exist_ok=True)
+    res.drop(columns=[c for c in ("vs_parent_K", "gain_score", "cuprate") if c in res]).to_csv(board_path, index=False)
     res["vs_parent_K"] = (res["pred_Tc_K"] - res["parent_Tc"]).round(1)
     res["gain_score"] = res["vs_parent_K"] - res["uncertainty_K"]
     res["cuprate"] = res["formula"].map(is_cuprate) | res["parent"].map(is_cuprate)
-    print(f"candidates generated: {len(cands)}, in new chemical systems: {len(res)}")
+    print(f"leaderboard size: {len(res)}")
 
     lists = {
         "highest": ("Highest predicted Tc", "New element combinations with the highest conservative score. Mostly cuprates, as in real high-Tc research.",
@@ -120,7 +134,7 @@ th{{position:sticky;top:0;background:var(--bg)}}
 .card{{border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:16px 0}}
 </style></head><body>
 <h1>Superconductor Screen</h1>
-<p class="mute">Run {e(today)} &middot; {n:,} compositions in element combinations never measured &middot;
+<p class="mute">Run {e(today)} &middot; {n:,} candidates on the running leaderboard (predicted Tc minus uncertainty of 80 K or more), new random substitutions added every day &middot;
 <a href="https://github.com/jasonbrelsford/superconductor-screen">method, code and every past run</a></p>
 <div class="card"><strong>What this is.</strong> A machine-learning model trained on {metrics['n_compounds']:,} known
 superconductors predicts the critical temperature (Tc) of new compositions made by swapping chemically similar elements

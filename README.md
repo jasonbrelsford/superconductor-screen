@@ -1,6 +1,6 @@
 # Superconductor Screen
 
-A small, open, repeatable screen for new superconductor candidates. Every Monday a GitHub
+A small, open, repeatable screen for new superconductor candidates. Every day a GitHub
 Actions job trains a model on known superconductors, generates new compositions, ranks them,
 checks the best ones against the Materials Project, and publishes the results:
 
@@ -22,6 +22,9 @@ checks the best ones against the Materials Project, and publishes the results:
    element for a chemically similar one (same group and neighbouring row, neighbouring group, or
    another rare earth), fully or as 10% / 20% doping. Anions (O, N, F, S...) are only doped, never
    fully replaced. Only combinations of elements that appear in no training compound are kept.
+   Each daily run also draws a fresh random batch of double substitutions (seeded by the date, so
+   any run can be reproduced) and adds strong ones to `results/leaderboard.csv` with the date they
+   were first seen.
 5. **Ranking.** Three lists: highest score (prediction minus uncertainty), biggest predicted gain
    over the parent compound, and the best candidates outside the cuprates.
 6. **Stability.** With a Materials Project key (`MP_API_KEY` repository secret), each listed
@@ -43,7 +46,7 @@ python -m pip install -r requirements.txt
 MP_API_KEY=your_key python run.py     # the key is optional
 ```
 
-Output goes to `results/<date>/*.csv`, `results/latest.json` and `site/index.html`. Every weekly
+Output goes to `results/<date>/*.csv`, `results/latest.json` and `site/index.html`. Every daily
 run is committed to `results/`, so the history of each prediction and its date are public.
 
 ## Credits
