@@ -135,7 +135,7 @@ th{{position:sticky;top:0;background:var(--bg)}}
 </style></head><body>
 <h1>Superconductor Screen</h1>
 <p class="mute">Run {e(today)} &middot; {n:,} candidates on the running leaderboard (predicted Tc minus uncertainty of 80 K or more), new random substitutions added every day &middot;
-<a href="https://github.com/jasonbrelsford/superconductor-screen">method, code and every past run</a></p>
+<a href="https://github.com/jasonbrelsford/Superconductor-screen">method, code and every past run</a></p>
 <div class="card"><strong>What this is.</strong> A machine-learning model trained on {metrics['n_compounds']:,} known
 superconductors predicts the critical temperature (Tc) of new compositions made by swapping chemically similar elements
 into known superconductors. These are <em>predictions to test</em>, not discoveries: a material counts only when a lab
