@@ -16,7 +16,7 @@ from sc.features import featurize
 
 TOP = 50
 PER_PARENT = 2          # at most two candidates built from the same parent compound per list
-METHOD = 2                          # bump when the stability check changes, to redo host failures
+METHOD = 3                          # bump when the stability check changes, to redo host failures
 STRUCTURE_CHECKS_PER_RUN = 45      # CHGNet stability calculations per run (results are kept across runs)
 STRUCTURE_BUDGET_S = 100 * 60
 LEADERBOARD_MIN_SCORE = 80.0   # keep candidates scoring at least this (K) on the running leaderboard

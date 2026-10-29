@@ -55,11 +55,31 @@ def _frac_distance(a, b):
     return sum(abs(ca.get(e, 0) - cb.get(e, 0)) for e in set(ca) | set(cb))
 
 
+def _proxies(el):
+    """Chemical stand-ins for an element, most similar first (used only to borrow a structure)."""
+    if el in RARE_EARTHS or el == "Sc":
+        return [p for p in ("Y", "La", "Nd", "Gd") if p != el][:3]
+    e = Element(el)
+    near = [x for x in Element.__members__ if x != el and not Element(x).is_noble_gas
+            and Element(x).Z <= 83 and Element(x).group == e.group and abs(Element(x).row - e.row) == 1]
+    side = [x for x in Element.__members__ if Element(x).Z <= 83 and Element(x).row == e.row
+            and abs(Element(x).group - e.group) == 1 and not Element(x).is_noble_gas]
+    return (near + side)[:3]
+
+
+def _renamed(comp, swap):
+    out = {}
+    for e, a in Composition(comp).get_el_amt_dict().items():
+        out[swap.get(e, e)] = out.get(swap.get(e, e), 0) + a
+    return Composition(out)
+
+
 class Checker:
     def __init__(self, key, cache_path, budget_s):
         from chgnet.model import StructOptimizer
         from mp_api.client import MPRester
         self.mpr = MPRester(key)
+        self._phase_memo = {}
         self.opt = StructOptimizer()
         self.cache_path = cache_path
         self.cache = json.load(open(cache_path)) if os.path.exists(cache_path) else {}
@@ -86,6 +106,14 @@ class Checker:
         cat = _cations(parent)
         return {e for e in els if e in ANIONS or cat.get(e, 0) >= MINOR}
 
+    def _phases(self, els):
+        """MP phases in exactly this chemical system (memoised for the run: candidates share parents)."""
+        key = "-".join(sorted(els))
+        if key not in self._phase_memo:
+            self._phase_memo[key] = self.mpr.materials.summary.search(
+                chemsys=key, fields=["material_id", "structure", "energy_above_hull", "nsites"])
+        return self._phase_memo[key]
+
     def host(self, parent):
         """Closest stable-ish MP structure for the parent, or (None, reason). Tries the parent's major
         elements first; if Materials Project has nothing there, drops the least abundant cations one
@@ -100,8 +128,7 @@ class Checker:
                     tries.append(major - set(drop))
         closest = None
         for els in tries:
-            docs = self.mpr.materials.summary.search(chemsys="-".join(sorted(els)),
-                                                     fields=["material_id", "structure", "energy_above_hull", "nsites"])
+            docs = self._phases(els)
             docs = [d for d in docs if d.nsites <= MAX_SITES and d.energy_above_hull is not None and d.energy_above_hull <= 0.1]
             if not docs:
                 continue
@@ -111,6 +138,27 @@ class Checker:
                 return best, ""
             if closest is None or dist < closest[0]:
                 closest = (dist, best)
+        # Last resort: a structure where one or two of the parent's cations are played by a chemical
+        # stand-in (Lu by Y, Bi by Sb, ...). The placement step then puts the real elements back.
+        stand = [(c, p) for c in cations[:3] for p in _proxies(c)]
+        for n in (1, 2):
+            for pick in itertools.combinations(stand, n):
+                if len({c for c, _ in pick}) < n:
+                    continue
+                swap = {p: c for c, p in pick}
+                els = (major - {c for c, _ in pick}) | set(swap)
+                if len(els) < len(major):   # a stand-in that is already in the compound
+                    continue
+                docs = self._phases(els)
+                docs = [d for d in docs if d.nsites <= MAX_SITES and d.energy_above_hull is not None and d.energy_above_hull <= 0.1]
+                if not docs:
+                    continue
+                dist = lambda d: _frac_distance(_renamed(d.structure.composition, swap), parent)
+                best = min(docs, key=lambda d: (dist(d), d.energy_above_hull))
+                if dist(best) <= MAX_HOST_DISTANCE:
+                    return best, ""
+                if closest is None or dist(best) < closest[0]:
+                    closest = (dist(best), best)
         if closest:
             return None, f"closest host too different ({closest[1].structure.composition.reduced_formula})"
         return None, "no host structure in Materials Project"
