@@ -1,2 +1,7 @@
 formula,first_seen,pred_Tc_K,uncertainty_K,score,vs_parent_K,parent,parent_Tc,change,stability,e_above_hull_eV,computed_as
-Ba2Ca3Tl0.64Cu4Bi0.16Pb0.2O1,2026-10-28,124.7,3.6,121.1,2.2,Sr2Ca3Tl0.64Cu4Bi0.16Pb0.2O1,122.5,Sr -> Ba,plausible,0.079,BaCaCuO3
+Ba2Ca1.975Sm0.025Cu3Hg1O9,2026-10-28,123.3,2.6,120.7,-0.1,Ba2Ca1.975Sm0.025Tl0.8Cu3Hg0.2O9,123.4,Tl -> Hg,plausible,0.089,Ba4Ca4Cu6Hg3O19
+Ba2Tm1Ga0.33Cu2.67O1,2026-10-29,72.9,3.7,69.2,47.9,Sr2Y1Ga0.33Cu2.67O1,25.0,Sr -> Ba; Y -> Tm,plausible,0.026,Ba2TmCu3O7
+Ba2Y1Ti0.1Nb0.7Cu2.2O1,2026-10-29,76.4,7.4,69.0,46.4,Sr2Eu1Ti0.1Nb0.7Cu2.2O1,30.0,Eu -> Y; Sr -> Ba,plausible,0.037,Ba2YNb(CuO4)2
+Ba2Y1Cu2.8Ge0.2O7,2026-10-29,70.6,3.6,67.0,45.6,Ba0.5Sr1.5Y1Cu2.8Ge0.2O7,25.0,Sr -> Ba,plausible,0.015,Ba4Y2Cu6O13
+Ba2Tm1Al0.2Cu2.8O7.11,2026-10-29,70.0,4.9,65.1,50.0,Ba1.3Sr0.7Y1Al0.2Cu2.8O7.11,20.0,Sr -> Ba; Y -> Tm,plausible,0.026,Ba4Tm2Cu6O13
+Ba2Gd1Ta0.05Cu2Ru0.95O1,2026-10-29,61.8,3.3,58.5,39.3,Sr2Gd1Ta0.05Cu2Ru0.95O1,22.5,Sr -> Ba,plausible,0.021,Ba2GdCu2RuO8
