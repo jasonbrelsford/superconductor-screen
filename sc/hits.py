@@ -16,6 +16,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PATH = os.path.join(ROOT, "results", "hits.json")
 REPO = "jasonbrelsford/superconductor-screen"
 CUPRATE_MIN, OTHER_MIN = 77.0, 40.0
+MAX_MATCH = 0.08   # cation-fraction distance between the computed structure and the candidate
 
 
 def _is_cuprate(f):
@@ -30,6 +31,8 @@ def find(board, checks):
     new = {}
     for f, r in checks.items():
         if r.get("status") != "plausible" or f in known or f not in rows.index:
+            continue
+        if r.get("match", 0.0) > MAX_MATCH:   # what was computed must really be this candidate
             continue
         row = rows.loc[f]
         score = float(row["score"])

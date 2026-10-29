@@ -16,8 +16,8 @@ from sc.features import featurize
 
 TOP = 50
 PER_PARENT = 2          # at most two candidates built from the same parent compound per list
-STRUCTURE_CHECKS_PER_RUN = 30      # CHGNet stability calculations per run (results are kept across runs)
-STRUCTURE_BUDGET_S = 75 * 60
+STRUCTURE_CHECKS_PER_RUN = 45      # CHGNet stability calculations per run (results are kept across runs)
+STRUCTURE_BUDGET_S = 100 * 60
 LEADERBOARD_MIN_SCORE = 80.0   # keep candidates scoring at least this (K) on the running leaderboard
 ROOT = os.path.dirname(os.path.abspath(__file__))
 COLS = ["formula", "first_seen", "pred_Tc_K", "uncertainty_K", "score", "vs_parent_K", "parent", "parent_Tc", "change",
@@ -100,7 +100,9 @@ def main():
     # Stability: CHGNet on a real crystal structure, for full substitutions; kept across runs.
     checks_path = os.path.join(ROOT, "results", "structure_checks.json")
     checks = json.load(open(checks_path)) if os.path.exists(checks_path) else {}
-    checks = {k: v for k, v in checks.items() if not str(v.get("status", "")).startswith("doped")}  # now computable
+    # Keep only results from the current method: computed ones carry "match"; host failures stay valid.
+    final = ("no host structure", "closest host too different")
+    checks = {k: v for k, v in checks.items() if "match" in v or str(v.get("status", "")).startswith(final)}
     tower_path = os.path.join(ROOT, "results", "structure_checks_tower.json")
     tower = json.load(open(tower_path)) if os.path.exists(tower_path) else {}
     swaps_of = dict(zip(res["formula"], res["swaps"]))

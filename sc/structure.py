@@ -38,6 +38,8 @@ FMAX = 0.1
 ANIONS = {"O", "N", "F", "S", "Se", "Te", "Cl", "Br", "I", "H", "B", "C", "P", "As"}
 MINOR = 0.08        # cations below this share of the cation sites are treated as dopants
 MAX_HOST_DISTANCE = 0.25
+TRACE = 0.03       # dopants below 3% of a site are left out of the calculation (and listed as omitted)
+RARE_EARTHS = ["Y", "La", "Ce", "Pr", "Nd", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu"]
 
 
 def _cations(comp):
@@ -116,76 +118,127 @@ class Checker:
             entries.append(PDEntry(Composition(c["formula"]), c["e_total"]))
         return entries
 
-    @staticmethod
-    def doping_fractions(formula, parent, swaps):
-        """Fraction of each swapped element actually replaced, read from the two formulas
-        (normalised on an element the swaps do not touch)."""
-        cf, pf = Composition(formula), Composition(parent)
-        touched = {a for a, _, _ in swaps} | {b for _, b, _ in swaps}
-        ref = next((e for e in pf.elements if str(e) not in touched and cf[e] > 0), None)
-        out = {}
-        for a, b, x in swaps:
-            if x >= 1.0:
-                out[a] = 1.0
-            elif ref is not None and pf[a] > 0:
-                scale = pf[ref] / cf[ref]
-                out[a] = round(min(1.0, max(0.0, 1 - cf[a] * scale / pf[a])), 3)
-            else:
-                out[a] = x
-        return out
+    # ---- placing a candidate's atoms on the host structure ------------------------------------
 
-    def _supercell_for(self, s, fractions):
-        """Smallest supercell (<= MAX_DOPED_SITES) in which every partial fraction can be hit
-        within 0.05 with a whole number of substituted sites."""
+    @staticmethod
+    def _similarity(a, b):
+        """0 = interchangeable on a site, larger = less likely to share a site."""
+        if a == b:
+            return 0.0
+        ea, eb = Element(a), Element(b)
+        rare = set(RARE_EARTHS)
+        if (a in rare and b in rare) or ea.group == eb.group:
+            return 0.0
+        if abs(ea.group - eb.group) == 1 and ea.row == eb.row:
+            return 0.3
+        try:
+            ra, rb = ea.average_ionic_radius, eb.average_ionic_radius
+            if ra and rb:
+                return min(1.0, abs(float(ra) - float(rb)) / float(max(ra, rb)))
+        except Exception:
+            pass
+        return 1.0
+
+    def plan(self, host_comp, formula):
+        """Which host sites get which new elements, as fractions of that site, read from the
+        candidate's formula. Cations and anions are matched separately (anion totals in the
+        training data are loose, so only their ratios are used). Returns (plan, omitted)."""
+        host = Composition(host_comp).get_el_amt_dict()
+        cand = Composition(formula).get_el_amt_dict()
+        plan, omitted = {}, []
+        for group in (lambda e: e not in ANIONS, lambda e: e in ANIONS):
+            h = {e: a for e, a in host.items() if group(e)}
+            c = {e: a for e, a in cand.items() if group(e)}
+            if not h or not c:
+                continue
+            scale = sum(h.values()) / sum(c.values())
+            c = {e: a * scale for e, a in c.items()}
+            deficit = {e: max(0.0, h[e] - c.get(e, 0.0)) for e in h}
+            extras = {e: a for e, a in c.items() if e not in h}
+            for e in h:   # an over-full host element spills onto another site
+                if c.get(e, 0.0) - h[e] > 0.02 * h[e]:
+                    extras[e] = c[e] - h[e]
+            for m, a in sorted(extras.items(), key=lambda kv: -kv[1]):
+                options = [(abs(deficit[s] - a) / max(a, 1e-9) + 2 * self._similarity(m, s), s)
+                           for s in h if s != m and deficit[s] > 0.25 * a]
+                if not options:
+                    omitted.append(m)
+                    continue
+                _, site = min(options)
+                take = min(a, deficit[site])
+                deficit[site] -= take
+                plan.setdefault(site, {})[m] = plan.get(site, {}).get(m, 0.0) + take / h[site]
+        for site in list(plan):
+            for m in list(plan[site]):
+                if plan[site][m] < TRACE:
+                    omitted.append(m)
+                    del plan[site][m]
+            if not plan[site]:
+                del plan[site]
+        return plan, omitted
+
+    def _supercell_for(self, s, plan):
+        """Smallest supercell (<= MAX_DOPED_SITES) where every fraction in the plan is hit within
+        0.05 by a whole number of sites (full replacements always fit)."""
+        counts = {}
+        for site in s:
+            counts[site.specie.symbol] = counts.get(site.specie.symbol, 0) + 1
         best = None
-        for m in [(1, 1, 1), (2, 1, 1), (1, 2, 1), (1, 1, 2), (2, 2, 1), (2, 1, 2), (1, 2, 2), (3, 1, 1),
-                  (1, 3, 1), (1, 1, 3), (2, 2, 2), (3, 2, 1), (3, 1, 2), (2, 3, 1), (4, 1, 1), (1, 4, 1), (1, 1, 4)]:
-            n = len(s) * m[0] * m[1] * m[2]
+        mats = [(1, 1, 1), (2, 1, 1), (1, 2, 1), (1, 1, 2), (2, 2, 1), (2, 1, 2), (1, 2, 2), (3, 1, 1),
+                (1, 3, 1), (1, 1, 3), (2, 2, 2), (3, 2, 1), (3, 1, 2), (2, 3, 1), (4, 1, 1), (1, 4, 1),
+                (1, 1, 4), (3, 3, 1), (3, 1, 3), (1, 3, 3), (4, 2, 1), (2, 2, 3), (3, 2, 2), (2, 3, 2), (4, 2, 2), (3, 3, 2)]
+        for m in mats:
+            mult = m[0] * m[1] * m[2]
+            n = len(s) * mult
             if n > MAX_DOPED_SITES:
                 continue
             ok = True
-            for el, x in fractions.items():
-                if x >= 1.0:
-                    continue
-                sites = sum(1 for site in s if site.specie.symbol == el) * m[0] * m[1] * m[2]
-                k = round(x * sites)
-                if k < 1 or abs(k / sites - x) > 0.05:
+            for site_el, subs in plan.items():
+                sites = counts.get(site_el, 0) * mult
+                if sum(round(x * sites) for x in subs.values()) > sites:
                     ok = False
-                    break
+                for x in subs.values():
+                    k = round(x * sites)
+                    if k < 1 or (x < 0.999 and abs(k / sites - x) > 0.05):
+                        ok = False
             if ok and (best is None or n < best[0]):
                 best = (n, m)
         return None if best is None else best[1]
 
-    def check(self, formula, parent, swaps):
-        if any(a not in self.major_elements(parent) for a, _, _ in swaps):
-            return {"status": "dopant swap: not computed"}   # the swapped element is itself a minor dopant
+    def check(self, formula, parent, swaps=None):
         h, why = self.host(parent)
         if h is None:
             return {"status": why}
-        s = h.structure.copy()
-        present = {str(e) for e in s.composition.elements}
-        if any(a not in present for a, _, _ in swaps):
-            return {"status": "host structure lacks a swapped element", "host": str(h.material_id)}
-        fr = self.doping_fractions(formula, parent, swaps)
-        full = {Element(a): Element(b) for a, b, _ in swaps if fr[a] >= 1.0}
+        base = h.structure.copy()
+        plan, omitted = self.plan(base.composition, formula)
+        if not plan:
+            return {"status": "candidate does not differ from host", "host": str(h.material_id)}
+        full = {Element(site): Element(next(iter(subs))) for site, subs in plan.items()
+                if len(subs) == 1 and next(iter(subs.values())) >= 0.97}
+        partial = {site: subs for site, subs in plan.items() if Element(site) not in full}
         if full:
-            s.replace_species(full)
-        partial = [(a, b, fr[a]) for a, b, _ in swaps if fr[a] < 1.0]
-        configs = [s]
+            base.replace_species(full)
+        configs = [base]
+        cell = (1, 1, 1)
         if partial:
-            m = self._supercell_for(s, {a: x for a, _, x in partial})
-            if m is None:
+            cell = self._supercell_for(base, partial)
+            if cell is None:
                 return {"status": "doping level needs too large a cell", "host": str(h.material_id)}
-            s = s * m
+            big = base * cell
             import random
             rng = random.Random(formula)
             configs = []
             for _ in range(CONFIGS):
-                c = s.copy()
-                for a, b, x in partial:
-                    idx = [i for i, site in enumerate(c) if site.specie.symbol == a]
-                    for i in rng.sample(idx, round(x * len(idx))):
-                        c.replace(i, b)
+                c = big.copy()
+                for site_el, subs in partial.items():
+                    idx = [i for i, st in enumerate(c) if st.specie.symbol == site_el]
+                    rng.shuffle(idx)
+                    pos = 0
+                    for new, x in subs.items():
+                        k = round(x * len(idx))
+                        for i in idx[pos:pos + k]:
+                            c.replace(i, new)
+                        pos += k
                 configs.append(c)
         best = None
         for c in configs:
@@ -203,6 +256,10 @@ class Checker:
         pd = PhaseDiagram(comps)
         _, ehull = pd.get_decomp_and_e_above_hull(PDEntry(relaxed.composition, e), allow_negative=True)
         ehull = round(float(ehull), 3)
-        return {"status": "plausible" if ehull <= 0.1 else "likely unstable",
-                "e_above_hull_eV": ehull, "computed_as": relaxed.composition.reduced_formula,
-                "cell_atoms": len(relaxed), "host": str(h.material_id)}
+        match = round(_frac_distance(relaxed.composition, formula), 3)
+        out = {"status": "plausible" if ehull <= 0.1 else "likely unstable",
+               "e_above_hull_eV": ehull, "computed_as": relaxed.composition.reduced_formula,
+               "cell_atoms": len(relaxed), "host": str(h.material_id), "match": match}
+        if omitted:
+            out["omitted"] = sorted(set(omitted))
+        return out

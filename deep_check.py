@@ -68,7 +68,7 @@ def main():
             if not isinstance(swaps, str):
                 continue
             try:
-                r = chk.check(row["formula"], row["parent"], [tuple(s) for s in json.loads(swaps)])
+                r = chk.check(row["formula"], row["parent"])
             except TimeoutError:
                 break
             except Exception as ex:
