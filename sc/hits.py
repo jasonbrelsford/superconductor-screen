@@ -3,7 +3,9 @@ with a high predicted Tc. Each new hit is recorded in results/hits.json and open
 issue labelled "hit", so the owner gets a notification.
 
 Thresholds:
-  * any candidate with predicted Tc minus uncertainty (score) >= 77 K, above liquid nitrogen;
+  * a cuprate whose score (predicted Tc minus uncertainty) is >= 77 K, above liquid nitrogen, AND
+    beats the measured Tc of the compound it came from (a stable copy of a known record holder
+    is not news);
   * or, outside the cuprates, a score >= 40 K (rarer families matter more).
 """
 import json
@@ -37,7 +39,8 @@ def find(board, checks):
         row = rows.loc[f]
         score = float(row["score"])
         cup = _is_cuprate(f) or _is_cuprate(str(row["parent"]))
-        if score >= CUPRATE_MIN or (not cup and score >= OTHER_MIN):
+        beats_parent = score > float(row["parent_Tc"])
+        if (cup and score >= CUPRATE_MIN and beats_parent) or (not cup and score >= OTHER_MIN):
             new[f] = {"score": score, "pred_Tc_K": float(row["pred_Tc_K"]), "parent": str(row["parent"]),
                       "change": str(row["change"]), "e_above_hull_eV": r.get("e_above_hull_eV"),
                       "computed_as": r.get("computed_as"), "found": r.get("checked"), "by": r.get("by", "github")}
@@ -52,6 +55,19 @@ def notify(new):
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GITHUB_ADMIN_TOKEN")
     if not token or not new:
         return
+    api = f"https://api.github.com/repos/{REPO}/issues"
+    hdr = {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"}
+    earlier = {}   # formula -> issue number, so a hit found again reopens its old issue
+    try:
+        for page in range(1, 6):
+            got = json.load(urllib.request.urlopen(urllib.request.Request(
+                f"{api}?labels=hit&state=all&per_page=100&page={page}", headers=hdr), timeout=30))
+            for i in got:
+                earlier[i["title"].removeprefix("Hit: ").split(" (")[0]] = i["number"]
+            if len(got) < 100:
+                break
+    except Exception as e:
+        print("could not list earlier hit issues", e)
     for f, h in new.items():
         body = (f"**{f}** passed the stability check and has a high predicted Tc.\n\n"
                 f"- Predicted Tc: {h['pred_Tc_K']} K (score {h['score']} K after subtracting uncertainty)\n"
@@ -59,10 +75,22 @@ def notify(new):
                 f"- Made from {h['parent']} by {h['change']}\n- Found {h['found']} by {h['by']}\n\n"
                 "This is a prediction to examine, not a discovery: check the chemistry and the host structure "
                 "before anyone tries to make it.")
-        req = urllib.request.Request(f"https://api.github.com/repos/{REPO}/issues", method="POST",
+        if f in earlier:   # reopen with the new numbers instead of a duplicate issue
+            n = earlier[f]
+            reqs = [urllib.request.Request(f"{api}/{n}", method="PATCH", headers=hdr,
+                                           data=json.dumps({"state": "open"}).encode()),
+                    urllib.request.Request(f"{api}/{n}/comments", method="POST", headers=hdr,
+                                           data=json.dumps({"body": "Passed again:\n\n" + body}).encode())]
+            try:
+                for r in reqs:
+                    urllib.request.urlopen(r, timeout=30).read()
+            except Exception as e:
+                print("could not reopen issue for", f, e)
+            continue
+        req = urllib.request.Request(api, method="POST",
                                      data=json.dumps({"title": f"Hit: {f} (predicted {h['pred_Tc_K']} K, plausible)",
                                                       "body": body, "labels": ["hit"]}).encode(),
-                                     headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"})
+                                     headers=hdr)
         try:
             urllib.request.urlopen(req, timeout=30).read()
         except Exception as e:

@@ -87,18 +87,33 @@ class Checker:
         return {e for e in els if e in ANIONS or cat.get(e, 0) >= MINOR}
 
     def host(self, parent):
-        """Closest stable-ish MP structure built from the parent's major elements, or (None, reason)."""
+        """Closest stable-ish MP structure for the parent, or (None, reason). Tries the parent's major
+        elements first; if Materials Project has nothing there, drops the least abundant cations one
+        or two at a time (the placement step then puts them back as substitutions)."""
         major = self.major_elements(parent)
-        docs = self.mpr.materials.summary.search(chemsys="-".join(sorted(major)),
-                                                 fields=["material_id", "structure", "energy_above_hull", "nsites"])
-        docs = [d for d in docs if d.nsites <= MAX_SITES and d.energy_above_hull is not None and d.energy_above_hull <= 0.1]
-        if not docs:
-            return None, "no host structure in Materials Project"
-        best = min(docs, key=lambda d: (_frac_distance(d.structure.composition, parent), d.energy_above_hull))
-        dist = _frac_distance(best.structure.composition, parent)
-        if dist > MAX_HOST_DISTANCE:
-            return None, f"closest host too different ({best.structure.composition.reduced_formula})"
-        return best, ""
+        cat = _cations(parent)
+        cations = sorted((e for e in major if e not in ANIONS), key=lambda e: cat.get(e, 0))
+        tries = [major]
+        for n in (1, 2):
+            for drop in itertools.combinations(cations[:4], n):
+                if len(cations) - n >= 2:
+                    tries.append(major - set(drop))
+        closest = None
+        for els in tries:
+            docs = self.mpr.materials.summary.search(chemsys="-".join(sorted(els)),
+                                                     fields=["material_id", "structure", "energy_above_hull", "nsites"])
+            docs = [d for d in docs if d.nsites <= MAX_SITES and d.energy_above_hull is not None and d.energy_above_hull <= 0.1]
+            if not docs:
+                continue
+            best = min(docs, key=lambda d: (_frac_distance(d.structure.composition, parent), d.energy_above_hull))
+            dist = _frac_distance(best.structure.composition, parent)
+            if dist <= MAX_HOST_DISTANCE:
+                return best, ""
+            if closest is None or dist < closest[0]:
+                closest = (dist, best)
+        if closest:
+            return None, f"closest host too different ({closest[1].structure.composition.reduced_formula})"
+        return None, "no host structure in Materials Project"
 
     def competitor_energies(self, elements):
         """CHGNet energy per atom of every stable MP phase in the chemical system (cached by mp-id)."""
@@ -222,13 +237,25 @@ class Checker:
         cell = (1, 1, 1)
         if partial:
             cell = self._supercell_for(base, partial)
+            while cell is None:   # drop the smallest dopant until the rest fits a cell we can afford
+                site, m = min(((site, m) for site, subs in partial.items() for m in subs),
+                              key=lambda sm: partial[sm[0]][sm[1]])
+                omitted.append(m)
+                del partial[site][m]
+                if not partial[site]:
+                    del partial[site]
+                if not partial:
+                    break
+                cell = self._supercell_for(base, partial)
             if cell is None:
+                cell = (1, 1, 1)
+            if not partial and not full:
                 return {"status": "doping level needs too large a cell", "host": str(h.material_id)}
             big = base * cell
             import random
             rng = random.Random(formula)
             configs = []
-            for _ in range(CONFIGS):
+            for _ in range(CONFIGS if partial else 1):
                 c = big.copy()
                 for site_el, subs in partial.items():
                     idx = [i for i, st in enumerate(c) if st.specie.symbol == site_el]

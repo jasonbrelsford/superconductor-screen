@@ -1,4 +1,5 @@
+data/
 .venv/
 __pycache__/
-data/
 site/
+tower_deep_check.cmd
