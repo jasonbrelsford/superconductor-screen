@@ -12,8 +12,8 @@
    "mae_K_on_Tc_30K_plus": 11.0
   }
  },
- "n_candidates_new_systems": 21942,
- "stability_checked": false,
+ "n_candidates_new_systems": 25022,
+ "stability_checked": true,
  "lists": {
   "highest": [
    {
@@ -26,11 +26,11 @@
     "parent": "Ba2Ca1.98Cu2.9Hg0.66Pb0.34O8.4",
     "parent_Tc": 143.0,
     "change": "Pb partly -> Sn",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    },
    {
-    "formula": "Ba2Ca2Cu3Re0.16Hg0.8Os0.04O8",
+    "formula": "Ba2Ca2Cu3Re0.18Hg0.8Os0.02O8",
     "first_seen": "2026-10-28",
     "pred_Tc_K": 132.0,
     "uncertainty_K": 0.2,
@@ -39,7 +39,7 @@
     "parent": "Ba2Ca2Cu3Re0.2Hg0.8O8",
     "parent_Tc": 133.12,
     "change": "Re partly -> Os",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    },
    {
@@ -52,7 +52,7 @@
     "parent": "Ba2Ca2Cu3Re0.2Hg0.8O8",
     "parent_Tc": 133.12,
     "change": "Re partly -> W",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    },
    {
@@ -65,7 +65,7 @@
     "parent": "Ba2Ca1.98Cu2.9Hg0.66Pb0.34O8.4",
     "parent_Tc": 143.0,
     "change": "Pb partly -> Sn; Ba partly -> Sr",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    },
    {
@@ -78,24 +78,24 @@
     "parent": "Ba2Ca2Cu3Hg0.8Sb0.05Pb0.15O8",
     "parent_Tc": 133.0,
     "change": "Hg partly -> Tl; Pb partly -> Bi",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    },
    {
-    "formula": "Ba2Ca2Cu3Sn0.01Hg0.95Sb0.04O8",
+    "formula": "Ba2Ca2Cu3Hg0.665Bi0.01Sb0.04Au0.285O8",
     "first_seen": "2026-10-28",
-    "pred_Tc_K": 131.7,
-    "uncertainty_K": 0.9,
+    "pred_Tc_K": 131.1,
+    "uncertainty_K": 0.3,
     "score": 130.8,
-    "vs_parent_K": -0.3,
+    "vs_parent_K": -0.9,
     "parent": "Ba2Ca2Cu3Hg0.95Sb0.05O8",
     "parent_Tc": 132.0,
-    "change": "Sb partly -> Sn",
-    "stability": "not checked yet",
+    "change": "Hg partly -> Au; Sb partly -> Bi",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    },
    {
-    "formula": "Ba2Ca2Cu3Hg0.95Sb0.04As0.01O8",
+    "formula": "Ba2Ca2Cu3Hg0.95Sb0.045As0.005O8",
     "first_seen": "2026-10-28",
     "pred_Tc_K": 131.3,
     "uncertainty_K": 0.5,
@@ -104,7 +104,7 @@
     "parent": "Ba2Ca2Cu3Hg0.95Sb0.05O8",
     "parent_Tc": 132.0,
     "change": "Sb partly -> As",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    },
    {
@@ -117,7 +117,7 @@
     "parent": "Ba2Ca2Cu3Hg0.8Sb0.05Pb0.15O8",
     "parent_Tc": 133.0,
     "change": "Pb partly -> Sn; Hg partly -> Tl",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    },
    {
@@ -130,7 +130,7 @@
     "parent": "Ba2Ca2Cu3Hg0.9Au0.1O1",
     "parent_Tc": 133.0,
     "change": "Au -> Ag",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    },
    {
@@ -143,7 +143,7 @@
     "parent": "Ba2Ca2Cu3Hg0.9Au0.1O1",
     "parent_Tc": 133.0,
     "change": "Au -> Pt",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    }
   ],
@@ -158,7 +158,7 @@
     "parent": "Sr2Ca3TbCu4PbO",
     "parent_Tc": 36.0,
     "change": "Sr -> Ba; Pb -> Tl",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    },
    {
@@ -171,7 +171,20 @@
     "parent": "Sr2Ca3TbCu4PbO",
     "parent_Tc": 36.0,
     "change": "Sr -> Ba; Pb -> Bi",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
+    "e_above_hull_eV": ""
+   },
+   {
+    "formula": "Ba2CaTlCu2SnO",
+    "first_seen": "2026-10-29",
+    "pred_Tc_K": 96.4000015258789,
+    "uncertainty_K": 11.600000381469727,
+    "score": 84.80000305175781,
+    "vs_parent_K": 71.4,
+    "parent": "Ba2CaCu2SbPbO",
+    "parent_Tc": 25.0,
+    "change": "Sb -> Sn; Pb -> Tl",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    },
    {
@@ -184,7 +197,7 @@
     "parent": "Sr2Ca3LuCu4PbO",
     "parent_Tc": 33.0,
     "change": "Pb partly -> Tl; Sr partly -> Ba",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    },
    {
@@ -197,7 +210,7 @@
     "parent": "Ba2CaCu2SbPbO",
     "parent_Tc": 25.0,
     "change": "Sb partly -> As; Pb -> Bi",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    },
    {
@@ -210,20 +223,7 @@
     "parent": "Sr2Ca3LuCu4PbO",
     "parent_Tc": 33.0,
     "change": "Sr -> Ba",
-    "stability": "not checked yet",
-    "e_above_hull_eV": ""
-   },
-   {
-    "formula": "Ba2Ca1Cu2Sn1Sb1S0.2O0.8",
-    "first_seen": "2026-10-28",
-    "pred_Tc_K": 91.1,
-    "uncertainty_K": 10.6,
-    "score": 80.5,
-    "vs_parent_K": 66.1,
-    "parent": "Ba2CaCu2SbPbO",
-    "parent_Tc": 25.0,
-    "change": "O partly -> S; Pb -> Sn",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    },
    {
@@ -236,7 +236,7 @@
     "parent": "Sr2CaTlCu2OF",
     "parent_Tc": 50.0,
     "change": "Tl -> Hg; Sr partly -> Ba",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    },
    {
@@ -249,7 +249,7 @@
     "parent": "Sr2CaTlCu2OF",
     "parent_Tc": 50.0,
     "change": "Sr -> Ba",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    },
    {
@@ -262,7 +262,7 @@
     "parent": "Sr2Ca1Tl0.8Cu2Mo0.2O7",
     "parent_Tc": 40.0,
     "change": "Sr -> Ba; Ca partly -> Mg",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    },
    {
@@ -275,7 +275,7 @@
     "parent": "Sr2Ca0.65Gd0.35V0.4Cu2Pb0.6O1",
     "parent_Tc": 36.6,
     "change": "Sr -> Ba",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    }
   ],
@@ -290,7 +290,7 @@
     "parent": "Sr2Ca3.6Bi1.6Pb0.4O1",
     "parent_Tc": 102.0,
     "change": "O partly -> F; Pb partly -> Sn",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    },
    {
@@ -303,7 +303,7 @@
     "parent": "Sr2Ca3.6Bi1.6Pb0.4O1",
     "parent_Tc": 102.0,
     "change": "O partly -> F",
-    "stability": "not checked yet",
+    "stability": "not in Materials Project",
     "e_above_hull_eV": ""
    }
   ]
