@@ -1,0 +1,172 @@
+{
+ "Ba1.6Sr0.4Ca2Cu3Hg0.64Bi0.2Au0.16O8.2": {
+  "by": "github",
+  "change": "Hg partly -> Au; Ba partly -> Sr",
+  "computed_as": "Ba6Sr2Ca8Cu12Hg3AuO32",
+  "e_above_hull_eV": 0.003,
+  "found": "2026-10-29",
+  "parent": "Ba2Ca2Cu3Hg0.8Bi0.2O8.2",
+  "pred_Tc_K": 130.2,
+  "score": 128.9
+ },
+ "Ba1.863Sr0.207Ca1.863Mg0.207Cu3.11Hg0.75O8.208": {
+  "by": "github",
+  "change": "Ba partly -> Sr; Ca partly -> Mg",
+  "computed_as": "Ba7SrCa7MgCu12(HgO8)4",
+  "e_above_hull_eV": 0.016,
+  "found": "2026-10-29",
+  "parent": "Ba2.07Ca2.07Cu3.11Hg0.75O8.208",
+  "pred_Tc_K": 129.2,
+  "score": 127.0
+ },
+ "Ba1.8Sr0.2Ca1.8Mg0.2Tl0.75Cu3O1": {
+  "by": "github",
+  "change": "Ba partly -> Sr; Ca partly -> Mg",
+  "computed_as": "Ba7SrCa11MgTl4(Cu4O11)4",
+  "e_above_hull_eV": 0.021,
+  "found": "2026-10-29",
+  "parent": "Ba2Ca2Tl0.75Cu3O1",
+  "pred_Tc_K": 125.1,
+  "score": 123.0
+ },
+ "Ba1.8Sr0.2Ca2Cu3Hg0.64Bi0.2Au0.16O8.2": {
+  "by": "github",
+  "change": "Ba partly -> Sr; Hg partly -> Au",
+  "computed_as": "Ba7SrCa8Cu12Hg3AuO32",
+  "e_above_hull_eV": 0.001,
+  "found": "2026-10-29",
+  "parent": "Ba2Ca2Cu3Hg0.8Bi0.2O8.2",
+  "pred_Tc_K": 130.2,
+  "score": 128.9
+ },
+ "Ba1.8Sr0.2Ca2Tl0.08V0.2Cu3Hg0.72O8.3": {
+  "by": "github",
+  "change": "Ba partly -> Sr; Hg partly -> Tl",
+  "computed_as": "Ba14Sr2Ca16TlCu24Hg7O64",
+  "e_above_hull_eV": 0.003,
+  "found": "2026-10-29",
+  "parent": "Ba2Ca2V0.2Cu3Hg0.8O8.3",
+  "pred_Tc_K": 127.0,
+  "score": 125.7
+ },
+ "Ba1Ca1Tl0.9In0.1Cu1O5": {
+  "by": "github",
+  "change": "Sr -> Ca; Tl partly -> In",
+  "computed_as": "Ba6Ca10Tl9In(Cu3O19)2",
+  "e_above_hull_eV": 0.057,
+  "found": "2026-10-29",
+  "parent": "BaSrTlCuO5",
+  "pred_Tc_K": 95.6,
+  "score": 93.8
+ },
+ "Ba1Ca1Tl1Cu1O4.5F0.5": {
+  "by": "github",
+  "change": "Sr -> Ca; O partly -> F",
+  "computed_as": "Ba3Ca5Tl5Cu3O17F2",
+  "e_above_hull_eV": 0.092,
+  "found": "2026-10-29",
+  "parent": "BaSrTlCuO5",
+  "pred_Tc_K": 101.4,
+  "score": 99.5
+ },
+ "Ba2.07Ca1.863Mg0.207Cu3.11Hg0.75O8.208": {
+  "by": "github",
+  "change": "Ca partly -> Mg",
+  "computed_as": "Ba8Ca7MgCu12(HgO8)4",
+  "e_above_hull_eV": 0.015,
+  "found": "2026-10-29",
+  "parent": "Ba2.07Ca2.07Cu3.11Hg0.75O8.208",
+  "pred_Tc_K": 128.4,
+  "score": 126.9
+ },
+ "Ba2.07Ca2.07Cd0.075Cu3.11Hg0.675O8.208": {
+  "by": "github",
+  "change": "Hg partly -> Cd",
+  "computed_as": "Ba16Ca16CdCu24Hg7O64",
+  "e_above_hull_eV": 0.003,
+  "found": "2026-10-29",
+  "parent": "Ba2.07Ca2.07Cu3.11Hg0.75O8.208",
+  "pred_Tc_K": 129.4,
+  "score": 126.9
+ },
+ "Ba2.07Ca2.07Tl0.075Cu3.11Hg0.675O7.3872F0.8208": {
+  "by": "github",
+  "change": "O partly -> F; Hg partly -> Tl",
+  "computed_as": "Ba16Ca16TlCu24Hg7(O29F3)2",
+  "e_above_hull_eV": 0.043,
+  "found": "2026-10-29",
+  "parent": "Ba2.07Ca2.07Cu3.11Hg0.75O8.208",
+  "pred_Tc_K": 130.1,
+  "score": 128.4
+ },
+ "Ba2Ca0.7Mg0.3Tl0.8Cu2Mo0.2O7": {
+  "by": "github",
+  "change": "Sr -> Ba; Ca partly -> Mg",
+  "computed_as": "Ba6Ca2MgTl3(Cu2O7)3",
+  "e_above_hull_eV": 0.051,
+  "found": "2026-10-29",
+  "parent": "Sr2Ca1Tl0.8Cu2Mo0.2O7",
+  "pred_Tc_K": 88.9,
+  "score": 86.6
+ },
+ "Ba2Ca1.8Mg0.2Tl0.08Cu3Hg0.72Bi0.2O8.2": {
+  "by": "github",
+  "change": "Ca partly -> Mg; Hg partly -> Tl",
+  "computed_as": "Ba16Ca14Mg2TlCu24Hg7O64",
+  "e_above_hull_eV": 0.012,
+  "found": "2026-10-29",
+  "parent": "Ba2Ca2Cu3Hg0.8Bi0.2O8.2",
+  "pred_Tc_K": 129.3,
+  "score": 127.3
+ },
+ "Ba2Ca1.8Mg0.2Tl0.6Cu3Hg0.15O1": {
+  "by": "github",
+  "change": "Ca partly -> Mg; Tl partly -> Hg",
+  "computed_as": "Ba8Ca11MgTl3Cu16HgO44",
+  "e_above_hull_eV": 0.034,
+  "found": "2026-10-29",
+  "parent": "Ba2Ca2Tl0.75Cu3O1",
+  "pred_Tc_K": 126.8,
+  "score": 124.5
+ },
+ "Ba2Ca1.975Sm0.025Cu3Hg1O9": {
+  "by": "github",
+  "change": "Tl -> Hg",
+  "computed_as": "Ba4Ca4Cu6Hg3O19",
+  "e_above_hull_eV": 0.089,
+  "found": "2026-10-29",
+  "parent": "Ba2Ca1.975Sm0.025Tl0.8Cu3Hg0.2O9",
+  "pred_Tc_K": 123.3,
+  "score": 120.7
+ },
+ "Ba2Ca1Tl0.56In0.24Cu2Mo0.2O7": {
+  "by": "github",
+  "change": "Sr -> Ba; Tl partly -> In",
+  "computed_as": "Ba6Ca3Tl2In(Cu2O7)3",
+  "e_above_hull_eV": 0.039,
+  "found": "2026-10-29",
+  "parent": "Sr2Ca1Tl0.8Cu2Mo0.2O7",
+  "pred_Tc_K": 89.2,
+  "score": 85.9
+ },
+ "Ba2Ca2Cu3Hg0.8Bi0.2O8.1F0.9": {
+  "by": "github",
+  "change": "Tl -> Hg; O partly -> F",
+  "computed_as": "Ba2Ca3Cu4HgO10F",
+  "e_above_hull_eV": 0.099,
+  "found": "2026-10-29",
+  "parent": "Ba2Ca2Tl0.8Cu3Bi0.2O9",
+  "pred_Tc_K": 130.0,
+  "score": 122.6
+ },
+ "Ba2Ca2Tl0.08V0.2Cu3Hg0.72O8.3": {
+  "by": "github",
+  "change": "Hg partly -> Tl",
+  "computed_as": "Ba16Ca16TlCu24Hg7O64",
+  "e_above_hull_eV": -0.0,
+  "found": "2026-10-29",
+  "parent": "Ba2Ca2V0.2Cu3Hg0.8O8.3",
+  "pred_Tc_K": 126.2,
+  "score": 125.5
+ }
+}

@@ -1,7 +1,39 @@
 {
+ "Ba0.2Sr1.8Ca1Cu2Hg1O1F1": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
+ "Ba0.2Sr1.8Ca3Lu1Tl0.3Cu4Pb0.7O1": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
+ "Ba0.4Sr1.6Ca1Tl0.7Cu2Hg0.3O1F1.5": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
+ "Ba0.4Sr1.6Ca3Lu1Cu4Sn0.3Pb0.7O1": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
  "Ba0.5Ca1.9Y0.4Cu2Bi0.5B0.5O1": {
   "checked": "2026-10-29",
   "status": "no host structure in Materials Project"
+ },
+ "Ba0.6Sr1.4Ca3La1Cu4Bi1O1": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
+ "Ba0.81Sr1.19Ca2Cu3Hg0.54Te0.01Pb0.49O1": {
+  "checked": "2026-10-29",
+  "status": "dopant swap: not computed"
+ },
+ "Ba1.3Sr0.7Ca0.5Sm0.5Cu2.6C0.28N0.12O7": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
+ "Ba1.3Sr0.7Yb1Cu2.8B0.2O7.11": {
+  "checked": "2026-10-29",
+  "status": "dopant swap: not computed"
  },
  "Ba1.4Sr0.6Ca1Tl1Cu2Sb1O1": {
   "checked": "2026-10-29",
@@ -59,6 +91,22 @@
   "host": "mp-22601",
   "status": "plausible"
  },
+ "Ba1Ca1Tl0.9In0.1Cu1O5": {
+  "cell_atoms": 70,
+  "checked": "2026-10-29",
+  "computed_as": "Ba6Ca10Tl9In(Cu3O19)2",
+  "e_above_hull_eV": 0.057,
+  "host": "mp-1228463",
+  "status": "plausible"
+ },
+ "Ba1Ca1Tl1Cu1O4.5F0.5": {
+  "cell_atoms": 35,
+  "checked": "2026-10-29",
+  "computed_as": "Ba3Ca5Tl5Cu3O17F2",
+  "e_above_hull_eV": 0.092,
+  "host": "mp-1228463",
+  "status": "plausible"
+ },
  "Ba2.07Ca1.863Mg0.207Cu3.11Hg0.75O8.208": {
   "cell_atoms": 64,
   "checked": "2026-10-29",
@@ -75,11 +123,39 @@
   "host": "mp-22601",
   "status": "plausible"
  },
+ "Ba2.07Ca2.07Tl0.075Cu3.11Hg0.675O7.3872F0.8208": {
+  "cell_atoms": 128,
+  "checked": "2026-10-29",
+  "computed_as": "Ba16Ca16TlCu24Hg7(O29F3)2",
+  "e_above_hull_eV": 0.043,
+  "host": "mp-22601",
+  "status": "plausible"
+ },
+ "Ba2.1Ca0.16Y0.518Lu0.222Cu2.78S0.22O7": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
  "Ba2Ca0.2Ho0.8Cu2.8P0.2O0.8": {
   "checked": "2026-10-29",
   "status": "no host structure in Materials Project"
  },
+ "Ba2Ca0.2Yb0.08Dy0.72Cu3O6.78": {
+  "checked": "2026-10-29",
+  "status": "dopant swap: not computed"
+ },
+ "Ba2Ca0.5Gd0.45Y0.05In0.65Cu2Bi0.35O1": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
  "Ba2Ca0.5Gd0.5In0.65Cu2Bi0.35O1": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
+ "Ba2Ca0.5La0.5Cu2Hg1O5.4F0.6": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
+ "Ba2Ca0.65Gd0.35Tl0.6V0.4Cu2O1": {
   "checked": "2026-10-29",
   "status": "no host structure in Materials Project"
  },
@@ -95,11 +171,31 @@
   "checked": "2026-10-29",
   "status": "no host structure in Materials Project"
  },
+ "Ba2Ca0.65Y0.35Sc0.075Ti0.175Cu2Hg0.75O1": {
+  "checked": "2026-10-29",
+  "status": "dopant swap: not computed"
+ },
  "Ba2Ca0.65Y0.35Ti0.25Cu2Hg0.75O1": {
   "checked": "2026-10-29",
   "status": "no host structure in Materials Project"
  },
  "Ba2Ca0.6Ho0.4Al1Cu2O7": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
+ "Ba2Ca0.6Yb0.12Ho0.28Al1Cu2O7": {
+  "checked": "2026-10-29",
+  "status": "dopant swap: not computed"
+ },
+ "Ba2Ca0.7Mg0.3Tl0.8Cu2Mo0.2O7": {
+  "cell_atoms": 39,
+  "checked": "2026-10-29",
+  "computed_as": "Ba6Ca2MgTl3(Cu2O7)3",
+  "e_above_hull_eV": 0.051,
+  "host": "mp-20824",
+  "status": "plausible"
+ },
+ "Ba2Ca0.7Mg0.3Tl1Cu2O1F1.5": {
   "checked": "2026-10-29",
   "status": "no host structure in Materials Project"
  },
@@ -150,11 +246,27 @@
   "checked": "2026-10-29",
   "status": "dopant swap: not computed"
  },
+ "Ba2Ca1Tl0.56In0.24Cu2Mo0.2O7": {
+  "cell_atoms": 39,
+  "checked": "2026-10-29",
+  "computed_as": "Ba6Ca3Tl2In(Cu2O7)3",
+  "e_above_hull_eV": 0.039,
+  "host": "mp-20824",
+  "status": "plausible"
+ },
+ "Ba2Ca1Tl1Zn0.2Cu1.8O1F1": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
  "Ba2Ca2Cd0.08Cu3Hg0.72Mo0.14W0.06O8.4": {
   "checked": "2026-10-29",
   "status": "dopant swap: not computed"
  },
  "Ba2Ca2Cu3Ag0.1Hg0.9O1": {
+  "checked": "2026-10-29",
+  "status": "dopant swap: not computed"
+ },
+ "Ba2Ca2Cu3Hg0.665Bi0.01Sb0.04Au0.285O8": {
   "checked": "2026-10-29",
   "status": "dopant swap: not computed"
  },
@@ -203,6 +315,10 @@
   "status": "dopant swap: not computed"
  },
  "Ba2Ca2Cu3Re0.18Hg0.8Os0.02O8": {
+  "checked": "2026-10-29",
+  "status": "dopant swap: not computed"
+ },
+ "Ba2Ca2Cu3Re0.18Hg0.8W0.02O8": {
   "checked": "2026-10-29",
   "status": "dopant swap: not computed"
  },
@@ -258,6 +374,10 @@
   "checked": "2026-10-29",
   "status": "no host structure in Materials Project"
  },
+ "Ba2Ca2Tl0.3Cu2.7Ag0.3Hg0.7O8F1": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
  "Ba2Ca2Tl0.3Cu3Hg0.7Ru0.6O1": {
   "checked": "2026-10-29",
   "status": "dopant swap: not computed"
@@ -310,7 +430,15 @@
   "checked": "2026-10-29",
   "status": "closest host too different (SrCa(CuO2)2)"
  },
+ "Ba2Ca3Yb1Cu4Sn0.1Pb0.9O1": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
  "Ba2Ca3YbCu4PbO": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
+ "Ba2CaCu2SnAsO": {
   "checked": "2026-10-29",
   "status": "no host structure in Materials Project"
  },
@@ -338,6 +466,10 @@
   "status": "dopant swap: not computed"
  },
  "Ba2Na0.08Li0.02Ca1.9Cu3Hg1O9": {
+  "checked": "2026-10-29",
+  "status": "dopant swap: not computed"
+ },
+ "Ba2Nd0.3Er0.7Cu3O1": {
   "checked": "2026-10-29",
   "status": "dopant swap: not computed"
  },
@@ -374,6 +506,14 @@
   "host": "mp-1228545",
   "status": "plausible"
  },
+ "Ba2Y1Ga0.33Cu2.67N0.2O0.8": {
+  "cell_atoms": 26,
+  "checked": "2026-10-29",
+  "computed_as": "Ba4Y2Cu6N3O11",
+  "e_above_hull_eV": 0.303,
+  "host": "mp-985569",
+  "status": "likely unstable"
+ },
  "Ba2Y1Ti0.1Nb0.7Cu2.2O1": {
   "checked": "2026-10-29",
   "computed_as": "Ba2YNb(CuO4)2",
@@ -382,6 +522,10 @@
   "status": "plausible"
  },
  "K0.03Ba2Na0.07Ca1.9Cu3Hg1O9": {
+  "checked": "2026-10-29",
+  "status": "dopant swap: not computed"
+ },
+ "Sr2Ca2Cu3Bi1.5Pb0.2N0.3O0.7": {
   "checked": "2026-10-29",
   "status": "dopant swap: not computed"
  }
