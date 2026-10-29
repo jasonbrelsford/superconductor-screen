@@ -16,7 +16,7 @@ from sc.features import featurize
 
 TOP = 50
 PER_PARENT = 2          # at most two candidates built from the same parent compound per list
-STRUCTURE_CHECKS_PER_RUN = 12      # CHGNet stability calculations per run (results are kept across runs)
+STRUCTURE_CHECKS_PER_RUN = 30      # CHGNet stability calculations per run (results are kept across runs)
 STRUCTURE_BUDGET_S = 75 * 60
 LEADERBOARD_MIN_SCORE = 80.0   # keep candidates scoring at least this (K) on the running leaderboard
 ROOT = os.path.dirname(os.path.abspath(__file__))

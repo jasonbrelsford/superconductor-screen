@@ -31,10 +31,22 @@ STEPS = 300
 FMAX = 0.1
 
 
+ANIONS = {"O", "N", "F", "S", "Se", "Te", "Cl", "Br", "I", "H", "B", "C", "P", "As"}
+MINOR = 0.08        # cations below this share of the cation sites are treated as dopants
+MAX_HOST_DISTANCE = 0.25
+
+
+def _cations(comp):
+    """Cation-site fractions only: anion counts in the training data are often loose."""
+    c = Composition(comp)
+    cat = {str(e): a for e, a in c.get_el_amt_dict().items() if str(e) not in ANIONS}
+    tot = sum(cat.values()) or 1.0
+    return {e: a / tot for e, a in cat.items()}
+
+
 def _frac_distance(a, b):
-    ca, cb = Composition(a).fractional_composition, Composition(b).fractional_composition
-    els = set(ca.elements) | set(cb.elements)
-    return sum(abs(ca[e] - cb[e]) for e in els)
+    ca, cb = _cations(a), _cations(b)
+    return sum(abs(ca.get(e, 0) - cb.get(e, 0)) for e in set(ca) | set(cb))
 
 
 class Checker:
@@ -63,20 +75,24 @@ class Checker:
                                                  fields=["material_id", "structure", "nsites"])
         return docs
 
+    def major_elements(self, parent):
+        els = {str(e) for e in Composition(parent).elements}
+        cat = _cations(parent)
+        return {e for e in els if e in ANIONS or cat.get(e, 0) >= MINOR}
+
     def host(self, parent):
-        els = [str(e) for e in Composition(parent).elements]
-        comp = Composition(parent).fractional_composition
-        tries = ["-".join(sorted(els))]
-        minor = [e for e in els if comp[e] < 0.06]
-        if minor:
-            tries.append("-".join(sorted(e for e in els if e not in minor)))
-        for cs in tries:
-            docs = self.mpr.materials.summary.search(chemsys=cs, fields=["material_id", "structure", "energy_above_hull", "nsites"])
-            docs = [d for d in docs if d.nsites <= MAX_SITES and d.energy_above_hull is not None and d.energy_above_hull <= 0.1]
-            if docs:
-                best = min(docs, key=lambda d: (_frac_distance(d.structure.composition, parent), d.energy_above_hull))
-                return best
-        return None
+        """Closest stable-ish MP structure built from the parent's major elements, or (None, reason)."""
+        major = self.major_elements(parent)
+        docs = self.mpr.materials.summary.search(chemsys="-".join(sorted(major)),
+                                                 fields=["material_id", "structure", "energy_above_hull", "nsites"])
+        docs = [d for d in docs if d.nsites <= MAX_SITES and d.energy_above_hull is not None and d.energy_above_hull <= 0.1]
+        if not docs:
+            return None, "no host structure in Materials Project"
+        best = min(docs, key=lambda d: (_frac_distance(d.structure.composition, parent), d.energy_above_hull))
+        dist = _frac_distance(best.structure.composition, parent)
+        if dist > MAX_HOST_DISTANCE:
+            return None, f"closest host too different ({best.structure.composition.reduced_formula})"
+        return best, ""
 
     def competitor_energies(self, elements):
         """CHGNet energy per atom of every stable MP phase in the chemical system (cached by mp-id)."""
@@ -99,9 +115,11 @@ class Checker:
     def check(self, parent, swaps):
         if any(x < 1.0 for _, _, x in swaps):
             return {"status": "doped: not computed"}
-        h = self.host(parent)
+        if any(a not in self.major_elements(parent) for a, _, _ in swaps):
+            return {"status": "doped: not computed"}   # the swapped element is itself a minor dopant
+        h, why = self.host(parent)
         if h is None:
-            return {"status": "no host structure in Materials Project"}
+            return {"status": why}
         s = h.structure.copy()
         present = {str(e) for e in s.composition.elements}
         mapping = {Element(a): Element(b) for a, b, _ in swaps if a in present}
