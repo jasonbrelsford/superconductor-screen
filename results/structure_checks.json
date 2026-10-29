@@ -1,0 +1,55 @@
+{
+ "Ba2Ca1.975Pr0.025Cu3Hg1O9": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
+ "Ba2Ca1.975Sm0.025Cu3Hg1O9": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
+ "Ba2Ca2Cu3Ag0.1Hg0.9O1": {
+  "checked": "2026-10-29",
+  "host": "mp-6879",
+  "status": "host structure lacks a swapped element"
+ },
+ "Ba2Ca2Cu3Hg0.85Os0.15O8": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
+ "Ba2Ca2Cu3Hg0.9Pt0.1O1": {
+  "checked": "2026-10-29",
+  "host": "mp-6879",
+  "status": "host structure lacks a swapped element"
+ },
+ "Ba2Ca2Zr0.4Cu3Hg0.6O8.4": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
+ "Ba2Ca3LaCu4PbO": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
+ "Ba2Ca3LuCu4PbO": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
+ "Ba2Ca3TbCu4BiO": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
+ "Ba2Ca3TbTlCu4O": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
+ "Ba2Ca3Tl0.64Cu4Bi0.16Pb0.2O1": {
+  "checked": "2026-10-29",
+  "computed_as": "BaCaCuO3",
+  "e_above_hull_eV": 0.079,
+  "host": "mp-1218361",
+  "status": "plausible"
+ },
+ "Ba2CaTlCu2SnO": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ }
+}

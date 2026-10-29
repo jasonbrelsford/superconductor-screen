@@ -1,0 +1,2 @@
+formula,first_seen,pred_Tc_K,uncertainty_K,score,vs_parent_K,parent,parent_Tc,change,stability,e_above_hull_eV,computed_as
+Ba2Ca3Tl0.64Cu4Bi0.16Pb0.2O1,2026-10-28,124.7,3.6,121.1,2.2,Sr2Ca3Tl0.64Cu4Bi0.16Pb0.2O1,122.5,Sr -> Ba,plausible,0.079,BaCaCuO3
