@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
   pages: write
   id-token: write
 
@@ -29,6 +30,7 @@ jobs:
       - name: Run the screen
         env:
           MP_API_KEY: ${{ secrets.MP_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python run.py
       - name: Commit this run's results
         run: |

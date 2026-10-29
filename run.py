@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 from pymatgen.core import Composition
 
-from sc import candidates, data, model, structure
+from sc import candidates, data, hits, model, structure
 from sc.features import featurize
 
 TOP = 50
@@ -101,12 +101,14 @@ def main():
     checks_path = os.path.join(ROOT, "results", "structure_checks.json")
     checks = json.load(open(checks_path)) if os.path.exists(checks_path) else {}
     checks = {k: v for k, v in checks.items() if not str(v.get("status", "")).startswith("doped")}  # now computable
+    tower_path = os.path.join(ROOT, "results", "structure_checks_tower.json")
+    tower = json.load(open(tower_path)) if os.path.exists(tower_path) else {}
     swaps_of = dict(zip(res["formula"], res["swaps"]))
     queue = []
     for _, _, tl in lists.values():
         for f, parent in zip(tl["formula"], tl["parent"]):
             sw = swaps_of.get(f)
-            if f in checks or not isinstance(sw, str):
+            if f in checks or f in tower or not isinstance(sw, str):
                 continue
             if (f, parent) not in queue:
                 queue.append((f, parent))
@@ -129,6 +131,10 @@ def main():
         finally:
             chk.close()
         json.dump(checks, open(checks_path, "w"), indent=1, sort_keys=True)
+    checks = {**tower, **checks}   # TOWER's deep checks are published alongside this run's
+    new_hits = hits.find(res, checks)
+    hits.notify(new_hits)
+    print(f"new hits: {len(new_hits)}")
 
     def stab(f):
         if f in checks:
@@ -148,6 +154,13 @@ def main():
         lists = {"plausible": ("High Tc and plausibly makeable",
                                "Candidates whose substituted crystal structure CHGNet puts within 0.1 eV/atom of the convex hull. The best place to start.", pl), **lists}
     stab_done = len(checks)
+    all_hits = json.load(open(hits.PATH)) if os.path.exists(hits.PATH) else {}
+    if all_hits:
+        hl = res[res["formula"].isin(set(all_hits))].sort_values("score", ascending=False).copy()
+        hl["stability"] = "plausible"
+        hl["e_above_hull_eV"] = [all_hits[f]["e_above_hull_eV"] for f in hl["formula"]]
+        hl["computed_as"] = [all_hits[f]["computed_as"] for f in hl["formula"]]
+        lists = {"hits": ("Hits", f"Plausibly makeable and predicted above {hits.CUPRATE_MIN:.0f} K (or above {hits.OTHER_MIN:.0f} K outside the cuprates). Each one opens a GitHub issue.", hl), **lists}
 
     outdir = os.path.join(ROOT, "results", today)
     os.makedirs(outdir, exist_ok=True)
