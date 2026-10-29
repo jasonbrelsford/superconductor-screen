@@ -100,12 +100,13 @@ def main():
     # Stability: CHGNet on a real crystal structure, for full substitutions; kept across runs.
     checks_path = os.path.join(ROOT, "results", "structure_checks.json")
     checks = json.load(open(checks_path)) if os.path.exists(checks_path) else {}
+    checks = {k: v for k, v in checks.items() if not str(v.get("status", "")).startswith("doped")}  # now computable
     swaps_of = dict(zip(res["formula"], res["swaps"]))
     queue = []
     for _, _, tl in lists.values():
         for f, parent in zip(tl["formula"], tl["parent"]):
             sw = swaps_of.get(f)
-            if f in checks or not isinstance(sw, str) or any(x < 1.0 for _, _, x in json.loads(sw)):
+            if f in checks or not isinstance(sw, str):
                 continue
             if (f, parent) not in queue:
                 queue.append((f, parent))
@@ -117,7 +118,7 @@ def main():
                 if chk.time_left() < 300:
                     break
                 try:
-                    r = chk.check(parent, [tuple(s) for s in json.loads(swaps_of[f])])
+                    r = chk.check(f, parent, [tuple(s) for s in json.loads(swaps_of[f])])
                 except TimeoutError:
                     break
                 except Exception as ex:   # one bad structure must not stop the run
@@ -132,9 +133,6 @@ def main():
     def stab(f):
         if f in checks:
             return checks[f]
-        sw = swaps_of.get(f)
-        if isinstance(sw, str) and any(x < 1.0 for _, _, x in json.loads(sw)):
-            return {"status": "doped: not computed"}
         return {"status": "queued" if key else "not checked (no key)"}
 
     for _, _, tl in lists.values():
@@ -178,7 +176,7 @@ def write_site(today, metrics, n, lists, checked):
                  f"stable competing phase computed the same way ({checked} candidates checked so far, a few more each run). "
                  f"'plausible' means within 0.1 eV/atom of the convex hull; 'computed_as' is the formula actually "
                  f"calculated, which follows the real structure (oxygen counts in the training data are often loose). "
-                 f"Doped formulas are not computed.")
+                 f"Doped candidates use a supercell with a few random dopant arrangements, so they are rougher.")
     sections = "".join(f"<h2>{e(title)}</h2><p class='mute'>{e(desc)}</p>{table(t)}" for title, desc, t in lists.values())
     page = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">

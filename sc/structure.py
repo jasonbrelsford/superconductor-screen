@@ -13,7 +13,9 @@ A result at or below about 0.1 eV/atom means "plausibly makeable"; far above mea
 probably decompose into the competing phases. This is an estimate: CHGNet errors are typically a
 few tens of meV/atom, the host structure may not be the one the real compound would adopt, and
 competing phases with very large cells are skipped (which can make a candidate look more stable).
-Doped (partial) substitutions are not computed: they need supercells and many configurations.
+Doped (partial) substitutions use the smallest supercell that hits the doping level within 5%,
+with a few random dopant arrangements; the lowest-energy one counts. Real dopants may order
+differently, so doped results are rougher than full substitutions.
 
 The computed formula follows the host structure, so it can differ from the screen's formula,
 especially in oxygen content, which the training data often records loosely.
@@ -27,6 +29,8 @@ from pymatgen.analysis.phase_diagram import PDEntry, PhaseDiagram
 from pymatgen.core import Composition, Element
 
 MAX_SITES = 80
+MAX_DOPED_SITES = 160   # largest supercell used for a doped candidate
+CONFIGS = 3             # random dopant arrangements tried; the lowest-energy one counts
 STEPS = 300
 FMAX = 0.1
 
@@ -112,30 +116,93 @@ class Checker:
             entries.append(PDEntry(Composition(c["formula"]), c["e_total"]))
         return entries
 
-    def check(self, parent, swaps):
-        if any(x < 1.0 for _, _, x in swaps):
-            return {"status": "doped: not computed"}
+    @staticmethod
+    def doping_fractions(formula, parent, swaps):
+        """Fraction of each swapped element actually replaced, read from the two formulas
+        (normalised on an element the swaps do not touch)."""
+        cf, pf = Composition(formula), Composition(parent)
+        touched = {a for a, _, _ in swaps} | {b for _, b, _ in swaps}
+        ref = next((e for e in pf.elements if str(e) not in touched and cf[e] > 0), None)
+        out = {}
+        for a, b, x in swaps:
+            if x >= 1.0:
+                out[a] = 1.0
+            elif ref is not None and pf[a] > 0:
+                scale = pf[ref] / cf[ref]
+                out[a] = round(min(1.0, max(0.0, 1 - cf[a] * scale / pf[a])), 3)
+            else:
+                out[a] = x
+        return out
+
+    def _supercell_for(self, s, fractions):
+        """Smallest supercell (<= MAX_DOPED_SITES) in which every partial fraction can be hit
+        within 0.05 with a whole number of substituted sites."""
+        best = None
+        for m in [(1, 1, 1), (2, 1, 1), (1, 2, 1), (1, 1, 2), (2, 2, 1), (2, 1, 2), (1, 2, 2), (3, 1, 1),
+                  (1, 3, 1), (1, 1, 3), (2, 2, 2), (3, 2, 1), (3, 1, 2), (2, 3, 1), (4, 1, 1), (1, 4, 1), (1, 1, 4)]:
+            n = len(s) * m[0] * m[1] * m[2]
+            if n > MAX_DOPED_SITES:
+                continue
+            ok = True
+            for el, x in fractions.items():
+                if x >= 1.0:
+                    continue
+                sites = sum(1 for site in s if site.specie.symbol == el) * m[0] * m[1] * m[2]
+                k = round(x * sites)
+                if k < 1 or abs(k / sites - x) > 0.05:
+                    ok = False
+                    break
+            if ok and (best is None or n < best[0]):
+                best = (n, m)
+        return None if best is None else best[1]
+
+    def check(self, formula, parent, swaps):
         if any(a not in self.major_elements(parent) for a, _, _ in swaps):
-            return {"status": "doped: not computed"}   # the swapped element is itself a minor dopant
+            return {"status": "dopant swap: not computed"}   # the swapped element is itself a minor dopant
         h, why = self.host(parent)
         if h is None:
             return {"status": why}
         s = h.structure.copy()
         present = {str(e) for e in s.composition.elements}
-        mapping = {Element(a): Element(b) for a, b, _ in swaps if a in present}
-        if len(mapping) != len(swaps):
+        if any(a not in present for a, _, _ in swaps):
             return {"status": "host structure lacks a swapped element", "host": str(h.material_id)}
-        s.replace_species(mapping)
-        relaxed, e = self._relax(s)
+        fr = self.doping_fractions(formula, parent, swaps)
+        full = {Element(a): Element(b) for a, b, _ in swaps if fr[a] >= 1.0}
+        if full:
+            s.replace_species(full)
+        partial = [(a, b, fr[a]) for a, b, _ in swaps if fr[a] < 1.0]
+        configs = [s]
+        if partial:
+            m = self._supercell_for(s, {a: x for a, _, x in partial})
+            if m is None:
+                return {"status": "doping level needs too large a cell", "host": str(h.material_id)}
+            s = s * m
+            import random
+            rng = random.Random(formula)
+            configs = []
+            for _ in range(CONFIGS):
+                c = s.copy()
+                for a, b, x in partial:
+                    idx = [i for i, site in enumerate(c) if site.specie.symbol == a]
+                    for i in rng.sample(idx, round(x * len(idx))):
+                        c.replace(i, b)
+                configs.append(c)
+        best = None
+        for c in configs:
+            if self.time_left() < 120:
+                raise TimeoutError
+            relaxed, e = self._relax(c)
+            if best is None or e / len(relaxed) < best[1] / len(best[0]):
+                best = (relaxed, e)
+        relaxed, e = best
         els = [str(x) for x in relaxed.composition.elements]
         comps = self.competitor_energies(els)
         have = {str(x) for en in comps for x in en.composition.elements if en.composition.is_element}
         if set(els) - have:
             return {"status": "missing elemental reference", "host": str(h.material_id)}
         pd = PhaseDiagram(comps)
-        cand = PDEntry(relaxed.composition, e)
-        _, ehull = pd.get_decomp_and_e_above_hull(cand, allow_negative=True)
+        _, ehull = pd.get_decomp_and_e_above_hull(PDEntry(relaxed.composition, e), allow_negative=True)
         ehull = round(float(ehull), 3)
         return {"status": "plausible" if ehull <= 0.1 else "likely unstable",
                 "e_above_hull_eV": ehull, "computed_as": relaxed.composition.reduced_formula,
-                "host": str(h.material_id)}
+                "cell_atoms": len(relaxed), "host": str(h.material_id)}
