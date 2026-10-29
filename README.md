@@ -4,7 +4,7 @@ A small, open, repeatable screen for new superconductor candidates. Every day a 
 Actions job trains a model on known superconductors, generates new compositions, ranks them,
 checks the best ones against the Materials Project, and publishes the results:
 
-**Results:** https://jasonbrelsford.github.io/Superconductor-screen/
+**Results:** https://jasonbrelsford.github.io/superconductor-screen/
 
 ## What it does
 
