@@ -4,3 +4,4 @@ scikit-learn==1.9.1
 xgboost==3.2.0
 pymatgen==2026.10.24
 mp-api==0.46.5
+chgnet==0.4.2

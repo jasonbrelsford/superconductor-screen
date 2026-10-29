@@ -74,8 +74,10 @@ def generate(train_df):
                 for v in variants:
                     f = _fmt(v)
                     if f not in known and f not in out:
+                        x = 1.0 if not v.get(sym) else round(1 - v[sym] / a, 3)
                         out[f] = {"parent": row["reduced"], "parent_Tc": float(row["Tc"]),
-                                  "change": f"{sym} partly -> {sub}" if v.get(sym) else f"{sym} -> {sub}"}
+                                  "change": f"{sym} partly -> {sub}" if v.get(sym) else f"{sym} -> {sub}",
+                                  "swaps": [(sym, sub, x)]}
     return out
 
 
@@ -122,5 +124,6 @@ def explore(train_df, seed, per_parent=40):
             f = _fmt(d)
             if f not in known and f not in out:
                 out[f] = {"parent": row["reduced"], "parent_Tc": float(row["Tc"]),
-                          "change": f"{s1} {'->' if x1 >= 1 else 'partly ->'} {t1}; {s2} {'->' if x2 >= 1 else 'partly ->'} {t2}"}
+                          "change": f"{s1} {'->' if x1 >= 1 else 'partly ->'} {t1}; {s2} {'->' if x2 >= 1 else 'partly ->'} {t2}",
+                          "swaps": [(s1, t1, x1), (s2, t2, x2)]}
     return out

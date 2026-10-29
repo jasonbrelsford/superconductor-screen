@@ -11,16 +11,17 @@ import numpy as np
 import pandas as pd
 from pymatgen.core import Composition
 
-from sc import candidates, data, model, stability
+from sc import candidates, data, model, structure
 from sc.features import featurize
 
 TOP = 50
 PER_PARENT = 2          # at most two candidates built from the same parent compound per list
-STABILITY_CHECKS = 150
+STRUCTURE_CHECKS_PER_RUN = 12      # CHGNet stability calculations per run (results are kept across runs)
+STRUCTURE_BUDGET_S = 75 * 60
 LEADERBOARD_MIN_SCORE = 80.0   # keep candidates scoring at least this (K) on the running leaderboard
 ROOT = os.path.dirname(os.path.abspath(__file__))
 COLS = ["formula", "first_seen", "pred_Tc_K", "uncertainty_K", "score", "vs_parent_K", "parent", "parent_Tc", "change",
-        "stability", "e_above_hull_eV"]
+        "stability", "e_above_hull_eV", "computed_as"]
 
 
 def is_cuprate(formula):
@@ -54,6 +55,7 @@ def main():
     res["score"] = (res["pred_Tc_K"] - res["uncertainty_K"]).round(1)   # conservative: mean minus spread
     for k in ("parent", "parent_Tc", "change"):
         res[k] = [cands[f][k] for f in forms]
+    res["swaps"] = [json.dumps(cands[f]["swaps"]) for f in forms]
     res["system"] = res["formula"].map(model.chemsys)
     # Only element combinations nobody has measured yet: a 1% tweak of a known compound tells us nothing.
     known_systems = set(df["reduced"].map(model.chemsys))
@@ -67,6 +69,17 @@ def main():
         res = pd.concat([old, res[~res["formula"].isin(set(old["formula"]))]], ignore_index=True)
     for c in ("pred_Tc_K", "uncertainty_K", "score", "parent_Tc"):
         res[c] = res[c].astype(float).round(1)
+    # Rows from earlier runs: rebuild the swap list from the change text ("Sr -> Ba; Pb partly -> Tl").
+    def swaps_from_change(ch):
+        out = []
+        for part in str(ch).split(";"):
+            a, _, b = part.strip().partition(" -> ") if " partly -> " not in part else part.strip().partition(" partly -> ")
+            out.append([a.strip(), b.strip(), 0.5 if "partly" in part else 1.0])
+        return json.dumps(out)
+    if "swaps" not in res:
+        res["swaps"] = None
+    miss = res["swaps"].isna()
+    res.loc[miss, "swaps"] = res.loc[miss, "change"].map(swaps_from_change)
     os.makedirs(os.path.dirname(board_path), exist_ok=True)
     keep = res[res["score"] >= LEADERBOARD_MIN_SCORE]   # the file keeps strong ones; today's lists use everything
     keep.drop(columns=[c for c in ("vs_parent_K", "gain_score", "cuprate") if c in keep]).to_csv(board_path, index=False, float_format="%.4g")
@@ -84,28 +97,70 @@ def main():
                        pick(res, "score", ~res["cuprate"])),
     }
 
-    to_check = []
-    for _, _, t in lists.values():
-        to_check += [f for f in t["formula"] if f not in to_check]
-    stab = stability.check(to_check[:STABILITY_CHECKS])
-    for _, _, t in lists.values():
-        if stab is None:
-            t["stability"] = "not checked yet"
-            t["e_above_hull_eV"] = ""
-        else:
-            t["stability"] = [stab.get(f, {}).get("status", "not checked") for f in t["formula"]]
-            t["e_above_hull_eV"] = [stab.get(f, {}).get("e_above_hull", "") for f in t["formula"]]
+    # Stability: CHGNet on a real crystal structure, for full substitutions; kept across runs.
+    checks_path = os.path.join(ROOT, "results", "structure_checks.json")
+    checks = json.load(open(checks_path)) if os.path.exists(checks_path) else {}
+    swaps_of = dict(zip(res["formula"], res["swaps"]))
+    queue = []
+    for _, _, tl in lists.values():
+        for f, parent in zip(tl["formula"], tl["parent"]):
+            sw = swaps_of.get(f)
+            if f in checks or not isinstance(sw, str) or any(x < 1.0 for _, _, x in json.loads(sw)):
+                continue
+            if (f, parent) not in queue:
+                queue.append((f, parent))
+    key = os.environ.get("MP_API_KEY", "").strip()
+    if key and queue:
+        chk = structure.Checker(key, os.path.join(ROOT, "results", "chgnet_cache.json"), STRUCTURE_BUDGET_S)
+        try:
+            for f, parent in queue[:STRUCTURE_CHECKS_PER_RUN]:
+                if chk.time_left() < 300:
+                    break
+                try:
+                    r = chk.check(parent, [tuple(s) for s in json.loads(swaps_of[f])])
+                except TimeoutError:
+                    break
+                except Exception as ex:   # one bad structure must not stop the run
+                    r = {"status": f"calculation failed ({type(ex).__name__})"}
+                r["checked"] = today
+                checks[f] = r
+                print("structure check:", f, r)
+        finally:
+            chk.close()
+        json.dump(checks, open(checks_path, "w"), indent=1, sort_keys=True)
+
+    def stab(f):
+        if f in checks:
+            return checks[f]
+        sw = swaps_of.get(f)
+        if isinstance(sw, str) and any(x < 1.0 for _, _, x in json.loads(sw)):
+            return {"status": "doped: not computed"}
+        return {"status": "queued" if key else "not checked (no key)"}
+
+    for _, _, tl in lists.values():
+        tl["stability"] = [stab(f)["status"] for f in tl["formula"]]
+        tl["e_above_hull_eV"] = [stab(f).get("e_above_hull_eV", "") for f in tl["formula"]]
+        tl["computed_as"] = [stab(f).get("computed_as", "") for f in tl["formula"]]
+    ok = res[res["formula"].isin({f for f, r in checks.items() if r.get("status") == "plausible"})]
+    pl = pick(ok, "score")
+    if len(pl):
+        pl["stability"] = "plausible"
+        pl["e_above_hull_eV"] = [checks[f]["e_above_hull_eV"] for f in pl["formula"]]
+        pl["computed_as"] = [checks[f]["computed_as"] for f in pl["formula"]]
+        lists = {"plausible": ("High Tc and plausibly makeable",
+                               "Candidates whose substituted crystal structure CHGNet puts within 0.1 eV/atom of the convex hull. The best place to start.", pl), **lists}
+    stab_done = len(checks)
 
     outdir = os.path.join(ROOT, "results", today)
     os.makedirs(outdir, exist_ok=True)
     for key, (_, _, t) in lists.items():
         t[COLS].to_csv(os.path.join(outdir, f"{key}.csv"), index=False)
     summary = {"date": today, "metrics": metrics, "n_candidates_new_systems": int(len(res)),
-               "stability_checked": stab is not None,
+               "structure_checks": stab_done,
                "lists": {k: t[COLS].head(10).to_dict("records") for k, (_, _, t) in lists.items()}}
     with open(os.path.join(ROOT, "results", "latest.json"), "w") as f:
         json.dump(summary, f, indent=1, default=str)
-    write_site(today, metrics, len(res), lists, stab is not None)
+    write_site(today, metrics, len(res), lists, stab_done)
 
 
 def table(t):
@@ -118,10 +173,12 @@ def table(t):
 def write_site(today, metrics, n, lists, checked):
     e = html.escape
     g, rcv = metrics["grouped_cv"], metrics["random_cv"]
-    stab_note = ("Candidates were checked against the Materials Project: 'near hull' means a computed structure of "
-                 "that composition is thermodynamically plausible; 'not in Materials Project' means nobody has computed "
-                 "its structure, so stability is unknown." if checked else
-                 "Stability has not been checked yet (the Materials Project key is not set up).")
+    stab_note = (f"Stability: for full element swaps, the swap is applied to the parent's real crystal structure from "
+                 f"the Materials Project, relaxed with the CHGNet machine-learned potential, and compared with every "
+                 f"stable competing phase computed the same way ({checked} candidates checked so far, a few more each run). "
+                 f"'plausible' means within 0.1 eV/atom of the convex hull; 'computed_as' is the formula actually "
+                 f"calculated, which follows the real structure (oxygen counts in the training data are often loose). "
+                 f"Doped formulas are not computed.")
     sections = "".join(f"<h2>{e(title)}</h2><p class='mute'>{e(desc)}</p>{table(t)}" for title, desc, t in lists.values())
     page = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
