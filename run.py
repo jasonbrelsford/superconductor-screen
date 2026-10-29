@@ -85,14 +85,19 @@ def main():
     keep = res[res["score"] >= LEADERBOARD_MIN_SCORE]   # the file keeps strong ones; today's lists use everything
     keep.drop(columns=[c for c in ("vs_parent_K", "gain_score", "cuprate") if c in keep]).to_csv(board_path, index=False, float_format="%.4g")
     res["vs_parent_K"] = (res["pred_Tc_K"] - res["parent_Tc"]).round(1)
-    res["gain_score"] = res["vs_parent_K"] - res["uncertainty_K"]
+    # The bar for a gain is the best measured Tc of the parent or of any known compound with the
+    # same main elements; formulas no oxidation states can balance (source-data typos) are dropped.
+    recs = hits.records(df)
+    res = res[res["formula"].map(hits.charge_ok)].copy()
+    bar = np.maximum(res["parent_Tc"].astype(float), res["formula"].map(lambda f: recs.get(hits.family(f), 0.0)))
+    res["gain_score"] = res["score"] - bar
     res["cuprate"] = res["formula"].map(is_cuprate) | res["parent"].map(is_cuprate)
     print(f"leaderboard size: {len(res)}")
 
     lists = {
         "highest": ("Highest predicted Tc", "New element combinations with the highest conservative score. Mostly cuprates, as in real high-Tc research.",
                     pick(res, "score")),
-        "gain": ("Biggest predicted gain over the parent", "Substitutions the model expects to raise Tc above the compound they came from, after subtracting uncertainty.",
+        "gain": ("Biggest predicted gain over the known record", "Substitutions the model expects to beat both the compound they came from and the best measured Tc of their element family, after subtracting uncertainty.",
                  pick(res, "gain_score", res["gain_score"] > 0)),
         "noncuprate": ("Best outside the cuprates", "No copper-oxide layers: iron pnictides, borides, hydrides, nickelates and others.",
                        pick(res, "score", ~res["cuprate"])),
@@ -113,7 +118,8 @@ def main():
     for name in ("gain", "noncuprate", "highest"):
         tl = lists[name][2]
         per_list.append([(f, p) for f, p in zip(tl["formula"], tl["parent"])
-                         if f not in checks and f not in tower and isinstance(swaps_of.get(f), str)])
+                         if f not in checks and f not in tower and isinstance(swaps_of.get(f), str)
+                         and hits.charge_ok(f) and not hits.high_pressure(f)])
     queue = []
     for i in range(max(map(len, per_list), default=0)):
         for items in per_list:
@@ -140,7 +146,7 @@ def main():
             chk.close()
         json.dump(checks, open(checks_path, "w"), indent=1, sort_keys=True)
     checks = {**tower, **checks}   # TOWER's deep checks are published alongside this run's
-    new_hits = hits.find(res, checks)
+    new_hits = hits.find(res, checks, recs)
     hits.notify(new_hits)
     print(f"new hits: {len(new_hits)}")
 

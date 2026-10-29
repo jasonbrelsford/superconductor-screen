@@ -17,7 +17,7 @@ import time
 
 import pandas as pd
 
-from sc import hits, structure
+from sc import data, hits, structure
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "results", "structure_checks_tower.json")
@@ -90,7 +90,7 @@ def main():
         json.dump(mine, open(OUT, "w"), indent=1, sort_keys=True)
         db.close()
 
-    new_hits = hits.find(board, mine)
+    new_hits = hits.find(board, mine, hits.records(data.load()))
     hits.notify(new_hits)
     git("add", "results/structure_checks_tower.json", "results/chgnet_cache.json", "results/hits.json")
     if git("diff", "--cached", "--quiet").returncode:
