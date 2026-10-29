@@ -43,13 +43,14 @@ def main():
     print("metrics:", metrics)
 
     cands = candidates.generate(df)
-    fresh = candidates.explore(df, seed=dt.date.fromisoformat(today).toordinal())
+    seed = int(dt.datetime.now(dt.timezone.utc).strftime("%Y%m%d%H"))   # new batch every run, reproducible from the hour
+    fresh = candidates.explore(df, seed=seed)
     print(f"single substitutions: {len(cands)}, today's random double substitutions: {len(fresh)}")
     cands.update({f: v for f, v in fresh.items() if f not in cands})
     forms = list(cands)
     X = np.vstack([featurize(f, elements) for f in forms])
     mean, std = model.predict(models, X)
-    res = pd.DataFrame({"formula": forms, "pred_Tc_K": mean.round(1), "uncertainty_K": std.round(1)})
+    res = pd.DataFrame({"formula": forms, "pred_Tc_K": np.round(mean.astype(float), 1), "uncertainty_K": np.round(std.astype(float), 1)})
     res["score"] = (res["pred_Tc_K"] - res["uncertainty_K"]).round(1)   # conservative: mean minus spread
     for k in ("parent", "parent_Tc", "change"):
         res[k] = [cands[f][k] for f in forms]
@@ -64,9 +65,11 @@ def main():
     if os.path.exists(board_path):
         old = pd.read_csv(board_path)
         res = pd.concat([old, res[~res["formula"].isin(set(old["formula"]))]], ignore_index=True)
-    res = res[res["score"] >= LEADERBOARD_MIN_SCORE].copy()
+    for c in ("pred_Tc_K", "uncertainty_K", "score", "parent_Tc"):
+        res[c] = res[c].astype(float).round(1)
     os.makedirs(os.path.dirname(board_path), exist_ok=True)
-    res.drop(columns=[c for c in ("vs_parent_K", "gain_score", "cuprate") if c in res]).to_csv(board_path, index=False)
+    keep = res[res["score"] >= LEADERBOARD_MIN_SCORE]   # the file keeps strong ones; today's lists use everything
+    keep.drop(columns=[c for c in ("vs_parent_K", "gain_score", "cuprate") if c in keep]).to_csv(board_path, index=False, float_format="%.4g")
     res["vs_parent_K"] = (res["pred_Tc_K"] - res["parent_Tc"]).round(1)
     res["gain_score"] = res["vs_parent_K"] - res["uncertainty_K"]
     res["cuprate"] = res["formula"].map(is_cuprate) | res["parent"].map(is_cuprate)
