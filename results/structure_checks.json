@@ -49,6 +49,24 @@
   "match": 0.021,
   "status": "plausible"
  },
+ "Ba1.6Sr0.4Ca2Tl0.08Cu3Hg0.72Bi0.2O8.2": {
+  "cell_atoms": 128,
+  "checked": "2026-10-29",
+  "computed_as": "Ba13Sr3Ca16TlCu24Hg5(BiO32)2",
+  "e_above_hull_eV": 0.024,
+  "host": "mp-22601",
+  "match": 0.03,
+  "status": "plausible"
+ },
+ "Ba1.8Sr0.2Ca1.8Mg0.2Tl0.75Cu3O1": {
+  "cell_atoms": 84,
+  "checked": "2026-10-29",
+  "computed_as": "Ba9SrCa10MgTl4Cu15O44",
+  "e_above_hull_eV": 0.024,
+  "host": "mp-1228589",
+  "match": 0.042,
+  "status": "plausible"
+ },
  "Ba1.8Sr0.2Ca1.98Cu2.9Sn0.034Hg0.66Pb0.306O8.4": {
   "cell_atoms": 96,
   "checked": "2026-10-29",
@@ -144,6 +162,18 @@
   "checked": "2026-10-29",
   "status": "no host structure in Materials Project"
  },
+ "Ba2Ca1.8Mg0.2Cu3Hg0.9Pt0.01Au0.09O1": {
+  "cell_atoms": 128,
+  "checked": "2026-10-29",
+  "computed_as": "Ba16Ca14Mg2Cu24Hg7AuO64",
+  "e_above_hull_eV": 0.015,
+  "host": "mp-22601",
+  "match": 0.021,
+  "omitted": [
+   "Pt"
+  ],
+  "status": "plausible"
+ },
  "Ba2Ca1.8Mg0.2Tl0.08Cu3Hg0.72Bi0.2O8.2": {
   "cell_atoms": 128,
   "checked": "2026-10-29",
@@ -160,6 +190,19 @@
   "e_above_hull_eV": 0.038,
   "host": "mp-1228589",
   "match": 0.047,
+  "status": "plausible"
+ },
+ "Ba2Ca1.975La0.0025Yb0.0225Cu3Hg1O9": {
+  "cell_atoms": 108,
+  "checked": "2026-10-29",
+  "computed_as": "Ba13Ca13Cu19(Hg2O19)3",
+  "e_above_hull_eV": 0.078,
+  "host": "mp-542197",
+  "match": 0.026,
+  "omitted": [
+   "La",
+   "Yb"
+  ],
   "status": "plausible"
  },
  "Ba2Ca1.98Cu2.9Sn0.068Hg0.66Pb0.272O8.4": {
@@ -191,11 +234,6 @@
   "match": 0.006,
   "status": "plausible"
  },
- "Ba2Ca2Cu3Hg0.665Bi0.01Sb0.04Au0.285O8": {
-  "checked": "2026-10-29",
-  "host": "mp-22601",
-  "status": "doping level needs too large a cell"
- },
  "Ba2Ca2Cu3Hg0.75C0.016N0.004O1": {
   "checked": "2026-10-29",
   "status": "no host structure in Materials Project"
@@ -209,12 +247,28 @@
   "match": 0.004,
   "status": "plausible"
  },
- "Ba2Ca2Cu3Hg0.8Mo0.16W0.04O8.4": {
+ "Ba2Ca2Cu3Hg0.8Bi0.2O8.1F0.9": {
+  "cell_atoms": 84,
   "checked": "2026-10-29",
-  "host": "mp-22601",
-  "status": "doping level needs too large a cell"
+  "computed_as": "Ba10Ca10Cu15Hg4Bi(O10F)4",
+  "e_above_hull_eV": 0.098,
+  "host": "mp-1228589",
+  "match": 0.0,
+  "status": "plausible"
  },
- "Ba2Ca2Cu3Hg0.95Sb0.04As0.01O8": {
+ "Ba2Ca2Cu3Hg0.8Mo0.16W0.04O8.4": {
+  "cell_atoms": 96,
+  "checked": "2026-10-29",
+  "computed_as": "Ba12Ca12Cu18Hg5MoO48",
+  "e_above_hull_eV": 0.054,
+  "host": "mp-22601",
+  "match": 0.01,
+  "omitted": [
+   "W"
+  ],
+  "status": "plausible"
+ },
+ "Ba2Ca2Cu3Hg0.95Sb0.045As0.005O8": {
   "checked": "2026-10-29",
   "host": "mp-22601",
   "status": "doping level needs too large a cell"
@@ -232,10 +286,26 @@
   "checked": "2026-10-29",
   "status": "no host structure in Materials Project"
  },
- "Ba2Ca2Cu3Re0.16Hg0.8Os0.04O8": {
+ "Ba2Ca2Cu3Re0.15Hg0.68Au0.17O8": {
+  "cell_atoms": 96,
   "checked": "2026-10-29",
+  "computed_as": "Ba12Ca12Cu18ReHg4AuO48",
+  "e_above_hull_eV": 0.064,
   "host": "mp-22601",
-  "status": "doping level needs too large a cell"
+  "match": 0.004,
+  "status": "plausible"
+ },
+ "Ba2Ca2Cu3Re0.18Hg0.8Os0.02O8": {
+  "cell_atoms": 96,
+  "checked": "2026-10-29",
+  "computed_as": "Ba12Ca12Cu18ReHg5O48",
+  "e_above_hull_eV": 0.072,
+  "host": "mp-22601",
+  "match": 0.008,
+  "omitted": [
+   "Os"
+  ],
+  "status": "plausible"
  },
  "Ba2Ca2Cu3Re0.18Hg0.8W0.02O8": {
   "cell_atoms": 96,
@@ -252,6 +322,11 @@
  "Ba2Ca2Cu3Re0.25Hg0.75O0.8F0.2": {
   "checked": "2026-10-29",
   "status": "no host structure in Materials Project"
+ },
+ "Ba2Ca2Cu3Sn0.005Hg0.95Sb0.045O8": {
+  "checked": "2026-10-29",
+  "host": "mp-22601",
+  "status": "doping level needs too large a cell"
  },
  "Ba2Ca2Nb0.005Cu3Hg0.95Mo0.045O1": {
   "checked": "2026-10-29",
@@ -270,31 +345,81 @@
   "status": "plausible"
  },
  "Ba2Ca2Nb0.06Tl0.08Cu3Hg0.72Mo0.14O8.4": {
+  "cell_atoms": 128,
   "checked": "2026-10-29",
+  "computed_as": "Ba16Ca16TlCu24Hg6MoO64",
+  "e_above_hull_eV": 0.043,
   "host": "mp-22601",
-  "status": "doping level needs too large a cell"
+  "match": 0.019,
+  "omitted": [
+   "Nb"
+  ],
+  "status": "plausible"
  },
  "Ba2Ca2Nd0.14Lu0.06Tl0.08Cu3Hg0.72O8.3": {
+  "cell_atoms": 128,
   "checked": "2026-10-29",
+  "computed_as": "Ba16Ca16NdTlCu24(Hg3O32)2",
+  "e_above_hull_eV": 0.032,
   "host": "mp-22601",
-  "status": "doping level needs too large a cell"
+  "match": 0.019,
+  "omitted": [
+   "Lu"
+  ],
+  "status": "plausible"
  },
  "Ba2Ca2Tb0.06Nd0.14Cu3Hg0.72Au0.08O8.3": {
+  "cell_atoms": 128,
   "checked": "2026-10-29",
+  "computed_as": "Ba16Ca16NdCu24Hg6AuO64",
+  "e_above_hull_eV": 0.03,
   "host": "mp-22601",
-  "status": "doping level needs too large a cell"
+  "match": 0.019,
+  "omitted": [
+   "Tb"
+  ],
+  "status": "plausible"
  },
  "Ba2Ca2Tl0.08Cu3Hg0.72Bi0.015Sb0.05Pb0.135O8": {
+  "cell_atoms": 128,
   "checked": "2026-10-29",
+  "computed_as": "Ba16Ca16TlCu24Hg6PbO64",
+  "e_above_hull_eV": 0.009,
   "host": "mp-22601",
-  "status": "doping level needs too large a cell"
+  "match": 0.019,
+  "omitted": [
+   "Bi",
+   "Sb"
+  ],
+  "status": "plausible"
  },
  "Ba2Ca2Tl0.08Cu3Sn0.015Hg0.72Sb0.05Pb0.135O8": {
+  "cell_atoms": 128,
   "checked": "2026-10-29",
+  "computed_as": "Ba16Ca16TlCu24Hg6PbO64",
+  "e_above_hull_eV": 0.009,
   "host": "mp-22601",
-  "status": "doping level needs too large a cell"
+  "match": 0.019,
+  "omitted": [
+   "Sb",
+   "Sn"
+  ],
+  "status": "plausible"
+ },
+ "Ba2Ca2Tl0.08V0.2Cu3Hg0.72O8.3": {
+  "cell_atoms": 128,
+  "checked": "2026-10-29",
+  "computed_as": "Ba16Ca16TlV2Cu24Hg5O64",
+  "e_above_hull_eV": 0.085,
+  "host": "mp-22601",
+  "match": 0.024,
+  "status": "plausible"
  },
  "Ba2Ca2Tl0.095Cu3Hg0.855Mo0.05O1": {
+  "checked": "2026-10-29",
+  "status": "no host structure in Materials Project"
+ },
+ "Ba2Ca2Tl0.2Cu3Hg0.8N1.6O6.4F1": {
   "checked": "2026-10-29",
   "status": "no host structure in Materials Project"
  },

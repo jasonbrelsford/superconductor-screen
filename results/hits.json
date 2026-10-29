@@ -9,6 +9,16 @@
   "pred_Tc_K": 127.0,
   "score": 125.7
  },
+ "Ba2Ca2Cu3Hg0.8Bi0.2O8.1F0.9": {
+  "by": "github",
+  "change": "Tl -> Hg; O partly -> F",
+  "computed_as": "Ba10Ca10Cu15Hg4Bi(O10F)4",
+  "e_above_hull_eV": 0.098,
+  "found": "2026-10-29",
+  "parent": "Ba2Ca2Tl0.8Cu3Bi0.2O9",
+  "pred_Tc_K": 130.0,
+  "score": 122.6
+ },
  "Ba2Ca2Nb0.02V0.18Cu3Hg0.8O8.3": {
   "by": "github",
   "change": "V partly -> Nb",
@@ -17,6 +27,36 @@
   "found": "2026-10-29",
   "parent": "Ba2Ca2V0.2Cu3Hg0.8O8.3",
   "pred_Tc_K": 126.4,
+  "score": 125.5
+ },
+ "Ba2Ca2Nd0.14Lu0.06Tl0.08Cu3Hg0.72O8.3": {
+  "by": "github",
+  "change": "Nd partly -> Lu; Hg partly -> Tl",
+  "computed_as": "Ba16Ca16NdTlCu24(Hg3O32)2",
+  "e_above_hull_eV": 0.032,
+  "found": "2026-10-29",
+  "parent": "Ba2Ca2Nd0.2Cu3Hg0.8O8.3",
+  "pred_Tc_K": 131.2,
+  "score": 129.3
+ },
+ "Ba2Ca2Tb0.06Nd0.14Cu3Hg0.72Au0.08O8.3": {
+  "by": "github",
+  "change": "Hg partly -> Au; Nd partly -> Tb",
+  "computed_as": "Ba16Ca16NdCu24Hg6AuO64",
+  "e_above_hull_eV": 0.03,
+  "found": "2026-10-29",
+  "parent": "Ba2Ca2Nd0.2Cu3Hg0.8O8.3",
+  "pred_Tc_K": 130.7,
+  "score": 129.2
+ },
+ "Ba2Ca2Tl0.08V0.2Cu3Hg0.72O8.3": {
+  "by": "github",
+  "change": "Hg partly -> Tl",
+  "computed_as": "Ba16Ca16TlV2Cu24Hg5O64",
+  "e_above_hull_eV": 0.085,
+  "found": "2026-10-29",
+  "parent": "Ba2Ca2V0.2Cu3Hg0.8O8.3",
+  "pred_Tc_K": 126.2,
   "score": 125.5
  }
 }
