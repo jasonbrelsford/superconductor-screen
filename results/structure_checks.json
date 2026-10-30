@@ -127,6 +127,17 @@
   "match": 0.017,
   "status": "plausible"
  },
+ "Ba1.8Sr0.2Ca2Cu3Hg0.8Au0.2O8F1": {
+  "cell_atoms": 96,
+  "checked": "2026-10-30",
+  "computed_as": "Ba11SrCa12Cu18Hg5AuO43F5",
+  "e_above_hull_eV": 0.046,
+  "host": "mp-22601",
+  "host_e_above_hull_eV": -0.003,
+  "match": 0.017,
+  "method": 5,
+  "status": "plausible"
+ },
  "Ba1.8Sr0.2Ca2Cu3Hg0.8Mo0.14W0.06O8.4": {
   "cell_atoms": 96,
   "checked": "2026-10-29",
@@ -159,6 +170,17 @@
   "host": "mp-22601",
   "match": 0.036,
   "status": "plausible"
+ },
+ "Ba1Ca1Tl1Cu1N1.5O3.5": {
+  "cell_atoms": 35,
+  "checked": "2026-10-30",
+  "computed_as": "Ba4Ca4Tl4Cu4N6O13",
+  "e_above_hull_eV": 0.521,
+  "host": "mp-1228463",
+  "host_e_above_hull_eV": 0.006,
+  "match": 0.0,
+  "method": 5,
+  "status": "likely unstable"
  },
  "Ba1Ca1Tl1Cu1O4.5F0.5": {
   "cell_atoms": 35,
@@ -203,6 +225,17 @@
   "omitted": [
    "Nd"
   ],
+  "status": "plausible"
+ },
+ "Ba2Ca0.65Gd0.35V0.32Cr0.08Cu2Pb0.6O1": {
+  "cell_atoms": 117,
+  "checked": "2026-10-30",
+  "computed_as": "Ba18Ca6Gd3Tl2V3CrCu18(PbO21)3",
+  "e_above_hull_eV": 0.053,
+  "host": "mp-20824",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.094,
+  "method": 5,
   "status": "plausible"
  },
  "Ba2Ca0.65Gd0.35V0.4Cu2Pb0.6O1": {
@@ -367,6 +400,17 @@
   "method": 5,
   "status": "closest host too different (BaSr(CuO2)2)"
  },
+ "Ba2Ca1Tl0.8Cu2Mo0.2S0.7O6.3": {
+  "cell_atoms": 78,
+  "checked": "2026-10-30",
+  "computed_as": "Ba12Ca6Tl5Cu12Mo(S2O19)2",
+  "e_above_hull_eV": 0.249,
+  "host": "mp-20824",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.011,
+  "method": 5,
+  "status": "likely unstable"
+ },
  "Ba2Ca2Cu2.7Ag0.3Hg0.7Bi0.3O8.15": {
   "cell_atoms": 48,
   "checked": "2026-10-30",
@@ -410,6 +454,17 @@
   "match": 0.004,
   "status": "plausible"
  },
+ "Ba2Ca2Cu3Hg0.8Au0.2O8F1": {
+  "cell_atoms": 96,
+  "checked": "2026-10-30",
+  "computed_as": "Ba12Ca12Cu18Hg5AuO43F5",
+  "e_above_hull_eV": 0.045,
+  "host": "mp-22601",
+  "host_e_above_hull_eV": -0.003,
+  "match": 0.008,
+  "method": 5,
+  "status": "plausible"
+ },
  "Ba2Ca2Cu3Hg0.8Bi0.2O8.1F0.9": {
   "cell_atoms": 84,
   "checked": "2026-10-29",
@@ -444,6 +499,12 @@
    "W"
   ],
   "status": "plausible"
+ },
+ "Ba2Ca2Cu3Hg0.95Sb0.04As0.01O8": {
+  "checked": "2026-10-30",
+  "host": "mp-22601",
+  "method": 5,
+  "status": "doping level needs too large a cell"
  },
  "Ba2Ca2Cu3Hg0.9Pt0.1O1": {
   "cell_atoms": 128,
@@ -821,12 +882,33 @@
   "method": 5,
   "status": "closest host too different (SrCa3(PbO4)2)"
  },
+ "Sr2Ca1.6Mg0.4Bi1.6Sb0.4O1": {
+  "cell_atoms": 42,
+  "checked": "2026-10-30",
+  "computed_as": "Sr6Ca5MgBi5SbO24",
+  "e_above_hull_eV": 0.033,
+  "host": "mp-1218368",
+  "host_e_above_hull_eV": 0.005,
+  "match": 0.044,
+  "method": 5,
+  "status": "plausible"
+ },
+ "Sr2Ca2.65Dy0.35Tl0.16Hg0.64Mo0.2O6": {
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (SrCaO2)"
+ },
  "Sr2Ca2.65La0.35Tl0.24Hg0.56Mo0.2O6": {
   "checked": "2026-10-30",
   "method": 5,
   "status": "closest host too different (SrCaO2)"
  },
  "Sr2Ca2.65Pr0.35Tl0.24Hg0.56Mo0.2O6": {
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (SrCaO2)"
+ },
+ "Sr2Ca2.65Y0.35Nb0.06Tl0.24Hg0.56Mo0.14O6": {
   "checked": "2026-10-30",
   "method": 5,
   "status": "closest host too different (SrCaO2)"
