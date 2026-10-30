@@ -3,3 +3,4 @@ data/
 __pycache__/
 site/
 tower_deep_check.cmd
+shard_out/

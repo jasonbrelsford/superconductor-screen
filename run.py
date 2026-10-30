@@ -17,8 +17,9 @@ from sc.features import featurize
 TOP = 50
 PER_PARENT = 2          # at most two candidates built from the same parent compound per list
 METHOD = 5                          # bump when the stability check changes, to redo host failures
-STRUCTURE_CHECKS_PER_RUN = 45      # CHGNet stability calculations per run (results are kept across runs)
-STRUCTURE_BUDGET_S = 100 * 60
+STRUCTURE_CHECKS_PER_RUN = int(os.environ.get("STRUCTURE_CHECKS_PER_RUN", 45))   # in this job
+STRUCTURE_BUDGET_S = int(os.environ.get("STRUCTURE_BUDGET_S", 100 * 60))
+SHARD_QUEUE = int(os.environ.get("SHARD_QUEUE", 240))   # queue left for the next run's parallel workers
 LEADERBOARD_MIN_SCORE = 80.0   # keep candidates scoring at least this (K) on the running leaderboard
 ROOT = os.path.dirname(os.path.abspath(__file__))
 COLS = ["formula", "first_seen", "pred_Tc_K", "uncertainty_K", "score", "vs_parent_K", "parent", "parent_Tc", "change",
@@ -110,6 +111,22 @@ def main():
     # added in method 5 only loosens the test); older failures and unstable verdicts are redone.
     checks = {k: v for k, v in checks.items()
               if v.get("method", 0) >= METHOD or (v.get("status") == "plausible" and "match" in v)}
+    # Results from the parallel workers (check_shard.py) that ran just before this job.
+    shard_dir = os.path.join(ROOT, "shard_out")
+    if os.path.isdir(shard_dir):
+        cache_path = os.path.join(ROOT, "results", "chgnet_cache.json")
+        cache = json.load(open(cache_path)) if os.path.exists(cache_path) else {}
+        got = 0
+        for root, _, files in os.walk(shard_dir):
+            for fn in sorted(files):
+                part = json.load(open(os.path.join(root, fn)))
+                if fn.startswith("checks_"):
+                    checks.update(part)
+                    got += len(part)
+                elif fn.startswith("cache_"):
+                    cache.update(part)
+        json.dump(cache, open(cache_path, "w"), indent=0, sort_keys=True)
+        print(f"merged {got} checks from parallel workers")
     tower_path = os.path.join(ROOT, "results", "structure_checks_tower.json")
     tower = json.load(open(tower_path)) if os.path.exists(tower_path) else {}
     swaps_of = dict(zip(res["formula"], res["swaps"]))
@@ -126,6 +143,10 @@ def main():
         for items in per_list:
             if i < len(items) and items[i] not in queue:
                 queue.append(items[i])
+    # What this job will not reach goes to the next run's parallel workers.
+    rest = queue[STRUCTURE_CHECKS_PER_RUN:STRUCTURE_CHECKS_PER_RUN + SHARD_QUEUE]
+    json.dump([{"formula": f, "parent": p, "swaps": json.loads(swaps_of[f])} for f, p in rest],
+              open(os.path.join(ROOT, "results", "queue.json"), "w"), indent=0)
     key = os.environ.get("MP_API_KEY", "").strip()
     if key and queue:
         chk = structure.Checker(key, os.path.join(ROOT, "results", "chgnet_cache.json"), STRUCTURE_BUDGET_S)

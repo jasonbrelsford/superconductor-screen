@@ -16,7 +16,38 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Parallel stability checks on the queue the previous run left (results/queue.json). Public
+  # repo, so these minutes are free; six workers multiply the checks per run by about seven.
+  shards:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install -r requirements.txt
+      - name: Check this shard's slice of the queue
+        env:
+          MP_API_KEY: ${{ secrets.MP_API_KEY }}
+        run: python check_shard.py ${{ matrix.shard }} 6
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: shard-${{ matrix.shard }}
+          path: shard_out
+          if-no-files-found: ignore
+          retention-days: 3
+
   screen:
+    needs: shards
+    if: always()
     runs-on: ubuntu-latest
     timeout-minutes: 150
     steps:
@@ -27,10 +58,17 @@ jobs:
           cache: pip
       - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
       - run: pip install -r requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: shard-*
+          path: shard_out
+        continue-on-error: true
       - name: Run the screen
         env:
           MP_API_KEY: ${{ secrets.MP_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STRUCTURE_CHECKS_PER_RUN: "20"
+          STRUCTURE_BUDGET_S: "3000"
         run: python run.py
       - name: Commit this run's results
         run: |
