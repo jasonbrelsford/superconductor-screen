@@ -1,51 +1,51 @@
 formula,first_seen,pred_Tc_K,uncertainty_K,score,vs_parent_K,parent,parent_Tc,change,stability,e_above_hull_eV,computed_as
-Ba2Ca3Lu1Tl0.3Cu4Pb0.7O1,2026-10-30,107.9,2.9,105.0,74.9,Sr2Ca3LuCu4PbO,33.0,Pb partly -> Tl; Sr -> Ba,closest host too different (SrCa(CuO2)2),,
-Ba2Ca3LuCu4BiO,2026-10-30,109.1,4.5,104.6,76.1,Sr2Ca3LuCu4PbO,33.0,Pb -> Bi; Sr -> Ba,closest host too different (SrCa(CuO2)2),,
-Ba2Ca3TbTlCu4O,2026-10-29,104.5,1.7,102.8,68.5,Sr2Ca3TbCu4PbO,36.0,Sr -> Ba; Pb -> Tl,closest host too different (SrCa(CuO2)2),,
 Ba2CaCu2Sn2O,2026-10-29,95.3,5.0,90.3,70.3,Ba2CaCu2SbPbO,25.0,Pb -> Sn; Sb -> Sn,closest host too different (Ba4Cu3PbO9),,
-Ba2Ca3TbCu4BiO,2026-10-29,104.3,3.5,100.8,68.3,Sr2Ca3TbCu4PbO,36.0,Sr -> Ba; Pb -> Bi,closest host too different (SrCa(CuO2)2),,
-Ba2Ca3ErCu4PbO,2026-10-30,91.7,6.9,84.8,69.7,Sr2Ca3LaCu4PbO,22.0,Sr -> Ba; La -> Er,closest host too different (SrCa(CuO2)2),,
-Ba2Ca3La0.8Yb0.2Cu4Pb1O1,2026-10-30,86.0,3.4,82.6,64.0,Sr2Ca3LaCu4PbO,22.0,Sr -> Ba; La partly -> Yb,closest host too different (SrCa(CuO2)2),,
 Ba1.4Sr0.6Ca1Tl1Cu2Sb1O1,2026-10-29,91.6,6.2,85.4,66.6,Ba2CaCu2SbPbO,25.0,Pb -> Tl; Ba partly -> Sr,closest host too different (Ba4Cu3PbO9),,
-Ba2Ca0.65Tm0.35V0.4Cu2Pb0.6O1,2026-10-30,91.1,10.4,80.7,65.6,Sr2Ca0.65Sm0.35V0.4Cu2Pb0.6O1,25.5,Sm -> Tm; Sr -> Ba,plausible,0.052,Ba16Ca5Tm3Tl2V3Cu16Pb3O56
-Ba2Ca1Tl0.8Cu2Mo0.2N2.1O4.9,2026-10-30,91.7,3.4,88.3,51.7,Sr2Ca1Tl0.8Cu2Mo0.2O7,40.0,Sr -> Ba; O partly -> N,queued,,
+Ba2Ca3LaCu4SnO,2026-10-29,85.4,3.3,82.1,63.4,Sr2Ca3LaCu4PbO,22.0,Pb -> Sn; Sr -> Ba,closest host too different (SrCa(CuO2)2),,
+Ba2Ca1Tl0.8Cu2Mo0.2N2.1O4.9,2026-10-30,91.7,3.4,88.3,51.7,Sr2Ca1Tl0.8Cu2Mo0.2O7,40.0,Sr -> Ba; O partly -> N,likely unstable,0.438,Ba12Ca6Tl5Cu12MoN13O29
 Ba1Ca1Tl1Cu1N1.5O3.5,2026-10-29,99.7,3.3,96.4,50.7,BaSrTlCuO5,49.0,Sr -> Ca; O partly -> N,likely unstable,0.521,Ba4Ca4Tl4Cu4N6O13
-Ba2Ca0.65Gd0.35V0.4Cu2Pb0.6O1,2026-10-28,92.7,10.0,82.7,56.1,Sr2Ca0.65Gd0.35V0.4Cu2Pb0.6O1,36.6,Sr -> Ba,plausible,0.049,Ba16Ca5Gd3Tl2V3Cu16Pb3O56
-Ba1.3Sr0.7Ca0.5Dy0.5Cu2.6C0.4O4.9F2.1,2026-10-30,80.7,4.8,75.9,50.7,Ba1.3Sr0.7Ca0.5Pr0.5Cu2.6C0.4O7,30.0,O partly -> F; Pr -> Dy,queued,,
-Ba2Ca1Tl0.8Cu2Mo0.2S0.7O6.3,2026-10-29,88.7,3.1,85.6,48.7,Sr2Ca1Tl0.8Cu2Mo0.2O7,40.0,O partly -> S; Sr -> Ba,likely unstable,0.249,Ba12Ca6Tl5Cu12Mo(S2O19)2
-Ba2Ca0.65Gd0.35V0.32Cr0.08Cu2Pb0.6O1,2026-10-28,91.8,9.8,82.0,55.2,Sr2Ca0.65Gd0.35V0.4Cu2Pb0.6O1,36.6,V partly -> Cr; Sr -> Ba,plausible,0.053,Ba18Ca6Gd3Tl2V3CrCu18(PbO21)3
-Ba0.4Sr1.6Ca3Yb1Tl0.3Cu4Pb0.7O1,2026-10-30,94.8,1.5,93.3,46.8,Sr2Ca3YbCu4PbO,48.0,Sr partly -> Ba; Pb partly -> Tl,queued,,
-Ba2Ca3Yb1Cu4Sn0.1Pb0.9O1,2026-10-29,99.3,6.3,93.0,51.3,Sr2Ca3YbCu4PbO,48.0,Sr -> Ba; Pb partly -> Sn,queued,,
-Ba2Ca0.5Gd0.5In0.65Cu2Bi0.35O1,2026-10-28,83.3,3.1,80.2,47.3,Sr2Ca0.5Gd0.5In0.65Cu2Bi0.35O1,36.0,Sr -> Ba,queued,,
-Ba2.1Ca0.16Y0.74Cu2.78P0.066S0.154O7,2026-10-30,76.1,2.1,74.0,46.1,Sr2.1Ca0.16Y0.74Cu2.78S0.22O7,30.0,S partly -> P; Sr -> Ba,queued,,
-Ba2Ca0.65Eu0.35V0.4Cu2Pb0.6O1,2026-10-30,81.3,13.4,67.9,55.8,Sr2Ca0.65Sm0.35V0.4Cu2Pb0.6O1,25.5,Sm -> Eu; Sr -> Ba,queued,,
-Ba2Ca2Cu2.8Bi1.5Pd0.2Pb0.2O1,2026-10-30,101.1,4.8,96.3,47.1,Sr2Ca2Cu2.8Ni0.2Bi1.5Pb0.2O1,54.0,Sr -> Ba; Ni -> Pd,queued,,
+Ba2Ca0.5Gd0.5In0.65Cu2Bi0.35O1,2026-10-28,83.3,3.1,80.2,47.3,Sr2Ca0.5Gd0.5In0.65Cu2Bi0.35O1,36.0,Sr -> Ba,plausible,0.057,Ba12Ca3Gd3In3GaCu12(BiO21)2
+Ba2Ca1Tl0.8Cu1.4Ag0.6Mo0.2O7,2026-10-30,87.0,4.6,82.4,47.0,Sr2Ca1Tl0.8Cu2Mo0.2O7,40.0,Cu partly -> Ag; Sr -> Ba,plausible,0.041,Ba12Ca6Tl5Cu8Ag4MoO42
+Ba1Ca1Tl1Cu1O3.5F1.5,2026-10-29,97.1,6.2,90.9,48.1,BaSrTlCuO5,49.0,O partly -> F; Sr -> Ca,likely unstable,0.136,Ba4Ca4Tl4Cu4O13F6
 Ba2Ca0.6Ho0.4Al1Cu2O7,2026-10-30,69.2,3.7,65.5,45.2,Sr2Ca0.6Ho0.4Al1Cu2O7,24.0,Sr -> Ba,closest host too different (Sr2Ca2Ga(CuO3)3),,
-Ba2La0.9Nd0.1Cu2Hg1O6,2026-10-30,72.0,4.3,67.7,44.0,Sr2LaCu2HgO6,28.0,La partly -> Nd; Sr -> Ba,queued,,
-Ba1.12Ca0.88Cu1.1C0.9N0.49O4.41,2026-10-30,80.3,6.8,73.5,45.3,Ba1.12Sr0.88Cu1.1C0.9O4.9,35.0,O partly -> N; Sr -> Ca,queued,,
-Ba2Ca0.5La0.5Cu2Hg1O5.4F0.6,2026-10-29,94.4,3.4,91.0,41.9,Sr2Ca0.5La0.5Cu2Hg1O6,52.5,Sr -> Ba; O partly -> F,likely unstable,0.129,Ba4CaLaCu4Hg2O13F
-Ba2Ca2Cu2.8Ni0.2Sn0.06Bi1.5Pb0.14O1,2026-10-30,96.1,3.6,92.5,42.1,Sr2Ca2Cu2.8Ni0.2Bi1.5Pb0.2O1,54.0,Pb partly -> Sn; Sr -> Ba,plausible,0.013,Ba16Ca17Cu23NiBi14PbO80
-Ba2Tb0.49Dy0.21Lu0.3Cu3O1,2026-10-30,89.2,0.8,88.4,39.2,Ba2Tb0.7Pr0.3Cu3O1,50.0,Tb partly -> Dy; Pr -> Lu,plausible,0.006,Ba8Tb2DyLu(CuO2)12
-Ba2Tb0.49Eu0.3Lu0.21Cu3O1,2026-10-30,89.5,1.1,88.4,39.5,Ba2Tb0.7Pr0.3Cu3O1,50.0,Tb partly -> Lu; Pr -> Eu,plausible,-0.001,Ba8Tb2EuLu(CuO2)12
+K0.4Ba1.6Cu1N1O5,2026-10-30,66.9,5.2,61.7,43.9,K0.4Sr1.6Cu1C1O5,23.0,Sr -> Ba; C -> N,queued,,
 Ba0.5Ca1.9Y0.4Cu2Bi0.5B0.5O1,2026-10-29,88.2,4.9,83.3,43.2,Ba0.5Sr1.5Ca0.4Y0.4Cu2B0.5Pb0.5O1,45.0,Sr -> Ca; Pb -> Bi,closest host too different (BaSr3Cu8(BO3)8),,
-Ba2Ca3Ce1Cu4Bi0.3Pb0.7O1,2026-10-30,103.8,3.9,99.9,41.8,Sr2Ca3CeCu4PbO,62.0,Pb partly -> Bi; Sr -> Ba,closest host too different (SrCa(CuO2)2),,
-Ba2Gd1Ta0.05Cu2Ru0.95O1,2026-10-30,61.8,3.3,58.5,39.3,Sr2Gd1Ta0.05Cu2Ru0.95O1,22.5,Sr -> Ba,plausible,0.021,Ba2GdCu2RuO8
+Ba2Y0.8Ho0.2Cu2Au2O8,2026-10-30,59.9,3.1,56.8,38.9,Ba2YCu2(HgO4)2,21.0,Hg -> Au; Y partly -> Ho,queued,,
 Ba2.5Ca0.4Ce0.6Cu2.1Hg0.4O5.6F1.4,2026-10-28,89.2,2.7,86.5,38.2,Sr2.5Ca0.4Ce0.6Cu2.1Hg0.4O7,51.0,O partly -> F; Sr -> Ba,closest host too different (Ba4Ce(CuO3)3),,
-Ba2Ca2Tl0.7Cu2Hg0.3C0.8N0.2O10,2026-10-29,93.6,4.4,89.2,38.6,Ba2Sr2Tl1Cu2C0.8N0.2O10,55.0,Sr -> Ca; Tl partly -> Hg,likely unstable,0.213,Ba6Ca6Tl4Cu7Hg(CO14)2
-Ba2Ca2Tl1Cu2C0.8N0.14O10.06,2026-10-30,93.3,4.1,89.2,38.3,Ba2Sr2Tl1Cu2C0.8N0.2O10,55.0,N partly -> O; Sr -> Ca,likely unstable,0.286,Ba6Ca6Tl5Cu7(CO14)2
-Ba2Ca0.7Y0.3V0.5Cu2Sn0.15Pb0.35O1,2026-10-29,98.8,4.0,94.8,37.8,Sr2Ca0.7Y0.3V0.5Cu2Pb0.5O1,61.0,Pb partly -> Sn; Sr -> Ba,closest host too different (Sr3Ca(CuO3)2),,
-Ba2Tb0.2Gd0.8Ta0.05Cu2Ru0.95O1,2026-10-30,59.6,3.7,55.9,37.1,Sr2Gd1Ta0.05Cu2Ru0.95O1,22.5,Sr -> Ba; Gd partly -> Tb,queued,,
-Ba2Ca0.5La0.5Cu2Hg1O6,2026-10-28,89.5,4.5,85.0,37.0,Sr2Ca0.5La0.5Cu2Hg1O6,52.5,Sr -> Ba,plausible,0.095,Ba4CaLaCu4(HgO7)2
-Sr1.4Ca0.6Cu1Pb1N0.5O4.5,2026-10-30,65.2,2.9,62.3,35.2,Sr2CuPbO5,30.0,O partly -> N; Sr partly -> Ca,queued,,
-Sr1.4Ca0.6Cu1Pb1O4F1,2026-10-30,68.3,6.0,62.3,38.3,Sr2CuPbO5,30.0,Sr partly -> Ca; O partly -> F,queued,,
-Ba0.5Sr1Lu0.5Tl1Cu2O6,2026-10-30,63.3,4.0,59.3,36.3,Ba0.5Sr1La0.5Cu2Pb1O6,27.0,La -> Lu; Pb -> Tl,queued,,
-Ba0.5Sr1.5Ca0.5Dy0.5Cu2Hg0.5Pb0.5O7,2026-10-29,82.1,0.9,81.2,33.1,Ba0.5Sr1.5Ca0.5Y0.5Cd0.5Cu2Pb0.5O7,49.0,Cd -> Hg; Y -> Dy,closest host too different (Sr4CaYCu6(PbO4)4),,
-Ba0.6Sr1.4Ca0.65Dy0.35V0.4Cu2Bi0.6O1,2026-10-29,92.0,3.5,88.5,35.4,Sr2Ca0.65Dy0.35V0.4Cu2Pb0.6O1,56.6,Pb -> Bi; Sr partly -> Ba,plausible,0.064,Ba5Sr11Ca5Dy3Tl2V3Cu16Bi3O56
+Sr2Ca3LuCu4SnO,2026-10-30,71.8,3.3,68.5,38.8,Sr2Ca3LuCu4PbO,33.0,Pb -> Sn,queued,,
+Ba0.4Sr1.6Ca3Yb1Cu4Sn1O1,2026-10-29,86.2,3.0,83.2,38.2,Sr2Ca3YbCu4PbO,48.0,Sr partly -> Ba; Pb -> Sn,queued,,
+Sr1.4Ca1.1Dy0.5In0.65Cu2Bi0.35O1,2026-10-30,73.8,4.2,69.6,37.8,Sr2Ca0.5Gd0.5In0.65Cu2Bi0.35O1,36.0,Gd -> Dy; Sr partly -> Ca,queued,,
+Ba2Y1Cd0.4Cu2Hg1.6O6.4F1.6,2026-10-30,58.5,4.0,54.5,37.5,Ba2YCu2(HgO4)2,21.0,O partly -> F; Hg partly -> Cd,queued,,
+Sr2Ca3LaCu4SnO,2026-10-30,58.5,3.6,54.9,36.5,Sr2Ca3LaCu4PbO,22.0,Pb -> Sn,queued,,
+Sr1.4Ca0.6Cu1Pb1O3.5F1.5,2026-10-30,67.2,4.5,62.7,37.2,Sr2CuPbO5,30.0,Sr partly -> Ca; O partly -> F,queued,,
+Sr2Ca2.1Yb1Mg0.9Cu4Bi0.3Pb0.7O1,2026-10-29,84.2,4.2,80.0,36.2,Sr2Ca3YbCu4PbO,48.0,Ca partly -> Mg; Pb partly -> Bi,queued,,
+Ba2Ca2Tl0.7In0.3Cu2C0.8N0.2O10,2026-10-28,93.4,6.4,87.0,38.4,Ba2Sr2Tl1Cu2C0.8N0.2O10,55.0,Sr -> Ca; Tl partly -> In,queued,,
+Ba0.5Ca1.9Y0.4Cu2B0.5Pb0.5O1,2026-10-30,82.3,7.8,74.5,37.3,Ba0.5Sr1.5Ca0.4Y0.4Cu2B0.5Pb0.5O1,45.0,Sr -> Ca,closest host too different (BaSr3Cu8(BO3)8),,
+Sr2Ca0.6Ho0.4Cu2Si1O7,2026-10-30,54.9,2.0,52.9,30.9,Sr2Ca0.6Ho0.4Al1Cu2O7,24.0,Al -> Si,queued,,
+Ba1Ca1Dy1Cu3O4.9F2.1,2026-10-30,71.7,4.2,67.5,32.7,BaCaSmCu3O7,39.0,Sm -> Dy; O partly -> F,queued,,
+K0.4Sr1.28Ca0.32Cu1N1O5,2026-10-30,56.3,5.2,51.1,33.3,K0.4Sr1.6Cu1C1O5,23.0,Sr partly -> Ca; C -> N,queued,,
+Ba2Ca2Tl1Cu2C0.8S3N0.2O7,2026-10-30,85.6,2.5,83.1,30.6,Ba2Sr2Tl1Cu2C0.8N0.2O10,55.0,Sr -> Ca; O partly -> S,queued,,
+Ba2Ca3DyCu4PbO,2026-10-30,96.8,7.4,89.4,34.8,Sr2Ca3CeCu4PbO,62.0,Ce -> Dy; Sr -> Ba,queued,,
+Ba2Ca3Lu1Cu4Bi0.1Pb0.9O1,2026-10-30,96.4,7.1,89.3,63.4,Sr2Ca3LuCu4PbO,33.0,Sr -> Ba; Pb partly -> Bi,queued,,
 Ba1.8Ca0.65Yb0.675Lu0.075Ga1Cu2O1,2026-10-29,88.7,5.1,83.6,36.7,Sr1.8Ca0.65Yb0.75Ga1Cu2O1,52.0,Sr -> Ba; Yb partly -> Lu,missing elemental reference,,
-Ba0.6Sr1.4Ca0.7Y0.3Tl0.5V0.5Cu2O1,2026-10-29,96.0,3.4,92.6,35.0,Sr2Ca0.7Y0.3V0.5Cu2Pb0.5O1,61.0,Sr partly -> Ba; Pb -> Tl,closest host too different (Sr3Ca(CuO3)2),,
-Sr2Ca0.6Ho0.32Lu0.08Cu2Si1O7,2026-10-30,57.0,1.5,55.5,33.0,Sr2Ca0.6Ho0.4Al1Cu2O7,24.0,Ho partly -> Lu; Al -> Si,queued,,
-Ba2Ca2Cu2Hg1C1O8.1F0.9,2026-10-29,99.4,6.4,93.0,37.4,Ba2Sr2Cu2HgCO9,62.0,Sr -> Ca; O partly -> F,queued,,
-Ba2.5Ca0.4Ce0.6Cu2.1Hg0.4S0.7O6.3,2026-10-28,85.1,3.2,81.9,34.1,Sr2.5Ca0.4Ce0.6Cu2.1Hg0.4O7,51.0,Sr -> Ba; O partly -> S,closest host too different (Ba4Ce(CuO3)3),,
-Ba2Dy1Cu2Ru0.9O7.8,2026-10-30,57.1,3.2,53.9,34.1,Sr2Er1Cu2Ru0.9O7.8,23.0,Sr -> Ba; Er -> Dy,queued,,
+Ba2Ca0.6Eu0.4Cu3N1.4O5.6,2026-10-30,81.7,1.7,80.0,27.7,Ba2Ca0.6Pr0.4Cu3O7,54.0,Pr -> Eu; O partly -> N,queued,,
 Ba1.8Ca0.65Yb0.675Dy0.075Ga1Cu2O1,2026-10-29,87.8,5.3,82.5,35.8,Sr1.8Ca0.65Yb0.75Ga1Cu2O1,52.0,Yb partly -> Dy; Sr -> Ba,queued,,
-Ba2Er1Cu2Ru0.9O7.8,2026-10-30,58.4,5.0,53.4,35.4,Sr2Er1Cu2Ru0.9O7.8,23.0,Sr -> Ba,plausible,0.11,Ba2ErCu2RuO9
+Ba2Ca3Ce0.8Lu0.2Cu4Pb1O1,2026-10-29,91.0,3.1,87.9,29.0,Sr2Ca3CeCu4PbO,62.0,Sr -> Ba; Ce partly -> Lu,queued,,
+Ba2Ca2Tl0.7Cu2Pb0.3C1O10,2026-10-29,94.2,3.7,90.5,29.6,Ba2Sr2TlCu2CO10,64.6,Tl partly -> Pb; Sr -> Ca,queued,,
+Sr2Nd1Cu2Hg1O4.8F1.2,2026-10-30,56.9,3.2,53.7,28.9,Sr2LaCu2HgO6,28.0,O partly -> F; La -> Nd,queued,,
+Ba1.8Ca2.2Cu2Hg1C1O9,2026-10-29,90.8,3.1,87.7,28.8,Ba2Sr2Cu2HgCO9,62.0,Ba partly -> Sr; Sr -> Ca,queued,,
+Ba2Ca2Cd0.1Cu2Hg0.9C1O9,2026-10-29,92.0,4.7,87.3,30.0,Ba2Sr2Cu2HgCO9,62.0,Sr -> Ca; Hg partly -> Cd,queued,,
+Ba0.6Sr1.4Ca0.7Y0.3V0.5Cu2Sn0.5O1,2026-10-29,90.4,4.9,85.5,29.4,Sr2Ca0.7Y0.3V0.5Cu2Pb0.5O1,61.0,Pb -> Sn; Sr partly -> Ba,queued,,
+Ba0.5Sr1La0.5Tl1Cu2O4.2F1.8,2026-10-30,57.6,6.1,51.5,30.6,Ba0.5Sr1La0.5Cu2Pb1O6,27.0,Pb -> Tl; O partly -> F,queued,,
+Ba0.6Sr1.4Ca0.65Dy0.35V0.4Cu2Sn0.6O1,2026-10-30,86.5,5.7,80.8,29.9,Sr2Ca0.65Dy0.35V0.4Cu2Pb0.6O1,56.6,Sr partly -> Ba; Pb -> Sn,queued,,
+Sr2Ca0.65Gd0.35V0.4Cu2Sn0.6O1,2026-10-30,64.8,4.1,60.7,28.2,Sr2Ca0.65Gd0.35V0.4Cu2Pb0.6O1,36.6,Pb -> Sn,queued,,
+Ba2Ca2Tl0.8Co3Cu2Hg0.2O1,2026-10-29,98.5,5.5,93.0,29.5,Ba2Sr2TlCo3Cu2O,69.0,Tl partly -> Hg; Sr -> Ca,queued,,
+Ba2Ca3Tb0.7Er0.3Cu4Pb1O1,2026-10-29,91.8,5.8,86.0,55.8,Sr2Ca3TbCu4PbO,36.0,Sr -> Ba; Tb partly -> Er,closest host too different (SrCa(CuO2)2),,
+Sr2Ca3TbCu4SnO,2026-10-30,62.7,2.9,59.8,26.7,Sr2Ca3TbCu4PbO,36.0,Pb -> Sn,queued,,
+Ba2Ca2Tl0.8In0.2Cu2C1O10,2026-10-29,90.6,2.6,88.0,26.0,Ba2Sr2TlCu2CO10,64.6,Sr -> Ca; Tl partly -> In,queued,,
+Sr3.2Ca0.8Tl0.12Cr0.6Cu2Hg0.28C1O9,2026-10-30,65.9,5.6,60.3,28.9,Sr4Cr0.6Cu2Hg0.4C1O9,37.0,Hg partly -> Tl; Sr partly -> Ca,queued,,
+Sr1.4Ca0.6Er1Cu2Rh0.9O7.8,2026-10-30,50.4,4.8,45.6,27.4,Sr2Er1Cu2Ru0.9O7.8,23.0,Sr partly -> Ca; Ru -> Rh,queued,,
+Sr1.8Ca0.2Cu1Pb1N0.5O4.5,2026-10-30,56.2,3.8,52.4,26.2,Sr2CuPbO5,30.0,Sr partly -> Ca; O partly -> N,queued,,
+K0.3Sr0.51Ca1.19Cu1Cl1.8O2F0.2,2026-10-30,56.0,9.7,46.3,32.0,K0.3Ca1.7Cu1Cl2O2,24.0,Cl partly -> F; Ca partly -> Sr,queued,,
+Ba1.8Eu1.6Ho0.6Cd0.5Cu2Pb0.5O1,2026-10-30,69.6,3.9,65.7,30.6,Sr1.8Ce0.6Eu1.6Cd0.5Cu2Pb0.5O1,39.0,Sr -> Ba; Ce -> Ho,queued,,
+Sr2Yb1.3Ce0.7Ti0.25Cu2.75O6.968F1.742,2026-10-30,45.9,2.7,43.2,24.9,Sr2Ce0.7Y1.3Ti0.25Cu2.75O8.71,21.0,O partly -> F; Y -> Yb,queued,,
