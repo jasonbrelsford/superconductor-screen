@@ -19,6 +19,7 @@ PER_PARENT = 2          # at most two candidates built from the same parent comp
 METHOD = 5                          # bump when the stability check changes, to redo host failures
 STRUCTURE_CHECKS_PER_RUN = int(os.environ.get("STRUCTURE_CHECKS_PER_RUN", 45))   # in this job
 STRUCTURE_BUDGET_S = int(os.environ.get("STRUCTURE_BUDGET_S", 100 * 60))
+QUEUE_DEPTH = 400   # candidates per list considered for stability checks
 SHARD_QUEUE = int(os.environ.get("SHARD_QUEUE", 240))   # queue left for the next run's parallel workers
 LEADERBOARD_MIN_SCORE = 80.0   # keep candidates scoring at least this (K) on the running leaderboard
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -31,10 +32,10 @@ def is_cuprate(formula):
     return {"Cu", "O"} <= el
 
 
-def pick(res, sort_col, mask=None):
+def pick(res, sort_col, mask=None, top=TOP, per_parent=PER_PARENT):
     d = res if mask is None else res[mask]
     d = d.sort_values(sort_col, ascending=False)
-    return d.drop_duplicates("system").groupby("parent", sort=False).head(PER_PARENT).head(TOP).copy()
+    return d.drop_duplicates("system").groupby("parent", sort=False).head(per_parent).head(top).copy()
 
 
 def main():
@@ -132,9 +133,13 @@ def main():
     swaps_of = dict(zip(res["formula"], res["swaps"]))
     # Take turns between the lists (biggest gain first, then non-cuprates, then highest Tc), so the
     # rarer families get checked every run instead of waiting behind hundreds of cuprates.
+    # The queue reaches well past the published top 50s, so the parallel workers stay busy.
+    deep = {"gain": pick(res, "gain_score", res["gain_score"] > 0, QUEUE_DEPTH, 4),
+            "noncuprate": pick(res, "score", ~res["cuprate"], QUEUE_DEPTH, 4),
+            "highest": pick(res, "score", None, QUEUE_DEPTH, 4)}
     per_list = []
     for name in ("gain", "noncuprate", "highest"):
-        tl = lists[name][2]
+        tl = deep[name]
         per_list.append([(f, p) for f, p in zip(tl["formula"], tl["parent"])
                          if f not in checks and f not in tower and isinstance(swaps_of.get(f), str)
                          and hits.charge_ok(f) and not hits.high_pressure(f)])
