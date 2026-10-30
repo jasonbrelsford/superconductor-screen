@@ -110,6 +110,23 @@ class Checker:
         top = max(an.values(), default=0.0)
         return {e for e in amt if (e in ANIONS and an[e] >= 0.25 * top) or cat.get(e, 0) >= MINOR}
 
+    def host_ehull(self, h):
+        """CHGNet energy above the CHGNet hull of the host structure itself (cached), or None."""
+        key = f"host:{h.material_id}"
+        if key not in self.cache:
+            if self.time_left() < 120:
+                raise TimeoutError
+            s, e = self._relax(h.structure)
+            self.cache[key] = {"formula": s.composition.formula, "e_total": e}
+        c = self.cache[key]
+        comp = Composition(c["formula"])
+        els = [str(x) for x in comp.elements]
+        comps = self.competitor_energies(els)
+        if set(els) - {str(x) for en in comps for x in en.composition.elements if en.composition.is_element}:
+            return None
+        _, eh = PhaseDiagram(comps).get_decomp_and_e_above_hull(PDEntry(comp, c["e_total"]), allow_negative=True)
+        return round(float(eh), 3)
+
     def _phases(self, els):
         """MP phases in exactly this chemical system (memoised for the run: candidates share parents)."""
         key = "-".join(sorted(els))
@@ -336,8 +353,14 @@ class Checker:
         _, ehull = pd.get_decomp_and_e_above_hull(PDEntry(relaxed.composition, e), allow_negative=True)
         ehull = round(float(ehull), 3)
         match = round(_frac_distance(relaxed.composition, formula), 3)
-        out = {"status": "plausible" if ehull <= 0.1 else "likely unstable",
-               "e_above_hull_eV": ehull, "computed_as": relaxed.composition.reduced_formula,
+        # Calibrate against the host: it is a real, made material, so however far above the
+        # CHGNet hull CHGNet puts it is error, not instability. A candidate is plausible when it
+        # sits within 0.1 eV/atom of the hull after allowing for the host's own offset.
+        host_ehull = self.host_ehull(h)
+        allow = max(0.0, host_ehull) if host_ehull is not None else 0.0
+        out = {"status": "plausible" if ehull <= 0.1 + allow else "likely unstable",
+               "e_above_hull_eV": ehull, "host_e_above_hull_eV": host_ehull,
+               "computed_as": relaxed.composition.reduced_formula,
                "cell_atoms": len(relaxed), "host": str(h.material_id), "match": match}
         if omitted:
             out["omitted"] = sorted(set(omitted))

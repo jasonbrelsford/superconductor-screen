@@ -16,7 +16,7 @@ from sc.features import featurize
 
 TOP = 50
 PER_PARENT = 2          # at most two candidates built from the same parent compound per list
-METHOD = 4                          # bump when the stability check changes, to redo host failures
+METHOD = 5                          # bump when the stability check changes, to redo host failures
 STRUCTURE_CHECKS_PER_RUN = 45      # CHGNet stability calculations per run (results are kept across runs)
 STRUCTURE_BUDGET_S = 100 * 60
 LEADERBOARD_MIN_SCORE = 80.0   # keep candidates scoring at least this (K) on the running leaderboard
@@ -106,9 +106,10 @@ def main():
     # Stability: CHGNet on a real crystal structure, for full substitutions; kept across runs.
     checks_path = os.path.join(ROOT, "results", "structure_checks.json")
     checks = json.load(open(checks_path)) if os.path.exists(checks_path) else {}
-    # Keep only results from the current method: computed ones carry "match"; host failures only
-    # if they came from the current host search (older ones are retried).
-    checks = {k: v for k, v in checks.items() if "match" in v or v.get("method", 0) >= METHOD}
+    # Keep results from the current method. Older plausible results stay (the host calibration
+    # added in method 5 only loosens the test); older failures and unstable verdicts are redone.
+    checks = {k: v for k, v in checks.items()
+              if v.get("method", 0) >= METHOD or (v.get("status") == "plausible" and "match" in v)}
     tower_path = os.path.join(ROOT, "results", "structure_checks_tower.json")
     tower = json.load(open(tower_path)) if os.path.exists(tower_path) else {}
     swaps_of = dict(zip(res["formula"], res["swaps"]))
