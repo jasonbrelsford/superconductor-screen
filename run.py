@@ -91,7 +91,7 @@ def main():
     # same main elements; formulas no oxidation states can balance (source-data typos) are dropped.
     recs = hits.records(df)
     res = res[res["formula"].map(hits.charge_ok)].copy()
-    bar = np.maximum(res["parent_Tc"].astype(float), res["formula"].map(lambda f: recs.get(hits.family(f), 0.0)))
+    bar = np.maximum(res["parent_Tc"].astype(float), res["formula"].map(lambda f: hits.record_for(f, recs)))
     res["gain_score"] = res["score"] - bar
     res["cuprate"] = res["formula"].map(is_cuprate) | res["parent"].map(is_cuprate)
     print(f"leaderboard size: {len(res)}")

@@ -61,13 +61,60 @@ def family(f):
     return frozenset(e for e in amt if e in ANION_ELS or cat[e] / tot >= 0.08)
 
 
+RARE = {"Sc", "Y", "La", "Ce", "Pr", "Nd", "Pm", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu"}
+NEAR = 0.25   # cation-fraction distance within which a known compound counts as the same family
+
+
+def _mapped(f):
+    """Cation fractions with rare earths pooled as RE and Sr/Ba pooled as AE (they share sites), and
+    the anion set; used to find the known compounds a candidate is a variant of."""
+    amt = Composition(f).get_el_amt_dict()
+    cat = {}
+    for e, a in amt.items():
+        if e in ANION_ELS:
+            continue
+        k = "RE" if e in RARE else "AE" if e in ("Sr", "Ba") else e
+        cat[k] = cat.get(k, 0.0) + a
+    tot = sum(cat.values()) or 1.0
+    cat = {k: a / tot for k, a in cat.items()}
+    return cat, frozenset(e for e in amt if e in ANION_ELS and amt[e] >= 0.25 * max(
+        [amt[x] for x in amt if x in ANION_ELS] or [0]))
+
+
 def records(df):
-    """Highest measured Tc for each family of main elements in the training data."""
-    out = {}
+    """Index of the training data for record_for(): known compounds grouped by their major cations."""
+    full, minus1 = {}, {}
     for f, tc in zip(df["reduced"], df["Tc"]):
-        k = family(f)
-        out[k] = max(out.get(k, 0.0), float(tc))
-    return out
+        try:
+            cat, an = _mapped(f)
+        except Exception:
+            continue
+        major = frozenset(k for k, x in cat.items() if x >= 0.08)
+        item = (cat, an, float(tc))
+        full.setdefault(major, []).append(item)
+        for e in major:
+            minus1.setdefault(major - {e}, []).append(item)
+    return {"full": full, "minus1": minus1}
+
+
+def record_for(f, recs):
+    """Best measured Tc among known compounds that this formula is a close variant of: same main
+    anions, cation fractions within NEAR (rare earths and Sr/Ba pooled), at most one major cation
+    more or fewer. 0.0 if none."""
+    if not recs:
+        return 0.0
+    cat, an = _mapped(f)
+    major = frozenset(k for k, x in cat.items() if x >= 0.08)
+    pool = list(recs["full"].get(major, [])) + list(recs["minus1"].get(major, []))
+    for e in major:
+        pool += recs["full"].get(major - {e}, [])
+    best = 0.0
+    for kc, kan, tc in pool:
+        if kan != an or tc <= best:
+            continue
+        if sum(abs(cat.get(k, 0) - kc.get(k, 0)) for k in set(cat) | set(kc)) <= NEAR:
+            best = tc
+    return best
 
 
 def _is_cuprate(f):
@@ -96,7 +143,7 @@ def find(board, checks, recs=None):
             continue   # every new element was too dilute to place: what was computed is the parent
         score = float(row["score"])
         cup = _is_cuprate(f) or _is_cuprate(str(row["parent"]))
-        beats = score > max(float(row["parent_Tc"]), recs.get(family(f), 0.0))
+        beats = score > max(float(row["parent_Tc"]), record_for(f, recs))
         if beats and ((cup and score >= CUPRATE_MIN) or (not cup and score >= OTHER_MIN)):
             new[f] = {"score": score, "pred_Tc_K": float(row["pred_Tc_K"]), "parent": str(row["parent"]),
                       "change": str(row["change"]), "e_above_hull_eV": r.get("e_above_hull_eV"),
