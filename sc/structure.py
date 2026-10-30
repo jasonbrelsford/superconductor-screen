@@ -102,9 +102,13 @@ class Checker:
         return docs
 
     def major_elements(self, parent):
-        els = {str(e) for e in Composition(parent).elements}
+        """Cations holding at least MINOR of the cation sites, and anions holding at least a quarter
+        as much as the main anion (so the F in LaFeAsO0.9F0.1 is a dopant, not a host element)."""
+        amt = Composition(parent).get_el_amt_dict()
         cat = _cations(parent)
-        return {e for e in els if e in ANIONS or cat.get(e, 0) >= MINOR}
+        an = {e: a for e, a in amt.items() if e in ANIONS}
+        top = max(an.values(), default=0.0)
+        return {e for e in amt if (e in ANIONS and an[e] >= 0.25 * top) or cat.get(e, 0) >= MINOR}
 
     def _phases(self, els):
         """MP phases in exactly this chemical system (memoised for the run: candidates share parents)."""
