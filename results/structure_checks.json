@@ -1,4 +1,9 @@
 {
+ "Ba0.2Sr1.8Ca2.65Y0.35Tl0.08Hg0.72Mo0.2O6": {
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (SrCaO2)"
+ },
  "Ba0.2Sr1.8Ca2Bi2O1": {
   "cell_atoms": 56,
   "checked": "2026-10-30",
@@ -10,10 +15,57 @@
   "method": 5,
   "status": "plausible"
  },
+ "Ba0.4Sr1.6Ca2.65Y0.35Hg0.8Mo0.2O6": {
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (SrCaO2)"
+ },
  "Ba0.4Sr1.6Ca3Lu1Cu4Bi1O1": {
   "checked": "2026-10-30",
   "method": 5,
   "status": "closest host too different (SrCa(CuO2)2)"
+ },
+ "Ba0.5Ca1.5Y1Cu2.8Ge0.2O4.9F2.1": {
+  "by": "shard 3",
+  "cell_atoms": 50,
+  "checked": "2026-10-30",
+  "computed_as": "Ba4Ca4Y4Cu11Ge(O9F4)2",
+  "e_above_hull_eV": 0.241,
+  "host": "mp-1228545",
+  "host_e_above_hull_eV": 0.029,
+  "match": 0.183,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Ba0.5Ca1.9Y0.4Cu2B0.5Pb0.5O1": {
+  "by": "shard 5",
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (BaSr3Cu8(BO3)8)"
+ },
+ "Ba0.5Ca1.9Y0.4Cu2Bi0.5B0.5O1": {
+  "by": "shard 1",
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (BaSr3Cu8(BO3)8)"
+ },
+ "Ba0.5Sr1.5Ca0.5Dy0.5Cu2Hg0.5Pb0.5O7": {
+  "by": "shard 3",
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (Sr4CaYCu6(PbO4)4)"
+ },
+ "Ba0.6Sr1.4Ca0.65Dy0.35V0.4Cu2Bi0.6O1": {
+  "by": "shard 5",
+  "cell_atoms": 104,
+  "checked": "2026-10-30",
+  "computed_as": "Ba5Sr11Ca5Dy3Tl2V3Cu16Bi3O56",
+  "e_above_hull_eV": 0.064,
+  "host": "mp-20824",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.1,
+  "method": 5,
+  "status": "plausible"
  },
  "Ba0.6Sr1.4Ca0.65Dy0.35V0.4Cu2Pb0.6O1": {
   "cell_atoms": 104,
@@ -23,6 +75,23 @@
   "host": "mp-20824",
   "match": 0.1,
   "method": 4,
+  "status": "plausible"
+ },
+ "Ba0.6Sr1.4Ca0.7Y0.3Tl0.5V0.5Cu2O1": {
+  "by": "shard 5",
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (Sr3Ca(CuO3)2)"
+ },
+ "Ba0.6Sr1.4Ca2Bi1.4Sb0.6O1": {
+  "cell_atoms": 42,
+  "checked": "2026-10-30",
+  "computed_as": "BaSr2Ca3BiSbPbO12",
+  "e_above_hull_eV": 0.053,
+  "host": "mp-1218368",
+  "host_e_above_hull_eV": 0.005,
+  "match": 0.267,
+  "method": 5,
   "status": "plausible"
  },
  "Ba0.6Sr1.4Ca2Bi1.6Sb0.4O1": {
@@ -35,10 +104,27 @@
   "method": 4,
   "status": "plausible"
  },
+ "Ba0.6Sr1.4Ca3Lu1Tl0.3Cu4Pb0.7O1": {
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (SrCa(CuO2)2)"
+ },
  "Ba1.4Sr0.6Ca1Tl1Cu2Sb1O1": {
   "checked": "2026-10-30",
   "method": 5,
   "status": "closest host too different (Ba4Cu3PbO9)"
+ },
+ "Ba1.5La0.5Cu2Pb1N1.2O4.8": {
+  "by": "shard 5",
+  "cell_atoms": 42,
+  "checked": "2026-10-30",
+  "computed_as": "Ba6La2Cu9Pb4N4O17",
+  "e_above_hull_eV": 0.231,
+  "host": "mp-1227647",
+  "host_e_above_hull_eV": 0.015,
+  "match": 0.057,
+  "method": 5,
+  "status": "likely unstable"
  },
  "Ba1.656Sr0.414Ca1.863Mg0.207Cu3.11Hg0.75O8.208": {
   "cell_atoms": 128,
@@ -66,6 +152,17 @@
   "e_above_hull_eV": 0.096,
   "host": "mp-22601",
   "match": 0.021,
+  "status": "plausible"
+ },
+ "Ba1.6Sr0.4Ca1.98Cu2.61Ag0.29Hg0.66Pb0.34O8.4": {
+  "cell_atoms": 48,
+  "checked": "2026-10-30",
+  "computed_as": "Ba5SrCa6Cu8AgHg2PbO24",
+  "e_above_hull_eV": 0.053,
+  "host": "mp-22601",
+  "host_e_above_hull_eV": -0.003,
+  "match": 0.025,
+  "method": 5,
   "status": "plausible"
  },
  "Ba1.6Sr0.4Ca2Cu2.7Ag0.3Hg0.8Bi0.2O8.2": {
@@ -96,6 +193,13 @@
   "host": "mp-22601",
   "match": 0.03,
   "status": "plausible"
+ },
+ "Ba1.8Ca0.65Yb0.675Lu0.075Ga1Cu2O1": {
+  "by": "shard 3",
+  "checked": "2026-10-30",
+  "host": "mp-1218712",
+  "method": 5,
+  "status": "missing elemental reference"
  },
  "Ba1.8Sr0.2Ca1.8Mg0.2Tl0.75Cu3O1": {
   "cell_atoms": 84,
@@ -201,6 +305,18 @@
   "match": 0.03,
   "status": "plausible"
  },
+ "Ba2.5Ca0.4Ce0.6Cu2.1Hg0.4O5.6F1.4": {
+  "by": "shard 1",
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (Ba4Ce(CuO3)3)"
+ },
+ "Ba2.5Ca0.4Ce0.6Cu2.1Hg0.4S0.7O6.3": {
+  "by": "shard 3",
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (Ba4Ce(CuO3)3)"
+ },
  "Ba23La0.2Y0.8O7.6": {
   "cell_atoms": 32,
   "checked": "2026-10-29",
@@ -227,6 +343,42 @@
   ],
   "status": "plausible"
  },
+ "Ba2Ca0.5Gd0.5In0.585Ga0.065Cu2Bi0.35O1": {
+  "by": "shard 1",
+  "cell_atoms": 78,
+  "checked": "2026-10-30",
+  "computed_as": "Ba12Ca3Gd3In3GaCu12(BiO21)2",
+  "e_above_hull_eV": 0.056,
+  "host": "mp-1218546",
+  "host_e_above_hull_eV": 0.003,
+  "match": 0.034,
+  "method": 5,
+  "status": "plausible"
+ },
+ "Ba2Ca0.5La0.5Cu2Hg1O5.4F0.6": {
+  "by": "shard 4",
+  "cell_atoms": 26,
+  "checked": "2026-10-30",
+  "computed_as": "Ba4CaLaCu4Hg2O13F",
+  "e_above_hull_eV": 0.129,
+  "host": "mp-1218536",
+  "host_e_above_hull_eV": 0.001,
+  "match": 0.0,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Ba2Ca0.5La0.5Cu2Hg1O6": {
+  "by": "shard 1",
+  "cell_atoms": 26,
+  "checked": "2026-10-30",
+  "computed_as": "Ba4CaLaCu4(HgO7)2",
+  "e_above_hull_eV": 0.095,
+  "host": "mp-1218536",
+  "host_e_above_hull_eV": 0.001,
+  "match": 0.0,
+  "method": 5,
+  "status": "plausible"
+ },
  "Ba2Ca0.65Gd0.35V0.32Cr0.08Cu2Pb0.6O1": {
   "cell_atoms": 117,
   "checked": "2026-10-30",
@@ -248,6 +400,18 @@
   "method": 4,
   "status": "plausible"
  },
+ "Ba2Ca0.65Sm0.35V0.4Cu2Pb0.6O1": {
+  "by": "shard 1",
+  "cell_atoms": 104,
+  "checked": "2026-10-30",
+  "computed_as": "Ba16Ca5Sm3Tl2V3Cu16Pb3O56",
+  "e_above_hull_eV": 0.056,
+  "host": "mp-20824",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.092,
+  "method": 5,
+  "status": "plausible"
+ },
  "Ba2Ca0.65Tm0.35V0.4Cu2Pb0.6O1": {
   "cell_atoms": 104,
   "checked": "2026-10-30",
@@ -259,6 +423,12 @@
   "method": 5,
   "status": "plausible"
  },
+ "Ba2Ca0.6Ho0.4Al1Cu2O7": {
+  "by": "shard 4",
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (Sr2Ca2Ga(CuO3)3)"
+ },
  "Ba2Ca0.7Mg0.3Tl0.8Cu2Mo0.2O7": {
   "cell_atoms": 78,
   "checked": "2026-10-29",
@@ -268,6 +438,12 @@
   "match": 0.022,
   "method": 2,
   "status": "plausible"
+ },
+ "Ba2Ca0.7Y0.3V0.5Cu2Sn0.15Pb0.35O1": {
+  "by": "shard 1",
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (Sr3Ca(CuO3)2)"
  },
  "Ba2Ca1.8Mg0.2Cu3Hg0.75C0.02O1": {
   "checked": "2026-10-30",
@@ -355,6 +531,22 @@
   ],
   "status": "plausible"
  },
+ "Ba2Ca1.975Sm0.02Gd0.005Cu3Hg1O9": {
+  "by": "shard 0",
+  "cell_atoms": 108,
+  "checked": "2026-10-30",
+  "computed_as": "Ba13Ca13Cu19(Hg2O19)3",
+  "e_above_hull_eV": 0.072,
+  "host": "mp-542197",
+  "host_e_above_hull_eV": 0.016,
+  "match": 0.026,
+  "method": 5,
+  "omitted": [
+   "Gd",
+   "Sm"
+  ],
+  "status": "plausible"
+ },
  "Ba2Ca1.975Sm0.02Lu0.005Cu3Hg1O9": {
   "cell_atoms": 108,
   "checked": "2026-10-30",
@@ -383,6 +575,20 @@
   ],
   "status": "plausible"
  },
+ "Ba2Ca1.98Cu2.9Hg0.66Bi0.034Pb0.306O8.4": {
+  "cell_atoms": 48,
+  "checked": "2026-10-30",
+  "computed_as": "Ba6Ca6Cu9Hg2PbO24",
+  "e_above_hull_eV": 0.022,
+  "host": "mp-22601",
+  "host_e_above_hull_eV": -0.003,
+  "match": 0.02,
+  "method": 5,
+  "omitted": [
+   "Bi"
+  ],
+  "status": "plausible"
+ },
  "Ba2Ca1.98Cu2.9Sn0.068Hg0.66Pb0.272O8.4": {
   "cell_atoms": 64,
   "checked": "2026-10-29",
@@ -399,6 +605,11 @@
   "checked": "2026-10-30",
   "method": 5,
   "status": "closest host too different (BaSr(CuO2)2)"
+ },
+ "Ba2Ca1Cu2Sn1Sb1S0.3O0.7": {
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (Ba4Cu3PbO9)"
  },
  "Ba2Ca1Tl0.8Cu2Mo0.2S0.7O6.3": {
   "cell_atoms": 78,
@@ -421,6 +632,21 @@
   "match": 0.017,
   "method": 5,
   "status": "likely unstable"
+ },
+ "Ba2Ca2Cu2.8Ni0.2Sn0.06Bi1.5Pb0.14O1": {
+  "by": "shard 1",
+  "cell_atoms": 152,
+  "checked": "2026-10-30",
+  "computed_as": "Ba16Ca17Cu23NiBi14PbO80",
+  "e_above_hull_eV": 0.013,
+  "host": "mp-1209015",
+  "host_e_above_hull_eV": 0.055,
+  "match": 0.057,
+  "method": 5,
+  "omitted": [
+   "Sn"
+  ],
+  "status": "plausible"
  },
  "Ba2Ca2Cu3Ag0.1Hg0.9O1": {
   "cell_atoms": 128,
@@ -486,6 +712,12 @@
   ],
   "status": "plausible"
  },
+ "Ba2Ca2Cu3Hg0.95Bi0.005Sb0.045O8": {
+  "checked": "2026-10-30",
+  "host": "mp-22601",
+  "method": 5,
+  "status": "doping level needs too large a cell"
+ },
  "Ba2Ca2Cu3Hg0.95Mo0.035W0.015O1": {
   "cell_atoms": 16,
   "checked": "2026-10-29",
@@ -550,6 +782,20 @@
   ],
   "status": "plausible"
  },
+ "Ba2Ca2Cu3Re0.18Hg0.72Os0.02Au0.08O8": {
+  "cell_atoms": 144,
+  "checked": "2026-10-30",
+  "computed_as": "Ba18Ca18Cu27Re2Hg6AuO72",
+  "e_above_hull_eV": 0.072,
+  "host": "mp-22601",
+  "host_e_above_hull_eV": -0.003,
+  "match": 0.018,
+  "method": 5,
+  "omitted": [
+   "Os"
+  ],
+  "status": "plausible"
+ },
  "Ba2Ca2Cu3Re0.18Hg0.8Os0.02O8": {
   "cell_atoms": 96,
   "checked": "2026-10-29",
@@ -573,6 +819,12 @@
    "W"
   ],
   "status": "plausible"
+ },
+ "Ba2Ca2Cu3Sn0.005Hg0.95Sb0.045O8": {
+  "checked": "2026-10-30",
+  "host": "mp-22601",
+  "method": 5,
+  "status": "doping level needs too large a cell"
  },
  "Ba2Ca2Cu3Sn0.01Hg0.95Sb0.04O8": {
   "checked": "2026-10-30",
@@ -669,6 +921,17 @@
   ],
   "status": "plausible"
  },
+ "Ba2Ca2Tl0.08Cu3Re0.2Hg0.72O8": {
+  "cell_atoms": 128,
+  "checked": "2026-10-30",
+  "computed_as": "Ba16Ca16TlCu24Re2Hg5O64",
+  "e_above_hull_eV": 0.113,
+  "host": "mp-22601",
+  "host_e_above_hull_eV": -0.003,
+  "match": 0.024,
+  "method": 5,
+  "status": "likely unstable"
+ },
  "Ba2Ca2Tl0.08Cu3Sn0.015Hg0.72Sb0.05Pb0.135O8": {
   "cell_atoms": 128,
   "checked": "2026-10-29",
@@ -706,6 +969,18 @@
   "method": 2,
   "status": "plausible"
  },
+ "Ba2Ca2Tl0.63Cu3Hg0.27Pd0.1O9": {
+  "by": "shard 0",
+  "cell_atoms": 108,
+  "checked": "2026-10-30",
+  "computed_as": "Ba13Ca13Tl3Cu19Hg2PdO57",
+  "e_above_hull_eV": 0.044,
+  "host": "mp-542197",
+  "host_e_above_hull_eV": 0.016,
+  "match": 0.045,
+  "method": 5,
+  "status": "plausible"
+ },
  "Ba2Ca2Tl0.75Cu3Mo0.05O1": {
   "cell_atoms": 24,
   "checked": "2026-10-30",
@@ -719,6 +994,36 @@
    "Mo"
   ],
   "status": "plausible"
+ },
+ "Ba2Ca2Tl0.7Cu2Hg0.3C0.8N0.2O10": {
+  "by": "shard 3",
+  "cell_atoms": 54,
+  "checked": "2026-10-30",
+  "computed_as": "Ba6Ca6Tl4Cu7Hg(CO14)2",
+  "e_above_hull_eV": 0.213,
+  "host": "mp-1218170",
+  "host_e_above_hull_eV": 0.026,
+  "match": 0.145,
+  "method": 5,
+  "omitted": [
+   "N"
+  ],
+  "status": "likely unstable"
+ },
+ "Ba2Ca2Tl1Cu2C0.8N0.14O10.06": {
+  "by": "shard 5",
+  "cell_atoms": 54,
+  "checked": "2026-10-30",
+  "computed_as": "Ba6Ca6Tl5Cu7(CO14)2",
+  "e_above_hull_eV": 0.286,
+  "host": "mp-1218170",
+  "host_e_above_hull_eV": 0.026,
+  "match": 0.143,
+  "method": 5,
+  "omitted": [
+   "N"
+  ],
+  "status": "likely unstable"
  },
  "Ba2Ca2Zr0.08Ti0.32Cu2.7Ag0.3Hg0.6O8.4": {
   "cell_atoms": 32,
@@ -745,7 +1050,23 @@
   "method": 5,
   "status": "plausible"
  },
+ "Ba2Ca3Ce1Cu4Bi0.3Pb0.7O1": {
+  "by": "shard 3",
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (SrCa(CuO2)2)"
+ },
+ "Ba2Ca3ErCu4PbO": {
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (SrCa(CuO2)2)"
+ },
  "Ba2Ca3La0.8Lu0.2Cu4Pb1O1": {
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (SrCa(CuO2)2)"
+ },
+ "Ba2Ca3La0.8Yb0.2Cu4Pb1O1": {
   "checked": "2026-10-30",
   "method": 5,
   "status": "closest host too different (SrCa(CuO2)2)"
@@ -756,6 +1077,16 @@
   "status": "closest host too different (SrCa(CuO2)2)"
  },
  "Ba2Ca3Lu1Tl0.3Cu4Pb0.7O1": {
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (SrCa(CuO2)2)"
+ },
+ "Ba2Ca3LuCu4BiO": {
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (SrCa(CuO2)2)"
+ },
+ "Ba2Ca3Tb0.7Er0.3Cu4Pb1O1": {
   "checked": "2026-10-30",
   "method": 5,
   "status": "closest host too different (SrCa(CuO2)2)"
@@ -775,6 +1106,86 @@
   "method": 5,
   "status": "closest host too different (Ba4Cu3PbO9)"
  },
+ "Ba2CaTlCu2SnO": {
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (Ba4Cu3PbO9)"
+ },
+ "Ba2Cu1Pb1O3.5F1.5": {
+  "by": "shard 3",
+  "cell_atoms": 18,
+  "checked": "2026-10-30",
+  "computed_as": "Ba4Cu2Pb2O7F3",
+  "e_above_hull_eV": 0.084,
+  "host": "mp-620290",
+  "host_e_above_hull_eV": -0.004,
+  "match": 0.0,
+  "method": 5,
+  "status": "plausible"
+ },
+ "Ba2Er1Cu2Ru0.9O7.8": {
+  "by": "shard 3",
+  "cell_atoms": 15,
+  "checked": "2026-10-30",
+  "computed_as": "Ba2ErCu2RuO9",
+  "e_above_hull_eV": 0.11,
+  "host": "mp-1218771",
+  "host_e_above_hull_eV": 0.06,
+  "match": 0.028,
+  "method": 5,
+  "status": "plausible"
+ },
+ "Ba2Gd1Ta0.05Cu2Ru0.95O1": {
+  "by": "shard 5",
+  "cell_atoms": 28,
+  "checked": "2026-10-30",
+  "computed_as": "Ba2GdCu2RuO8",
+  "e_above_hull_eV": 0.021,
+  "host": "mp-1194240",
+  "host_e_above_hull_eV": 0.007,
+  "match": 0.017,
+  "method": 5,
+  "omitted": [
+   "Ta"
+  ],
+  "status": "plausible"
+ },
+ "Ba2Li0.225Ca2Cu3.5Hg0.25H0.025O7.955": {
+  "by": "shard 3",
+  "cell_atoms": 48,
+  "checked": "2026-10-30",
+  "computed_as": "Ba6LiCa6Cu10HgO24",
+  "e_above_hull_eV": 0.054,
+  "host": "mp-1206538",
+  "host_e_above_hull_eV": 0.018,
+  "match": 0.048,
+  "method": 5,
+  "omitted": [
+   "H"
+  ],
+  "status": "plausible"
+ },
+ "Ba2Li0.2Ca2Tl0.35Cu3Hg0.15Pb0.5O1": {
+  "by": "shard 3",
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (SrCa(CuO2)2)"
+ },
+ "Ba2Na0.08Li0.02Ca1.9Cu3Hg1O9": {
+  "by": "shard 0",
+  "cell_atoms": 144,
+  "checked": "2026-10-30",
+  "computed_as": "Ba17NaCa16Cu26(Hg2O19)4",
+  "e_above_hull_eV": 0.075,
+  "host": "mp-542197",
+  "host_e_above_hull_eV": 0.016,
+  "match": 0.024,
+  "method": 5,
+  "omitted": [
+   "Li"
+  ],
+  "status": "plausible"
+ },
  "Ba2Sr1Ca2Tl0.075Cu3Hg0.675O7.2F0.8": {
   "cell_atoms": 128,
   "checked": "2026-10-30",
@@ -784,6 +1195,203 @@
   "match": 0.135,
   "method": 2,
   "status": "plausible"
+ },
+ "Ba2Tb0.49Dy0.21Lu0.3Cu3O1": {
+  "by": "shard 3",
+  "cell_atoms": 48,
+  "checked": "2026-10-30",
+  "computed_as": "Ba8Tb2DyLu(CuO2)12",
+  "e_above_hull_eV": 0.006,
+  "host": "mp-22215",
+  "host_e_above_hull_eV": 0.004,
+  "match": 0.017,
+  "method": 5,
+  "status": "plausible"
+ },
+ "Ba2Tb0.49Eu0.3Lu0.21Cu3O1": {
+  "by": "shard 5",
+  "cell_atoms": 48,
+  "checked": "2026-10-30",
+  "computed_as": "Ba8Tb2EuLu(CuO2)12",
+  "e_above_hull_eV": -0.001,
+  "host": "mp-22215",
+  "host_e_above_hull_eV": 0.004,
+  "match": 0.017,
+  "method": 5,
+  "status": "plausible"
+ },
+ "Ba2Y1Nb0.72Cu2.1Mo0.18O7.9": {
+  "by": "shard 5",
+  "cell_atoms": 84,
+  "checked": "2026-10-30",
+  "computed_as": "Ba12Y6Nb5Cu12MoO48",
+  "e_above_hull_eV": 0.035,
+  "host": "mp-1173261",
+  "host_e_above_hull_eV": 0.019,
+  "match": 0.038,
+  "method": 5,
+  "omitted": [
+   "Cu"
+  ],
+  "status": "plausible"
+ },
+ "Ba2Y1Nb0.9Cu2.1S0.79O7.11": {
+  "by": "shard 3",
+  "cell_atoms": 112,
+  "checked": "2026-10-30",
+  "computed_as": "Ba16Y8Nb7Cu17(S3O29)2",
+  "e_above_hull_eV": 0.231,
+  "host": "mp-1173261",
+  "host_e_above_hull_eV": 0.019,
+  "match": 0.008,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Ba2Yb1Cu1.89Ag0.81Mo0.3O1": {
+  "by": "shard 5",
+  "checked": "2026-10-30",
+  "host": "mp-985569",
+  "method": 5,
+  "status": "missing elemental reference"
+ },
+ "C0.9S0.08Cl0.02": {
+  "by": "shard 5",
+  "cell_atoms": 8,
+  "checked": "2026-10-30",
+  "computed_as": "C7S",
+  "e_above_hull_eV": 0.201,
+  "host": "mp-3347313",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0,
+  "method": 5,
+  "omitted": [
+   "Cl"
+  ],
+  "status": "likely unstable"
+ },
+ "C0.9S0.08O0.02": {
+  "by": "shard 4",
+  "cell_atoms": 8,
+  "checked": "2026-10-30",
+  "computed_as": "C7S",
+  "e_above_hull_eV": 0.201,
+  "host": "mp-3347313",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0,
+  "method": 5,
+  "omitted": [
+   "O"
+  ],
+  "status": "likely unstable"
+ },
+ "Dy0.9Ho0.1Fe1As1O0.85": {
+  "by": "shard 0",
+  "cell_atoms": 32,
+  "checked": "2026-10-30",
+  "computed_as": "Dy7HoFe8As9O7",
+  "e_above_hull_eV": 0.335,
+  "host": "mp-1080453",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.025,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Dy0.9Tm0.1Fe1As1O0.63F0.37": {
+  "by": "shard 4",
+  "cell_atoms": 32,
+  "checked": "2026-10-30",
+  "computed_as": "Dy7TmFe8As8O5F3",
+  "e_above_hull_eV": 0.269,
+  "host": "mp-1080453",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.025,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Dy1Fe1As1H0.3O0.7": {
+  "by": "shard 0",
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "no host structure in Materials Project"
+ },
+ "Er1Fe1As1H0.3O0.7": {
+  "by": "shard 2",
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "no host structure in Materials Project"
+ },
+ "Er1Fe1As1N0.17O0.68": {
+  "by": "shard 0",
+  "cell_atoms": 48,
+  "checked": "2026-10-30",
+  "computed_as": "Er12Fe12As13N2O9",
+  "e_above_hull_eV": 0.287,
+  "host": "mp-1080453",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.0,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Gd0.8Lu0.2Fe1As1O0.72F0.28": {
+  "by": "shard 5",
+  "cell_atoms": 48,
+  "checked": "2026-10-30",
+  "computed_as": "Gd10Lu2Fe12As12(O3F)3",
+  "e_above_hull_eV": 0.235,
+  "host": "mp-1080453",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.033,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Gd0.9Y0.1Fe1As1O0.8F0.2": {
+  "by": "shard 2",
+  "cell_atoms": 48,
+  "checked": "2026-10-30",
+  "computed_as": "Gd11YFe12As12(O5F)2",
+  "e_above_hull_eV": 0.217,
+  "host": "mp-1080453",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.017,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Gd1Fe1As0.9P0.1O0.63F0.37": {
+  "by": "shard 0",
+  "checked": "2026-10-30",
+  "host": "mp-1080453",
+  "method": 5,
+  "status": "missing elemental reference"
+ },
+ "Gd1Fe1Sb0.05As0.95O0.8F0.2": {
+  "by": "shard 2",
+  "cell_atoms": 24,
+  "checked": "2026-10-30",
+  "computed_as": "Gd6Fe6As6O5F",
+  "e_above_hull_eV": 0.22,
+  "host": "mp-1080453",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.049,
+  "method": 5,
+  "omitted": [
+   "Sb"
+  ],
+  "status": "likely unstable"
+ },
+ "Gd1Mn0.01Fe0.99As1O0.704F0.296": {
+  "by": "shard 4",
+  "cell_atoms": 16,
+  "checked": "2026-10-30",
+  "computed_as": "Gd4Fe4As4O3F",
+  "e_above_hull_eV": 0.219,
+  "host": "mp-1079308",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.01,
+  "method": 5,
+  "omitted": [
+   "Mn"
+  ],
+  "status": "likely unstable"
  },
  "H1C54.9Br3N6.1": {
   "cell_atoms": 12,
@@ -864,6 +1472,18 @@
   "method": 2,
   "status": "plausible"
  },
+ "Ho0.9Er0.1Fe1As1O0.85": {
+  "by": "shard 2",
+  "cell_atoms": 32,
+  "checked": "2026-10-30",
+  "computed_as": "Ho7ErFe8As9O7",
+  "e_above_hull_eV": 0.336,
+  "host": "mp-1080453",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.025,
+  "method": 5,
+  "status": "likely unstable"
+ },
  "K0.03Ba2Na0.07Ca1.9Cu3Hg1O9": {
   "cell_atoms": 144,
   "checked": "2026-10-30",
@@ -876,6 +1496,220 @@
    "K"
   ],
   "status": "plausible"
+ },
+ "La0.2Gd0.8Fe1As1O0.7": {
+  "by": "shard 2",
+  "cell_atoms": 24,
+  "checked": "2026-10-30",
+  "computed_as": "LaGd5Fe6As7O5",
+  "e_above_hull_eV": 0.24,
+  "host": "mp-1080453",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.033,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "La0.7Tm0.3Fe1As1N0.04O0.36F0.6": {
+  "by": "shard 2",
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "no host structure in Materials Project"
+ },
+ "La0.8Tm0.2Fe1As1O0.4F0.6": {
+  "by": "shard 2",
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "no host structure in Materials Project"
+ },
+ "Nd0.2Gd0.8Fe1As1O0.7": {
+  "by": "shard 2",
+  "cell_atoms": 24,
+  "checked": "2026-10-30",
+  "computed_as": "NdGd5Fe6As7O5",
+  "e_above_hull_eV": 0.25,
+  "host": "mp-1080453",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.033,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Nd0.2Sm0.8Fe1As1O0.67": {
+  "by": "shard 4",
+  "cell_atoms": 24,
+  "checked": "2026-10-30",
+  "computed_as": "NdSm5Fe6As7O5",
+  "e_above_hull_eV": 0.287,
+  "host": "mp-1079308",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.033,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Nd0.9Y0.1Fe1As1O0.825F0.175": {
+  "by": "shard 2",
+  "cell_atoms": 32,
+  "checked": "2026-10-30",
+  "computed_as": "Nd7YFe8As8O7F",
+  "e_above_hull_eV": 0.225,
+  "host": "mp-1080453",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.025,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Nd1Fe1As0.9Se0.1O0.7": {
+  "by": "shard 4",
+  "cell_atoms": 48,
+  "checked": "2026-10-30",
+  "computed_as": "Nd12Fe12As13SeO10",
+  "e_above_hull_eV": 0.223,
+  "host": "mp-1080453",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.0,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Nd1Fe1As1N0.0825O0.7425F0.175": {
+  "by": "shard 2",
+  "cell_atoms": 32,
+  "checked": "2026-10-30",
+  "computed_as": "Nd8Fe8As8NO6F",
+  "e_above_hull_eV": 0.235,
+  "host": "mp-1080453",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.0,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Nd1Fe1Sb0.05As0.95O0.72F0.28": {
+  "by": "shard 4",
+  "cell_atoms": 16,
+  "checked": "2026-10-30",
+  "computed_as": "Nd4Fe4As4O3F",
+  "e_above_hull_eV": 0.231,
+  "host": "mp-1080453",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.049,
+  "method": 5,
+  "omitted": [
+   "Sb"
+  ],
+  "status": "likely unstable"
+ },
+ "Pr0.1Dy0.9Fe1As1O0.85": {
+  "by": "shard 0",
+  "cell_atoms": 32,
+  "checked": "2026-10-30",
+  "computed_as": "PrDy7Fe8As9O7",
+  "e_above_hull_eV": 0.32,
+  "host": "mp-1080453",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.025,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Pr0.1Ho0.9Fe1As1O0.85": {
+  "by": "shard 0",
+  "cell_atoms": 32,
+  "checked": "2026-10-30",
+  "computed_as": "PrHo7Fe8As9O7",
+  "e_above_hull_eV": 0.316,
+  "host": "mp-1080453",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.025,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Pr0.9Sm0.1Fe1As1O0.775F0.225": {
+  "by": "shard 4",
+  "cell_atoms": 32,
+  "checked": "2026-10-30",
+  "computed_as": "Pr7SmFe8As8(O3F)2",
+  "e_above_hull_eV": 0.234,
+  "host": "mp-1080453",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.025,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Pr1Fe1As1N0.155O0.62F0.225": {
+  "by": "shard 0",
+  "cell_atoms": 32,
+  "checked": "2026-10-30",
+  "computed_as": "Pr8Fe8As8NO5F2",
+  "e_above_hull_eV": 0.244,
+  "host": "mp-1080453",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.0,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Pr1Fe1As1N0.17O0.68": {
+  "by": "shard 0",
+  "cell_atoms": 48,
+  "checked": "2026-10-30",
+  "computed_as": "Pr12Fe12As13N2O9",
+  "e_above_hull_eV": 0.239,
+  "host": "mp-1080453",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.0,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Sm0.5Y0.5Fe1As1O0.6": {
+  "by": "shard 4",
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "no host structure in Materials Project"
+ },
+ "Sm0.8Dy0.2Fe1As0.95P0.05O0.704F0.296": {
+  "by": "shard 2",
+  "checked": "2026-10-30",
+  "host": "mp-1079308",
+  "method": 5,
+  "status": "missing elemental reference"
+ },
+ "Sm0.9Lu0.1Fe1As1H0.19O0.648F0.162": {
+  "by": "shard 0",
+  "cell_atoms": 48,
+  "checked": "2026-10-30",
+  "computed_as": "Sm11LuFe12As12H2(O4F)2",
+  "e_above_hull_eV": 0.215,
+  "host": "mp-1079308",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.017,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Sm1Fe1As1H0.19O0.648F0.162": {
+  "by": "shard 4",
+  "cell_atoms": 24,
+  "checked": "2026-10-30",
+  "computed_as": "Sm6Fe6As6HO4F",
+  "e_above_hull_eV": 0.205,
+  "host": "mp-1079308",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.0,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Sm1Fe1As1N0.134O0.536": {
+  "by": "shard 2",
+  "cell_atoms": 24,
+  "checked": "2026-10-30",
+  "computed_as": "Sm6Fe6As7NO4",
+  "e_above_hull_eV": 0.235,
+  "host": "mp-1079308",
+  "host_e_above_hull_eV": 0.0,
+  "match": 0.0,
+  "method": 5,
+  "status": "likely unstable"
+ },
+ "Sm4Fe2Sb0.216Te0.504As2Cl0.12O2.8F1.08": {
+  "by": "shard 5",
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "no host structure in Materials Project"
  },
  "Sr2.72Ca2.88Bi1.44Sb0.16Pb0.4O1": {
   "checked": "2026-10-30",
@@ -898,7 +1732,17 @@
   "method": 5,
   "status": "closest host too different (SrCaO2)"
  },
+ "Sr2Ca2.65Gd0.35Tl0.16Hg0.64Mo0.2O6": {
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (SrCaO2)"
+ },
  "Sr2Ca2.65La0.35Tl0.24Hg0.56Mo0.2O6": {
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (SrCaO2)"
+ },
+ "Sr2Ca2.65Pr0.35Tl0.08Hg0.72Mo0.2O6": {
   "checked": "2026-10-30",
   "method": 5,
   "status": "closest host too different (SrCaO2)"
@@ -923,9 +1767,26 @@
   "method": 4,
   "status": "plausible"
  },
+ "Sr2Ca3.24Mg0.36Tl0.08Bi1.6Pb0.32O1": {
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (SrCa3(PbO4)2)"
+ },
+ "Sr2Ca3.6Sn0.08Bi1.6Pb0.32O1": {
+  "checked": "2026-10-30",
+  "method": 5,
+  "status": "closest host too different (SrCa3(PbO4)2)"
+ },
  "Sr2Ca3.6Tl0.08Bi1.6Pb0.32O1": {
   "checked": "2026-10-30",
   "method": 5,
   "status": "closest host too different (SrCa3(PbO4)2)"
+ },
+ "Y1Fe1As0.95P0.05O0.616F0.384": {
+  "by": "shard 4",
+  "checked": "2026-10-30",
+  "host": "mp-1079308",
+  "method": 5,
+  "status": "missing elemental reference"
  }
 }
