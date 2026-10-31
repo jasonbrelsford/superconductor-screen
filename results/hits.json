@@ -38,5 +38,15 @@
   "parent": "Sr2Ca1Tl0.8Cu2Mo0.2O7",
   "pred_Tc_K": 87.0,
   "score": 82.4
+ },
+ "Ba2Ca2Cu2.8Ni0.2Sb1.5Pb0.2O1": {
+  "by": "github",
+  "change": "Bi -> Sb; Sr -> Ba",
+  "computed_as": "Ba16Ca17Cu23NiBiSb12(PbO40)2",
+  "e_above_hull_eV": 0.13,
+  "found": "2026-10-31",
+  "parent": "Sr2Ca2Cu2.8Ni0.2Bi1.5Pb0.2O1",
+  "pred_Tc_K": 91.6,
+  "score": 86.7
  }
 }
