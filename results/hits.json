@@ -39,6 +39,16 @@
   "pred_Tc_K": 83.3,
   "score": 80.2
  },
+ "Ba2Ca0.8Lu0.2Tl0.5V0.5Cu2O1": {
+  "by": "shard 0",
+  "change": "Sr -> Ba; Y -> Lu",
+  "computed_as": "Ba12Ca5LuTl3V3(Cu2O7)6",
+  "e_above_hull_eV": 0.028,
+  "found": "2026-11-03",
+  "parent": "Sr2Ca0.8Y0.2Tl0.5V0.5Cu2O1",
+  "pred_Tc_K": 111.7,
+  "score": 107.9
+ },
  "Ba2Ca1In0.8Cu2Mo0.2O7": {
   "by": "github",
   "change": "Tl -> In; Sr -> Ba",
