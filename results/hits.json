@@ -1,4 +1,14 @@
 {
+ "Ba0.6Sr1.4Ca0.65Nd0.28Er0.07Cu2Hg0.5Bi0.5O1": {
+  "by": "shard 2",
+  "change": "Sr partly -> Ba; Nd partly -> Er",
+  "computed_as": "Ba7Sr17Ca8Nd3ErCu24Hg6(BiO14)6",
+  "e_above_hull_eV": 0.027,
+  "found": "2026-11-03",
+  "parent": "Sr2Ca0.65Nd0.35Cu2Hg0.5Bi0.5O1",
+  "pred_Tc_K": 108.5,
+  "score": 104.6
+ },
  "Ba0.6Sr1.4Ca0.65Nd0.28Lu0.07Cu2Hg0.5Bi0.5O1": {
   "by": "shard 5",
   "change": "Sr partly -> Ba; Nd partly -> Lu",
