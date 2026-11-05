@@ -1,4 +1,14 @@
 {
+ "Ba0.2Sr1.8Ca0.65Dy0.35Cu2Hg0.5Bi0.5O1": {
+  "by": "shard 3",
+  "change": "Y -> Dy; Sr partly -> Ba",
+  "computed_as": "BaSr11Ca4Dy2Cu12Hg3(BiO14)3",
+  "e_above_hull_eV": 0.023,
+  "found": "2026-11-05",
+  "parent": "Sr2Ca0.65Y0.35Cu2Hg0.5Bi0.5O1",
+  "pred_Tc_K": 106.3,
+  "score": 104.0
+ },
  "Ba0.6Sr1.4Ca0.65Nd0.28Er0.07Cu2Hg0.5Bi0.5O1": {
   "by": "shard 2",
   "change": "Sr partly -> Ba; Nd partly -> Er",
@@ -49,6 +59,16 @@
   "pred_Tc_K": 91.5,
   "score": 88.7
  },
+ "Ba2Ca0.5Gd0.35Er0.15In0.65Cu2Bi0.35O1": {
+  "by": "github",
+  "change": "Sr -> Ba; Gd partly -> Er",
+  "computed_as": "Ba12Ca3Gd2ErIn3GaCu12(BiO21)2",
+  "e_above_hull_eV": 0.059,
+  "found": "2026-11-05",
+  "parent": "Sr2Ca0.5Gd0.5In0.65Cu2Bi0.35O1",
+  "pred_Tc_K": 83.4,
+  "score": 79.4
+ },
  "Ba2Ca0.5Gd0.5In0.65Cu2Bi0.35O1": {
   "by": "shard 1",
   "change": "Sr -> Ba",
@@ -58,6 +78,16 @@
   "parent": "Sr2Ca0.5Gd0.5In0.65Cu2Bi0.35O1",
   "pred_Tc_K": 83.3,
   "score": 80.2
+ },
+ "Ba2Ca0.5Tb0.1Gd0.4In0.65Cu2Bi0.35O1": {
+  "by": "github",
+  "change": "Gd partly -> Tb; Sr -> Ba",
+  "computed_as": "Ba16Ca4TbGd3In4GaCu16Bi3O56",
+  "e_above_hull_eV": 0.058,
+  "found": "2026-11-05",
+  "parent": "Sr2Ca0.5Gd0.5In0.65Cu2Bi0.35O1",
+  "pred_Tc_K": 82.8,
+  "score": 78.2
  },
  "Ba2Ca0.8Lu0.2Tl0.5V0.5Cu2O1": {
   "by": "shard 0",
@@ -138,5 +168,15 @@
   "parent": "Sr2Ca2Cu2.8Ni0.2Bi1.5Pb0.2O1",
   "pred_Tc_K": 91.6,
   "score": 86.7
+ },
+ "Sr1.4Ca1.1Gd0.5Cu2Sn0.65Bi0.35O1": {
+  "by": "github",
+  "change": "Sr partly -> Ca; In -> Sn",
+  "computed_as": "Sr8Ca7Gd3GaCu12Sn3(BiO21)2",
+  "e_above_hull_eV": 0.076,
+  "found": "2026-11-05",
+  "parent": "Sr2Ca0.5Gd0.5In0.65Cu2Bi0.35O1",
+  "pred_Tc_K": 81.1,
+  "score": 78.6
  }
 }
