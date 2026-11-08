@@ -89,6 +89,16 @@
   "pred_Tc_K": 83.3,
   "score": 80.2
  },
+ "Ba2Ca0.5Nd0.5In0.65Cu2Bi0.35O1": {
+  "by": "github",
+  "change": "Gd -> Nd; Sr -> Ba",
+  "computed_as": "Ba12Ca3Nd3In3GaCu12(BiO21)2",
+  "e_above_hull_eV": 0.057,
+  "found": "2026-11-08",
+  "parent": "Sr2Ca0.5Gd0.5In0.65Cu2Bi0.35O1",
+  "pred_Tc_K": 84.1,
+  "score": 78.1
+ },
  "Ba2Ca0.5Tb0.1Gd0.4In0.65Cu2Bi0.35O1": {
   "by": "github",
   "change": "Gd partly -> Tb; Sr -> Ba",
