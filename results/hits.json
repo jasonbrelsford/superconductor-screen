@@ -189,6 +189,16 @@
   "pred_Tc_K": 91.6,
   "score": 86.7
  },
+ "BaCaCuPbO5": {
+  "by": "shard 4",
+  "change": "Sr -> Ca; Tl -> Pb",
+  "computed_as": "Ba4Ca4Cu4Pb4O19",
+  "e_above_hull_eV": 0.065,
+  "found": "2026-11-06",
+  "parent": "BaSrTlCuO5",
+  "pred_Tc_K": 84.6,
+  "score": 77.3
+ },
  "Sr1.4Ca1.1Gd0.5Cu2Sn0.65Bi0.35O1": {
   "by": "github",
   "change": "Sr partly -> Ca; In -> Sn",
