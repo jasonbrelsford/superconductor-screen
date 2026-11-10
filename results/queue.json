@@ -1,78 +1,174 @@
 [
 {
-"formula": "Sm1Fe1As0.95P0.05Cl0.0768O0.616F0.3072",
-"parent": "Sm1Fe1As0.95P0.05O0.88F0.12",
+"formula": "Sr2Ca2Tl0.15Cu3Re0.2Hg0.6W0.05O1",
+"parent": "Sr2Ca2Cu3Re0.25Hg0.75O1",
 "swaps": [
 [
-"O",
-"F",
-0.3
+"Re",
+"W",
+0.2
 ],
 [
-"F",
-"Cl",
+"Hg",
+"Tl",
 0.2
 ]
 ]
 },
 {
-"formula": "Ba0.5Sr1La0.4Tb0.1Cu2Pb1O4.2F1.8",
-"parent": "Ba0.5Sr1La0.5Cu2Pb1O6",
+"formula": "K0.4Sr1.12Ca0.48Cu1Si1O5",
+"parent": "K0.4Sr1.6Cu1C1O5",
+"swaps": [
+[
+"C",
+"Si",
+1.0
+],
+[
+"Sr",
+"Ca",
+0.3
+]
+]
+},
+{
+"formula": "Sm1Fe1As1N0.0775O0.6975F0.225",
+"parent": "Pr1Fe1As1O0.775F0.225",
+"swaps": [
+[
+"Pr",
+"Sm",
+1.0
+],
+[
+"O",
+"N",
+0.1
+]
+]
+},
+{
+"formula": "Ba0.5Ca1.9Y0.36Lu0.04Cu2B0.5Pb0.5O1",
+"parent": "Ba0.5Sr1.5Ca0.4Y0.4Cu2B0.5Pb0.5O1",
+"swaps": [
+[
+"Y",
+"Lu",
+0.1
+],
+[
+"Sr",
+"Ca",
+1.0
+]
+]
+},
+{
+"formula": "Tb0.1Dy0.9Fe1As1O0.72F0.28",
+"parent": "Dy1Fe1As1O0.9F0.1",
 "swaps": [
 [
 "O",
 "F",
-0.3
+0.2
 ],
 [
-"La",
+"Dy",
 "Tb",
+0.1
+]
+]
+},
+{
+"formula": "Ba1.12Sr0.88Cu1.1N0.9O3.43F1.47",
+"parent": "Ba1.12Sr0.88Cu1.1C0.9O4.9",
+"swaps": [
+[
+"C",
+"N",
+1.0
+],
+[
+"O",
+"F",
+0.3
+]
+]
+},
+{
+"formula": "Nd1Fe1As1H0.22N0.156O0.624",
+"parent": "Ce1Fe1As1H0.22O0.78",
+"swaps": [
+[
+"Ce",
+"Nd",
+1.0
+],
+[
+"O",
+"N",
 0.2
 ]
 ]
 },
 {
-"formula": "Gd1Fe1Sn0.05As0.95O0.8F0.2",
-"parent": "La1Fe1Sb0.05As0.95O0.8F0.2",
+"formula": "Ba2Ca3GdCu4PbO",
+"parent": "Sr2Ca3TbCu4PbO",
 "swaps": [
 [
-"La",
+"Tb",
 "Gd",
 1.0
 ],
 [
-"Sb",
-"Sn",
+"Sr",
+"Ba",
 1.0
 ]
 ]
 },
 {
-"formula": "Ba0.6Sr1.4Ca0.5Yb0.05Gd0.45In0.65Cu2Bi0.35O1",
+"formula": "Sm1Fe1As0.95P0.045S0.005O0.704F0.296",
+"parent": "Sm1Fe1As0.95P0.05O0.88F0.12",
+"swaps": [
+[
+"P",
+"S",
+0.1
+],
+[
+"O",
+"F",
+0.2
+]
+]
+},
+{
+"formula": "Sr1.6Ca0.9Tb0.5In0.65Cu2Bi0.35O1",
 "parent": "Sr2Ca0.5Gd0.5In0.65Cu2Bi0.35O1",
 "swaps": [
 [
 "Gd",
+"Tb",
+1.0
+],
+[
+"Sr",
+"Ca",
+0.2
+]
+]
+},
+{
+"formula": "Yb0.1Ce0.9Fe1As1O0.623F0.377",
+"parent": "Ce1Fe1As1O0.89F0.11",
+"swaps": [
+[
+"Ce",
 "Yb",
 0.1
 ],
 [
-"Sr",
-"Ba",
-0.3
-]
-]
-},
-{
-"formula": "La0.62Dy0.304Tm0.076Fe1As1O0.5775F0.4225",
-"parent": "La0.62Dy0.38Fe1As1O0.825F0.175",
-"swaps": [
-[
-"Dy",
-"Tm",
-0.2
-],
-[
 "O",
 "F",
 0.3
@@ -80,183 +176,119 @@
 ]
 },
 {
-"formula": "Ba1Ca1Nd0.1Sm0.9Cu3O4.9F2.1",
-"parent": "BaCaSmCu3O7",
-"swaps": [
-[
-"O",
-"F",
-0.3
-],
-[
-"Sm",
-"Nd",
-0.1
-]
-]
-},
-{
-"formula": "Ca0.4Ce0.6Fe1Ge0.3As0.7F1",
-"parent": "Ca0.4Pr0.6Fe1As1F1",
-"swaps": [
-[
-"Pr",
-"Ce",
-1.0
-],
-[
-"As",
-"Ge",
-0.3
-]
-]
-},
-{
-"formula": "Ba2Sm1Ta0.8Cu2Sn0.2N1.6O6.4",
-"parent": "Sr2Sm1Ta0.8Cu2Sn0.2O8",
-"swaps": [
-[
-"Sr",
-"Ba",
-1.0
-],
-[
-"O",
-"N",
-0.2
-]
-]
-},
-{
-"formula": "Pr0.9Lu0.1Fe1As1N0.085O0.765",
-"parent": "Pr1Fe1As1O0.85",
-"swaps": [
-[
-"O",
-"N",
-0.1
-],
-[
-"Pr",
-"Lu",
-0.1
-]
-]
-},
-{
-"formula": "Ba0.5Ca1La0.35Lu0.15Cu2Pb1O6",
+"formula": "Ba0.5Sr1Eu0.5Cu2Pb1N1.2O4.8",
 "parent": "Ba0.5Sr1La0.5Cu2Pb1O6",
 "swaps": [
 [
-"La",
-"Lu",
-0.3
+"O",
+"N",
+0.2
 ],
 [
-"Sr",
-"Ca",
+"La",
+"Eu",
 1.0
 ]
 ]
 },
 {
-"formula": "Pr0.8Sm0.2Fe1As1N0.255O0.595",
+"formula": "Pr0.8Ho0.2Fe1As1N0.085O0.765",
 "parent": "Pr1Fe1As1O0.85",
 "swaps": [
 [
-"O",
-"N",
-0.3
-],
-[
 "Pr",
-"Sm",
-0.2
-]
-]
-},
-{
-"formula": "Sr1.4Ca0.6Y0.7Ho0.3Cd0.67Cu2Bi0.23Pb0.1O7",
-"parent": "Sr2Y1Cd0.67Cu2Bi0.23Pb0.1O7",
-"swaps": [
-[
-"Y",
 "Ho",
-0.3
+0.2
 ],
-[
-"Sr",
-"Ca",
-0.3
-]
-]
-},
-{
-"formula": "Pr0.2Y0.8Fe1As1N0.255O0.595",
-"parent": "Y1Fe1As1O0.85",
-"swaps": [
 [
 "O",
 "N",
-0.3
-],
-[
-"Y",
-"Pr",
-0.2
-]
-]
-},
-{
-"formula": "Sr2Ca0.65Gd0.35V0.28Cr0.12Cu2Sn0.6O1",
-"parent": "Sr2Ca0.65Gd0.35V0.4Cu2Pb0.6O1",
-"swaps": [
-[
-"V",
-"Cr",
-0.3
-],
-[
-"Pb",
-"Sn",
-1.0
-]
-]
-},
-{
-"formula": "Tm1Fe1As1O0.765F0.085",
-"parent": "Ce1Fe1As1O0.85",
-"swaps": [
-[
-"O",
-"F",
 0.1
-],
-[
-"Ce",
-"Tm",
-1.0
 ]
 ]
 },
 {
-"formula": "Ba2Tb0.3Y0.7Cd2Cu2O8",
+"formula": "Ba2Y1Cd0.6Cu2Hg1.4N2.4O5.6",
 "parent": "Ba2YCu2(HgO4)2",
 "swaps": [
 [
 "Hg",
 "Cd",
-1.0
+0.3
 ],
 [
-"Y",
-"Tb",
+"O",
+"N",
 0.3
 ]
 ]
 },
 {
-"formula": "Ce0.62Gd0.342Er0.038Fe1As1O0.66F0.34",
+"formula": "Eu0.2Ho0.8Fe1As1O0.63F0.37",
+"parent": "Ho1Fe1As1O0.9F0.1",
+"swaps": [
+[
+"Ho",
+"Eu",
+0.2
+],
+[
+"O",
+"F",
+0.3
+]
+]
+},
+{
+"formula": "Ba0.5Sr1.05Ca0.45Y1Cu2.8Ge0.2N1.4O5.6",
+"parent": "Ba0.5Sr1.5Y1Cu2.8Ge0.2O7",
+"swaps": [
+[
+"O",
+"N",
+0.2
+],
+[
+"Sr",
+"Ca",
+0.3
+]
+]
+},
+{
+"formula": "Sm0.7Tm0.3Fe1As0.95P0.05N0.264O0.616F0.12",
+"parent": "Sm1Fe1As0.95P0.05O0.88F0.12",
+"swaps": [
+[
+"O",
+"N",
+0.3
+],
+[
+"Sm",
+"Tm",
+0.3
+]
+]
+},
+{
+"formula": "Sr1.4Ca0.6Zn0.2Cu0.8Pb1O5",
+"parent": "Sr2CuPbO5",
+"swaps": [
+[
+"Cu",
+"Zn",
+0.2
+],
+[
+"Sr",
+"Ca",
+0.3
+]
+]
+},
+{
+"formula": "Tb0.124Ce0.496Gd0.38Fe1As1O0.66F0.34",
 "parent": "Ce0.62Gd0.38Fe1As1O0.825F0.175",
 "swaps": [
 [
@@ -265,543 +297,495 @@
 0.2
 ],
 [
-"Gd",
-"Er",
-0.1
-]
-]
-},
-{
-"formula": "Sr2Er1Cu2Os0.9N0.78O7.02",
-"parent": "Sr2Er1Cu2Ru0.9O7.8",
-"swaps": [
-[
-"O",
-"N",
-0.1
-],
-[
-"Ru",
-"Os",
-1.0
-]
-]
-},
-{
-"formula": "Ho0.8Tm0.2Fe1As1O0.72F0.28",
-"parent": "Ho1Fe1As1O0.9F0.1",
-"swaps": [
-[
-"O",
-"F",
-0.2
-],
-[
-"Ho",
-"Tm",
-0.2
-]
-]
-},
-{
-"formula": "Sr1.6Ca0.4Gd1Co0.01Cu2Ru0.99O6.4F1.6",
-"parent": "Sr2Gd1Co0.01Cu2Ru0.99O8",
-"swaps": [
-[
-"Sr",
-"Ca",
-0.2
-],
-[
-"O",
-"F",
-0.2
-]
-]
-},
-{
-"formula": "Ba0.2La0.16Nd0.64Fe1As1O0.42F0.58",
-"parent": "Ba0.2Nd0.8Fe1As1O0.6F0.4",
-"swaps": [
-[
-"Nd",
-"La",
-0.2
-],
-[
-"O",
-"F",
-0.3
-]
-]
-},
-{
-"formula": "Sr2La0.9Dy0.1Cu2Hg1O4.8F1.2",
-"parent": "Sr2LaCu2HgO6",
-"swaps": [
-[
-"La",
-"Dy",
-0.1
-],
-[
-"O",
-"F",
-0.2
-]
-]
-},
-{
-"formula": "Ba0.2Dy0.8Fe1As1N0.06O0.54F0.4",
-"parent": "Ba0.2Nd0.8Fe1As1O0.6F0.4",
-"swaps": [
-[
-"Nd",
-"Dy",
-1.0
-],
-[
-"O",
-"N",
-0.1
-]
-]
-},
-{
-"formula": "Sr1.4Ca0.6Eu0.8Er0.2Ti0.1Nb0.7Cu2.2O1",
-"parent": "Sr2Eu1Ti0.1Nb0.7Cu2.2O1",
-"swaps": [
-[
-"Sr",
-"Ca",
-0.3
-],
-[
-"Eu",
-"Er",
-0.2
-]
-]
-},
-{
-"formula": "La0.496Tb0.038Dy0.342Ho0.124Fe1As1O0.825F0.175",
-"parent": "La0.62Dy0.38Fe1As1O0.825F0.175",
-"swaps": [
-[
-"La",
-"Ho",
-0.2
-],
-[
-"Dy",
+"Ce",
 "Tb",
-0.1
+0.2
 ]
 ]
 },
 {
-"formula": "Ba1.3Sr0.7Y0.9Lu0.1Al0.2Cu2.8N1.422O5.688",
-"parent": "Ba1.3Sr0.7Y1Al0.2Cu2.8O7.11",
+"formula": "Ba0.5Ca1La0.35Yb0.15Cu2Pb1O6",
+"parent": "Ba0.5Sr1La0.5Cu2Pb1O6",
 "swaps": [
 [
-"O",
-"N",
-0.2
+"La",
+"Yb",
+0.3
 ],
+[
+"Sr",
+"Ca",
+1.0
+]
+]
+},
+{
+"formula": "Y0.7Lu0.3Fe1As1N0.17O0.68",
+"parent": "Y1Fe1As1O0.85",
+"swaps": [
 [
 "Y",
 "Lu",
-0.1
+0.3
+],
+[
+"O",
+"N",
+0.2
 ]
 ]
 },
 {
-"formula": "Ho1Fe1As0.95P0.05N0.264O0.616F0.12",
+"formula": "Ba1Ca1Sm0.8Dy0.2Cu3O5.6F1.4",
+"parent": "BaCaSmCu3O7",
+"swaps": [
+[
+"O",
+"F",
+0.2
+],
+[
+"Sm",
+"Dy",
+0.2
+]
+]
+},
+{
+"formula": "Sm0.9Ho0.1Fe1As0.95P0.05N0.176O0.704F0.12",
 "parent": "Sm1Fe1As0.95P0.05O0.88F0.12",
 "swaps": [
 [
 "Sm",
 "Ho",
-1.0
+0.1
 ],
 [
 "O",
 "N",
-0.3
+0.2
 ]
 ]
 },
 {
-"formula": "Ba2Gd0.3Y0.7Cu2Hg2O5.6F2.4",
-"parent": "Ba2YCu2(HgO4)2",
+"formula": "Sr2Ca3La1Cu3.6Ni0.4Sn1O1",
+"parent": "Sr2Ca3LaCu4PbO",
 "swaps": [
 [
-"Y",
-"Gd",
-0.3
+"Cu",
+"Ni",
+0.1
 ],
+[
+"Pb",
+"Sn",
+1.0
+]
+]
+},
+{
+"formula": "Ho1Fe1As0.9P0.1O0.72F0.28",
+"parent": "Ho1Fe1As1O0.9F0.1",
+"swaps": [
 [
 "O",
 "F",
-0.3
-]
-]
-},
-{
-"formula": "Sm1Mn0.01Fe0.99As0.9P0.1O0.704F0.296",
-"parent": "Sm1Mn0.01Fe0.99As1O0.88F0.12",
-"swaps": [
+0.2
+],
 [
 "As",
 "P",
 0.1
-],
-[
-"O",
-"F",
-0.2
 ]
 ]
 },
 {
-"formula": "Na0.315Sr0.495Li0.035Ca1.155Cu1Br1Cl1O2",
-"parent": "Na0.35Ca1.65Cu1Br1Cl1O2",
-"swaps": [
-[
-"Na",
-"Li",
-0.1
-],
-[
-"Ca",
-"Sr",
-0.3
-]
-]
-},
-{
-"formula": "Ba1.9La0.08Nd1Y0.02N1.372O5.488",
-"parent": "Ba1.9La0.1Nd1O6.86",
+"formula": "Sr1.8Ca0.2Cu1Pb1N1.5O3.5",
+"parent": "Sr2CuPbO5",
 "swaps": [
 [
 "O",
 "N",
-0.2
-],
-[
-"La",
-"Y",
-0.2
-]
-]
-},
-{
-"formula": "Ba2Ca0.2Sm0.8Cd0.2Cu1.96Ag0.84O6.87",
-"parent": "Ba2Ca0.2Sm0.8Zn0.2Cu2.8O6.87",
-"swaps": [
-[
-"Zn",
-"Cd",
-1.0
-],
-[
-"Cu",
-"Ag",
-0.3
-]
-]
-},
-{
-"formula": "Yb0.1Ho0.9Fe1As1N0.18O0.72F0.1",
-"parent": "Ho1Fe1As1O0.9F0.1",
-"swaps": [
-[
-"Ho",
-"Yb",
-0.1
-],
-[
-"O",
-"N",
-0.2
-]
-]
-},
-{
-"formula": "Ba1Ca0.9Sm1Mg0.1Cu3O5.6F1.4",
-"parent": "BaCaSmCu3O7",
-"swaps": [
-[
-"Ca",
-"Mg",
-0.1
-],
-[
-"O",
-"F",
-0.2
-]
-]
-},
-{
-"formula": "Ho1Fe1Ge0.1As0.9N0.27O0.63F0.1",
-"parent": "Ho1Fe1As1O0.9F0.1",
-"swaps": [
-[
-"O",
-"N",
-0.3
-],
-[
-"As",
-"Ge",
-0.1
-]
-]
-},
-{
-"formula": "Ba2Ca0.5Dy0.5Cu2.5Pb0.5O4.9F2.1",
-"parent": "Sr2Ca0.5Dy0.5Cu2.5Pb0.5O7",
-"swaps": [
-[
-"O",
-"F",
 0.3
 ],
 [
 "Sr",
-"Ba",
-1.0
+"Ca",
+0.1
 ]
 ]
 },
 {
-"formula": "Nd0.9Lu0.1Fe0.98As1Ru0.02O0.801F0.199",
+"formula": "Pr0.9Lu0.1Fe1As0.9P0.1O0.63F0.37",
+"parent": "Pr1Fe1As0.9P0.1O0.9F0.1",
+"swaps": [
+[
+"Pr",
+"Lu",
+0.1
+],
+[
+"O",
+"F",
+0.3
+]
+]
+},
+{
+"formula": "Sr1.449Ca0.161La0.39Ga0.01Cu0.99Sb1.8Pb0.2O1",
+"parent": "Sr1.61La0.39Ga0.01Cu0.99Bi1.8Pb0.2O1",
+"swaps": [
+[
+"Bi",
+"Sb",
+1.0
+],
+[
+"Sr",
+"Ca",
+0.1
+]
+]
+},
+{
+"formula": "Yb0.2Nd0.8Fe0.98As1Ru0.02O0.623F0.377",
 "parent": "Nd1Fe0.98As1Ru0.02O0.89F0.11",
 "swaps": [
 [
 "Nd",
-"Lu",
-0.1
+"Yb",
+0.2
 ],
 [
 "O",
 "F",
+0.3
+]
+]
+},
+{
+"formula": "Na0.35Sr0.495Ca1.155Cu1I0.2Br0.8Cl1O2",
+"parent": "Na0.35Ca1.65Cu1Br1Cl1O2",
+"swaps": [
+[
+"Ca",
+"Sr",
+0.3
+],
+[
+"Br",
+"I",
+0.2
+]
+]
+},
+{
+"formula": "Nd0.7Lu0.3Mn0.01Fe0.99As1O0.712F0.288",
+"parent": "Nd1Mn0.01Fe0.99As1O0.89F0.11",
+"swaps": [
+[
+"Nd",
+"Lu",
+0.3
+],
+[
+"O",
+"F",
+0.2
+]
+]
+},
+{
+"formula": "Sr1.6Ca0.4Er1Cu2Os0.9O7.8",
+"parent": "Sr2Er1Cu2Ru0.9O7.8",
+"swaps": [
+[
+"Sr",
+"Ca",
+0.2
+],
+[
+"Ru",
+"Os",
+1.0
+]
+]
+},
+{
+"formula": "La0.05Ce0.5Y0.45Fe1As1O0.85F0.15",
+"parent": "La0.5Y0.5Fe1As1O0.85F0.15",
+"swaps": [
+[
+"La",
+"Ce",
+1.0
+],
+[
+"Y",
+"La",
 0.1
 ]
 ]
 },
 {
-"formula": "Ba2Ca2Tl0.3Cu2Hg0.7Rh3O1",
-"parent": "Ba2Sr2Tl0.3Co3Cu2Hg0.7O1",
+"formula": "Ba0.5Ca1.5Y1Cu1.96Ni0.84Ge0.2O7",
+"parent": "Ba0.5Sr1.5Y1Cu2.8Ge0.2O7",
 "swaps": [
-[
-"Co",
-"Rh",
-1.0
-],
 [
 "Sr",
 "Ca",
 1.0
+],
+[
+"Cu",
+"Ni",
+0.3
 ]
 ]
 },
 {
-"formula": "La0.04Y0.96Fe1As1H0.15N0.2O0.8",
-"parent": "La0.05Y0.95Fe1As1H0.15O1",
+"formula": "Ca0.88La0.096Y0.024Fe1Sn0.02Sb0.18As1.8",
+"parent": "Ca0.88La0.12Fe1Sb0.2As1.8",
 "swaps": [
+[
+"Sb",
+"Sn",
+0.1
+],
 [
 "La",
 "Y",
 0.2
-],
-[
-"O",
-"N",
-0.2
 ]
 ]
 },
 {
-"formula": "Sr1.4Ca1Yb0.18Gd0.42In0.39Cu2Bi0.21Pb0.4O1",
-"parent": "Sr2Ca0.4Gd0.6In0.39Cu2Bi0.21Pb0.4O1",
+"formula": "Ba2Ca0.6Pr0.28Lu0.12Cu2.1Ag0.9O7",
+"parent": "Ba2Ca0.6Pr0.4Cu3O7",
 "swaps": [
 [
-"Gd",
-"Yb",
+"Cu",
+"Ag",
 0.3
 ],
 [
-"Sr",
-"Ca",
-0.3
-]
-]
-},
-{
-"formula": "Ba0.2Nd0.56Lu0.24Fe1As1N0.12O0.48F0.4",
-"parent": "Ba0.2Nd0.8Fe1As1O0.6F0.4",
-"swaps": [
-[
-"O",
-"N",
-0.2
-],
-[
-"Nd",
+"Pr",
 "Lu",
 0.3
 ]
 ]
 },
 {
-"formula": "Sr2Nd1Cd0.67Cu2Bi0.23Pb0.1O5.6F1.4",
-"parent": "Sr2Y1Cd0.67Cu2Bi0.23Pb0.1O7",
+"formula": "La0.45Ho0.5Tm0.05Fe1As1O0.85F0.15",
+"parent": "La0.5Y0.5Fe1As1O0.85F0.15",
 "swaps": [
 [
 "Y",
-"Nd",
+"Ho",
 1.0
 ],
 [
-"O",
-"F",
-0.2
+"La",
+"Tm",
+0.1
 ]
 ]
 },
 {
-"formula": "Ho1Mn0.0003Fe0.9998As1S0.089O0.801F0.11",
-"parent": "La1Mn0.00025Fe0.99975As1O0.89F0.11",
+"formula": "Sr1.4Ca0.6Nd0.09Gd0.91Cu2Rh1O8",
+"parent": "Sr2Nd0.09Gd0.91Cu2Ru1O8",
+"swaps": [
+[
+"Sr",
+"Ca",
+0.3
+],
+[
+"Ru",
+"Rh",
+1.0
+]
+]
+},
+{
+"formula": "Sm0.9Eu0.1Fe1As1H0.2O0.8",
+"parent": "Sm1Fe1As0.77P0.23H0.2O0.8",
+"swaps": [
+[
+"Sm",
+"Eu",
+0.1
+],
+[
+"P",
+"As",
+1.0
+]
+]
+},
+{
+"formula": "K0.4Sr1.12Ca0.48Cu1C1S1.5O3.5",
+"parent": "K0.4Sr1.6Cu1C1O5",
 "swaps": [
 [
 "O",
 "S",
-0.1
+0.3
 ],
 [
-"La",
-"Ho",
-1.0
+"Sr",
+"Ca",
+0.3
 ]
 ]
 },
 {
-"formula": "Ba1.8Lu0.2Tl1Cu1O4F1",
-"parent": "Ba1.8La0.2Tl1Cu1O5",
+"formula": "Ca0.7Mg0.3Fe0.92Sb0.3As0.7Rh0.08F1",
+"parent": "Ca1Fe0.92As1Rh0.08F1",
 "swaps": [
 [
-"La",
-"Lu",
-1.0
-],
-[
-"O",
-"F",
-0.2
-]
-]
-},
-{
-"formula": "Pr1Fe1Ge0.09As0.81P0.1O0.63F0.37",
-"parent": "Pr1Fe1As0.9P0.1O0.9F0.1",
-"swaps": [
-[
-"O",
-"F",
+"Ca",
+"Mg",
 0.3
 ],
 [
 "As",
-"Ge",
+"Sb",
+0.3
+]
+]
+},
+{
+"formula": "Ba1Ca0.7Sm1Mg0.3Cu3O5.6F1.4",
+"parent": "BaCaSmCu3O7",
+"swaps": [
+[
+"O",
+"F",
+0.2
+],
+[
+"Ca",
+"Mg",
+0.3
+]
+]
+},
+{
+"formula": "La0.45Yb0.05Dy0.5Fe1As1O0.6",
+"parent": "La0.5Y0.5Fe1As1O0.6",
+"swaps": [
+[
+"Y",
+"Dy",
+1.0
+],
+[
+"La",
+"Yb",
 0.1
 ]
 ]
 },
 {
-"formula": "Ba2Cu1C0.7N0.3O4.28F1.07",
-"parent": "Sr2Cu1C0.7N0.3O5.35",
+"formula": "K0.4Ba0.32Sr1.28Cu1N1O5",
+"parent": "K0.4Sr1.6Cu1C1O5",
 "swaps": [
 [
 "Sr",
 "Ba",
-1.0
+0.2
 ],
+[
+"C",
+"N",
+1.0
+]
+]
+},
+{
+"formula": "La0.45Ce0.05Y0.4Lu0.1Fe1As1O0.6",
+"parent": "La0.5Y0.5Fe1As1O0.6",
+"swaps": [
+[
+"Y",
+"Lu",
+0.2
+],
+[
+"La",
+"Ce",
+0.1
+]
+]
+},
+{
+"formula": "Ba0.4Sr1.6Cu1Pb1O4F1",
+"parent": "Sr2CuPbO5",
+"swaps": [
 [
 "O",
 "F",
+0.2
+],
+[
+"Sr",
+"Ba",
 0.2
 ]
 ]
 },
 {
-"formula": "Sr0.5La0.05Sm0.45Fe1Ge0.2As0.8F1",
+"formula": "Sr0.5La0.15Sm0.35Fe1Sb0.2As0.8F1",
 "parent": "Sr0.5Sm0.5Fe1As1F1",
 "swaps": [
 [
 "Sm",
 "La",
-0.1
+0.3
+],
+[
+"As",
+"Sb",
+0.2
+]
+]
+},
+{
+"formula": "Sr1.4Ca0.6Eu0.8Dy0.2Ti0.1Nb0.7Cu2.2O1",
+"parent": "Sr2Eu1Ti0.1Nb0.7Cu2.2O1",
+"swaps": [
+[
+"Eu",
+"Dy",
+0.2
+],
+[
+"Sr",
+"Ca",
+0.3
+]
+]
+},
+{
+"formula": "Nd1Mn0.01Fe0.99Ge0.1As0.9O0.712F0.288",
+"parent": "Nd1Mn0.01Fe0.99As1O0.89F0.11",
+"swaps": [
+[
+"O",
+"F",
+0.2
 ],
 [
 "As",
 "Ge",
-0.2
+0.1
 ]
 ]
 },
 {
-"formula": "Ba1Sr1Y0.7Ho0.3Cu2Au2O8",
-"parent": "BaSrYCu2(HgO4)2",
-"swaps": [
-[
-"Hg",
-"Au",
-1.0
-],
-[
-"Y",
-"Ho",
-0.3
-]
-]
-},
-{
-"formula": "Ca0.56La0.14Ce0.06Mg0.24Fe1As1H1",
-"parent": "Ca0.8La0.2Fe1As1H1",
-"swaps": [
-[
-"Ca",
-"Mg",
-0.3
-],
-[
-"La",
-"Ce",
-0.3
-]
-]
-},
-{
-"formula": "Ba4Cr0.6Cu2Hg0.4C1N2.7O6.3",
-"parent": "Sr4Cr0.6Cu2Hg0.4C1O9",
-"swaps": [
-[
-"Sr",
-"Ba",
-1.0
-],
-[
-"O",
-"N",
-0.3
-]
-]
-},
-{
-"formula": "Tb0.2Ce0.8Fe1As1O0.712F0.288",
-"parent": "Ce1Fe1As1O0.89F0.11",
+"formula": "Ba1.3Sr0.7Ca0.5Tb0.05Pr0.45Cu2.6C0.4O5.6F1.4",
+"parent": "Ba1.3Sr0.7Ca0.5Pr0.5Cu2.6C0.4O7",
 "swaps": [
 [
 "O",
@@ -809,51 +793,19 @@
 0.2
 ],
 [
-"Ce",
+"Pr",
 "Tb",
-0.2
+0.1
 ]
 ]
 },
 {
-"formula": "Sr2Ca0.5La0.4Y0.1Cu2Hg1O4.8F1.2",
-"parent": "Sr2Ca0.5La0.5Cu2Hg1O6",
-"swaps": [
-[
-"La",
-"Y",
-0.2
-],
-[
-"O",
-"F",
-0.2
-]
-]
-},
-{
-"formula": "Nd0.7Sm0.3Fe0.98As1Ru0.02O0.623F0.377",
+"formula": "Nd0.9Tm0.1Fe0.98As1Ru0.02O0.623F0.377",
 "parent": "Nd1Fe0.98As1Ru0.02O0.89F0.11",
 "swaps": [
 [
 "Nd",
-"Sm",
-0.3
-],
-[
-"O",
-"F",
-0.3
-]
-]
-},
-{
-"formula": "Ba2Dy0.1Y0.9Cu2Hg2O5.6F2.4",
-"parent": "Ba2YCu2(HgO4)2",
-"swaps": [
-[
-"Y",
-"Dy",
+"Tm",
 0.1
 ],
 [
@@ -864,920 +816,45 @@
 ]
 },
 {
-"formula": "Ce0.7Er0.3Fe1As1S0.267O0.623F0.11",
-"parent": "Ce1Fe1As1O0.89F0.11",
+"formula": "Sr1.61La0.39Ga0.01Cu0.99Sb1.8Pb0.2N0.3O0.7",
+"parent": "Sr1.61La0.39Ga0.01Cu0.99Bi1.8Pb0.2O1",
 "swaps": [
 [
-"Ce",
-"Er",
-0.3
-],
-[
-"O",
-"S",
-0.3
-]
-]
-},
-{
-"formula": "Ba1.3Sr0.7Gd0.2Y0.8Al0.2Cu2.8N1.422O5.688",
-"parent": "Ba1.3Sr0.7Y1Al0.2Cu2.8O7.11",
-"swaps": [
-[
-"Y",
-"Gd",
-0.2
-],
-[
-"O",
-"N",
-0.2
-]
-]
-},
-{
-"formula": "Ce1Fe1As1Cl0.011O0.801F0.188",
-"parent": "Ce1Fe1As1O0.89F0.11",
-"swaps": [
-[
-"F",
-"Cl",
-0.1
-],
-[
-"O",
-"F",
-0.1
-]
-]
-},
-{
-"formula": "Sr2Eu0.7Ho0.3Fe1Cu2O5.257F2.253",
-"parent": "Sr2Eu1Fe1Cu2O7.51",
-"swaps": [
-[
-"O",
-"F",
-0.3
-],
-[
-"Eu",
-"Ho",
-0.3
-]
-]
-},
-{
-"formula": "La0.045Eu0.005Y0.95Fe1As1H0.15N0.2O0.8",
-"parent": "La0.05Y0.95Fe1As1H0.15O1",
-"swaps": [
-[
-"O",
-"N",
-0.2
-],
-[
-"La",
-"Eu",
-0.1
-]
-]
-},
-{
-"formula": "Sr2Ce1.09Y0.91V0.25Cu2.75O6.139F2.631",
-"parent": "Sr2Ce0.7Y1.3V0.25Cu2.75O8.77",
-"swaps": [
-[
-"Y",
-"Ce",
-0.3
-],
-[
-"O",
-"F",
-0.3
-]
-]
-},
-{
-"formula": "Ca0.8Mg0.2Fe0.92As1Rh0.08Cl0.2F0.8",
-"parent": "Ca1Fe0.92As1Rh0.08F1",
-"swaps": [
-[
-"F",
-"Cl",
-0.2
-],
-[
-"Ca",
-"Mg",
-0.2
-]
-]
-},
-{
-"formula": "Sr2Ce2.01Nd0.693Lu0.297Cu2.75Mo0.25O7.7F3.3",
-"parent": "Sr2Ce2.01Nd0.99Cu2.75Mo0.25O11",
-"swaps": [
-[
-"Nd",
-"Lu",
-0.3
-],
-[
-"O",
-"F",
-0.3
-]
-]
-},
-{
-"formula": "Ca0.875Pr0.1125Lu0.0125Fe2Sb0.2As1.8",
-"parent": "Ca0.875Pr0.125Fe2As2",
-"swaps": [
-[
-"As",
+"Bi",
 "Sb",
-0.1
-],
-[
-"Pr",
-"Lu",
-0.1
-]
-]
-},
-{
-"formula": "Ba2Cu0.9Re0.1Au1O1",
-"parent": "Sr2Cu0.9Re0.1Hg1O1",
-"swaps": [
-[
-"Sr",
-"Ba",
 1.0
 ],
-[
-"Hg",
-"Au",
-1.0
-]
-]
-},
-{
-"formula": "Na0.018Li0.042Mg0.94Si0.012B1.96C0.028",
-"parent": "Li0.06Mg0.94B1.96C0.04",
-"swaps": [
-[
-"C",
-"Si",
-0.3
-],
-[
-"Li",
-"Na",
-0.3
-]
-]
-},
-{
-"formula": "Sr2Y1Cr1Cu2Sn0.024Pb0.006O8",
-"parent": "Sr2Y1Cu2Sn0.03Mo1O8",
-"swaps": [
-[
-"Mo",
-"Cr",
-1.0
-],
-[
-"Sn",
-"Pb",
-0.2
-]
-]
-},
-{
-"formula": "Ca0.7384Nd0.077Mg0.1846Fe2Sb0.2As1.8",
-"parent": "Ca0.923Nd0.077Fe2As2",
-"swaps": [
-[
-"Ca",
-"Mg",
-0.2
-],
-[
-"As",
-"Sb",
-0.1
-]
-]
-},
-{
-"formula": "Na0.35Sr0.33Ca1.32Cu1Br1Cl0.8O2F0.2",
-"parent": "Na0.35Ca1.65Cu1Br1Cl1O2",
-"swaps": [
-[
-"Cl",
-"F",
-0.2
-],
-[
-"Ca",
-"Sr",
-0.2
-]
-]
-},
-{
-"formula": "La0.035Y0.95Ho0.015Fe1As1H0.15S0.1O0.9",
-"parent": "La0.05Y0.95Fe1As1H0.15O1",
-"swaps": [
-[
-"La",
-"Ho",
-0.3
-],
-[
-"O",
-"S",
-0.1
-]
-]
-},
-{
-"formula": "Sr0.7Ca0.3La0.7Ho0.3Cu1B0.5Pb0.5O1",
-"parent": "Sr1La1Cu1B0.5Pb0.5O1",
-"swaps": [
-[
-"La",
-"Ho",
-0.3
-],
-[
-"Sr",
-"Ca",
-0.3
-]
-]
-},
-{
-"formula": "Yb0.1Sm0.9Fe1As1N0.3O0.7F0.5",
-"parent": "Sm1Fe1As1O1F0.5",
-"swaps": [
 [
 "O",
 "N",
 0.3
-],
-[
-"Sm",
-"Yb",
-0.1
 ]
 ]
 },
 {
-"formula": "Sr1.6Ca0.4Cu1N0.2O1.8F2.33",
-"parent": "Sr2Cu1O2F2.33",
-"swaps": [
-[
-"Sr",
-"Ca",
-0.2
-],
-[
-"O",
-"N",
-0.1
-]
-]
-},
-{
-"formula": "Li0.04Ca0.8Mg0.2Fe1As1H0.16F0.8",
-"parent": "Ca1Fe1As1H0.2F0.8",
-"swaps": [
-[
-"Ca",
-"Mg",
-0.2
-],
-[
-"H",
-"Li",
-0.2
-]
-]
-},
-{
-"formula": "Ba1Sr1Yb1Fe0.5Cu2Ag0.5N1.4864O5.9456",
-"parent": "Ba1Sr1Yb1Fe0.5Cu2.5O7.432",
-"swaps": [
-[
-"O",
-"N",
-0.2
-],
-[
-"Cu",
-"Ag",
-0.2
-]
-]
-},
-{
-"formula": "Ba1.9La0.09Nd1Ho0.01S1.372O5.488",
-"parent": "Ba1.9La0.1Nd1O6.86",
-"swaps": [
-[
-"O",
-"S",
-0.2
-],
-[
-"La",
-"Ho",
-0.1
-]
-]
-},
-{
-"formula": "Ba1.3Sr0.7Ca0.5Tb0.15Pr0.35Cu1.82Ag0.78C0.4O7",
-"parent": "Ba1.3Sr0.7Ca0.5Pr0.5Cu2.6C0.4O7",
-"swaps": [
-[
-"Pr",
-"Tb",
-0.3
-],
-[
-"Cu",
-"Ag",
-0.3
-]
-]
-},
-{
-"formula": "Ce0.7Lu0.3Fe1As1S0.089O0.801F0.11",
-"parent": "Ce1Fe1As1O0.89F0.11",
-"swaps": [
-[
-"Ce",
-"Lu",
-0.3
-],
-[
-"O",
-"S",
-0.1
-]
-]
-},
-{
-"formula": "Ca2CuPbO5",
-"parent": "Sr2CuPbO5",
-"swaps": [
-[
-"Sr",
-"Ca",
-1.0
-]
-]
-},
-{
-"formula": "Sm1Fe0.99As1Pd0.01S0.264O0.616F0.12",
-"parent": "Sm1Fe0.99Ni0.01As1O0.88F0.12",
-"swaps": [
-[
-"O",
-"S",
-0.3
-],
-[
-"Ni",
-"Pd",
-1.0
-]
-]
-},
-{
-"formula": "Sr2Sm1Ta0.8Cu2Sn0.14Pb0.06O6.4F1.6",
-"parent": "Sr2Sm1Ta0.8Cu2Sn0.2O8",
-"swaps": [
-[
-"O",
-"F",
-0.2
-],
-[
-"Sn",
-"Pb",
-0.3
-]
-]
-},
-{
-"formula": "Pr0.9Dy0.1Fe1As0.9P0.1O0.81F0.19",
-"parent": "Pr1Fe1As0.9P0.1O0.9F0.1",
-"swaps": [
-[
-"O",
-"F",
-0.1
-],
-[
-"Pr",
-"Dy",
-0.1
-]
-]
-},
-{
-"formula": "Sr1.98Gd1Ho0.02Cu2Ru1O6.4F1.6",
-"parent": "Sr1.98La0.02Gd1Cu2Ru1O8",
+"formula": "Pr0.06Y0.14Er0.8Mn0.003Fe0.997As1O0.89F0.11",
+"parent": "La0.8Y0.2Mn0.003Fe0.997As1O0.89F0.11",
 "swaps": [
 [
 "La",
-"Ho",
-1.0
-],
-[
-"O",
-"F",
-0.2
-]
-]
-},
-{
-"formula": "Sm0.8Lu0.2Fe0.99Ni0.01As1O0.704F0.296",
-"parent": "Sm1Fe0.99Ni0.01As1O0.88F0.12",
-"swaps": [
-[
-"Sm",
-"Lu",
-0.2
-],
-[
-"O",
-"F",
-0.2
-]
-]
-},
-{
-"formula": "Ba0.6Sr1.4Gd1Co0.01Cu2Os0.99O8",
-"parent": "Sr2Gd1Co0.01Cu2Ru0.99O8",
-"swaps": [
-[
-"Ru",
-"Os",
-1.0
-],
-[
-"Sr",
-"Ba",
-0.3
-]
-]
-},
-{
-"formula": "Pr0.7Lu0.3Fe1Sb0.3As0.7H0.6O0.6",
-"parent": "Pr1Fe1As1H0.6O0.6",
-"swaps": [
-[
-"As",
-"Sb",
-0.3
-],
-[
-"Pr",
-"Lu",
-0.3
-]
-]
-},
-{
-"formula": "Ba1.3Sr0.7Ca0.5Pr0.45Eu0.05Cu2.6C0.4O4.9F2.1",
-"parent": "Ba1.3Sr0.7Ca0.5Pr0.5Cu2.6C0.4O7",
-"swaps": [
-[
-"O",
-"F",
-0.3
-],
-[
-"Pr",
-"Eu",
-0.1
-]
-]
-},
-{
-"formula": "Li0.035Ca0.095Mg0.855B2H0.015",
-"parent": "Li0.05Mg0.95B2",
-"swaps": [
-[
-"Mg",
-"Ca",
-0.1
-],
-[
-"Li",
-"H",
-0.3
-]
-]
-},
-{
-"formula": "Ca2Zn0.1Cu0.9Pb1O5",
-"parent": "Sr2CuPbO5",
-"swaps": [
-[
-"Cu",
-"Zn",
-0.1
-],
-[
-"Sr",
-"Ca",
-1.0
-]
-]
-},
-{
-"formula": "Sr1.5Ca3.5As0.2P1.8O10",
-"parent": "Ca5(PO5)2",
-"swaps": [
-[
-"P",
-"As",
-0.1
-],
-[
-"Ca",
-"Sr",
-0.3
-]
-]
-},
-{
-"formula": "Sr1.4Ca0.6Sm1Ta0.8Cu2Sn0.2N1.6O6.4",
-"parent": "Sr2Sm1Ta0.8Cu2Sn0.2O8",
-"swaps": [
-[
-"Sr",
-"Ca",
-0.3
-],
-[
-"O",
-"N",
-0.2
-]
-]
-},
-{
-"formula": "Er1Fe1As0.81P0.1Se0.09O0.9F0.1",
-"parent": "Pr1Fe1As0.9P0.1O0.9F0.1",
-"swaps": [
-[
-"Pr",
 "Er",
 1.0
 ],
 [
-"As",
-"Se",
-0.1
-]
-]
-},
-{
-"formula": "Ba1Sr1Y0.7Tm0.3Cu2.8P0.2N0.8O3.2",
-"parent": "Ba1Sr1Y1Cu2.8P0.2O4",
-"swaps": [
-[
 "Y",
-"Tm",
-0.3
-],
-[
-"O",
-"N",
-0.2
-]
-]
-},
-{
-"formula": "Pr1Fe0.9895As1Ru0.0105O0.89F0.11",
-"parent": "La1Fe0.985As1Ru0.015O0.89F0.11",
-"swaps": [
-[
-"La",
 "Pr",
-1.0
-],
-[
-"Ru",
-"Fe",
 0.3
 ]
 ]
 },
 {
-"formula": "Sr0.33Li0.35Ca1.32Cu1Br1Cl1O2",
-"parent": "Na0.35Ca1.65Cu1Br1Cl1O2",
-"swaps": [
-[
-"Ca",
-"Sr",
-0.2
-],
-[
-"Na",
-"Li",
-1.0
-]
-]
-},
-{
-"formula": "Nd1Fe1As1H0.6O0.42F0.18",
-"parent": "Pr1Fe1As1H0.6O0.6",
-"swaps": [
-[
-"Pr",
-"Nd",
-1.0
-],
-[
-"O",
-"F",
-0.3
-]
-]
-},
-{
-"formula": "Ba2Ca0.2Yb0.24Dy0.56Zn1.11Cu1.89O6.78",
-"parent": "Ba2Ca0.2Dy0.8Zn0.3Cu2.7O6.78",
-"swaps": [
-[
-"Cu",
-"Zn",
-0.3
-],
-[
-"Dy",
-"Yb",
-0.3
-]
-]
-},
-{
-"formula": "Nd0.7Y0.3Fe1As0.8P0.2N0.27O0.63F0.1",
-"parent": "Nd1Fe1As0.8P0.2O0.9F0.1",
-"swaps": [
-[
-"Nd",
-"Y",
-0.3
-],
-[
-"O",
-"N",
-0.3
-]
-]
-},
-{
-"formula": "Sr1La0.7Sm0.3Y0.5Cu2Bi0.5O4.228F1.812",
-"parent": "Sr1La1Y0.5Cu2Bi0.5O6.04",
-"swaps": [
-[
-"La",
-"Sm",
-0.3
-],
-[
-"O",
-"F",
-0.3
-]
-]
-},
-{
-"formula": "Ca6Ti2.68Fe2Si1.32Sb0.6As1.4O12",
-"parent": "Ca6Ti2.68Al1.32Fe2As2O12",
-"swaps": [
-[
-"As",
-"Sb",
-0.3
-],
-[
-"Al",
-"Si",
-1.0
-]
-]
-},
-{
-"formula": "Sr2La0.39Ce0.7Y0.91Ti0.25Cu2.75O6.968F1.742",
-"parent": "Sr2Ce0.7Y1.3Ti0.25Cu2.75O8.71",
-"swaps": [
-[
-"Y",
-"La",
-0.3
-],
-[
-"O",
-"F",
-0.2
-]
-]
-},
-{
-"formula": "Mg0.784Be0.196B2Ir0.016Os0.004",
-"parent": "Mg0.98B2Ir0.02",
-"swaps": [
-[
-"Mg",
-"Be",
-0.2
-],
-[
-"Ir",
-"Os",
-0.2
-]
-]
-},
-{
-"formula": "Ba0.2Sr1.8Y1Cu2Sn0.03Mo1N2.4O5.6",
-"parent": "Sr2Y1Cu2Sn0.03Mo1O8",
-"swaps": [
-[
-"O",
-"N",
-0.3
-],
-[
-"Sr",
-"Ba",
-0.1
-]
-]
-},
-{
-"formula": "Cs0.9Rb0.1Sr0.2Ca0.8Fe4As4",
-"parent": "CsCa(FeAs)4",
-"swaps": [
-[
-"Cs",
-"Rb",
-0.1
-],
-[
-"Ca",
-"Sr",
-0.2
-]
-]
-},
-{
-"formula": "Sr2Ca1.4Mg0.6Cu2.24Ni0.2Ag0.56Bi1.5Pb0.2O1",
-"parent": "Sr2Ca2Cu2.8Ni0.2Bi1.5Pb0.2O1",
-"swaps": [
-[
-"Ca",
-"Mg",
-0.3
-],
-[
-"Cu",
-"Ag",
-0.2
-]
-]
-},
-{
-"formula": "Tm1Fe1As0.8H0.6Se0.2O0.6",
-"parent": "Pr1Fe1As1H0.6O0.6",
-"swaps": [
-[
-"Pr",
-"Tm",
-1.0
-],
-[
-"As",
-"Se",
-0.2
-]
-]
-},
-{
-"formula": "Rb0.15Ca0.85Cu1S0.4Cl2O1.6",
-"parent": "K0.15Ca0.85Cu1Cl2O2",
-"swaps": [
-[
-"O",
-"S",
-0.2
-],
-[
-"K",
-"Rb",
-1.0
-]
-]
-},
-{
-"formula": "K0.3Rb0.7Ca1Fe4Sb0.4As3.6",
-"parent": "RbCa(FeAs)4",
-"swaps": [
-[
-"As",
-"Sb",
-0.1
-],
-[
-"Rb",
-"K",
-0.3
-]
-]
-},
-{
-"formula": "Sr1.25La0.75Cu1Hg0.4Bi0.5Au0.1O4F1",
+"formula": "Sr1.125Ca0.125La0.75Cu1Bi0.5Au0.5O5",
 "parent": "Sr1.25La0.75Cu1Hg0.5Bi0.5O5",
 "swaps": [
 [
 "Hg",
 "Au",
-0.2
-],
-[
-"O",
-"F",
-0.2
-]
-]
-},
-{
-"formula": "Dy1Fe1As0.72P0.2Se0.08O0.9F0.1",
-"parent": "Nd1Fe1As0.8P0.2O0.9F0.1",
-"swaps": [
-[
-"Nd",
-"Dy",
 1.0
-],
-[
-"As",
-"Se",
-0.1
-]
-]
-},
-{
-"formula": "Sr1.62La0.304Dy0.076Fe0.02Cu0.98Pb2O1",
-"parent": "Sr1.62La0.38Fe0.02Cu0.98Bi1.8Pb0.2O1",
-"swaps": [
-[
-"La",
-"Dy",
-0.2
-],
-[
-"Bi",
-"Pb",
-1.0
-]
-]
-},
-{
-"formula": "Ca4.8Mg1.2Ti2.68Al0.924Fe2B0.396As2O12",
-"parent": "Ca6Ti2.68Al1.32Fe2As2O12",
-"swaps": [
-[
-"Ca",
-"Mg",
-0.2
-],
-[
-"Al",
-"B",
-0.3
-]
-]
-},
-{
-"formula": "Sr3.6Ca0.4Cr0.6Cu1.4Ag0.6Hg0.4C1O9",
-"parent": "Sr4Cr0.6Cu2Hg0.4C1O9",
-"swaps": [
-[
-"Cu",
-"Ag",
-0.3
 ],
 [
 "Sr",
@@ -1787,77 +864,376 @@
 ]
 },
 {
-"formula": "Sm1Fe1As1N0.2Cl0.1O0.8F0.4",
-"parent": "Sm1Fe1As1O1F0.5",
+"formula": "Yb0.05Y0.95Fe1As1H0.15O0.9F0.1",
+"parent": "La0.05Y0.95Fe1As1H0.15O1",
 "swaps": [
 [
+"O",
 "F",
-"Cl",
-0.2
+0.1
 ],
-[
-"O",
-"N",
-0.2
-]
-]
-},
-{
-"formula": "Sr2Tm1Co0.01Cu2Ru0.99N1.6O6.4",
-"parent": "Sr2Gd1Co0.01Cu2Ru0.99O8",
-"swaps": [
-[
-"Gd",
-"Tm",
-1.0
-],
-[
-"O",
-"N",
-0.2
-]
-]
-},
-{
-"formula": "La0.7Lu0.3Fe1As1S0.14O0.56",
-"parent": "La1Fe1As1O0.7",
-"swaps": [
 [
 "La",
-"Lu",
-0.3
-],
-[
-"O",
-"S",
-0.2
+"Yb",
+1.0
 ]
 ]
 },
 {
-"formula": "Sr0.25Ca2.25Eu0.5Cu2Sb2O1",
-"parent": "Ca2.5Eu0.5Cu2Bi2O1",
+"formula": "Ba2Ca1Co0.04Cu1.96Sb1.8Pb0.2O8",
+"parent": "Sr2Ca1Co0.04Cu1.96Bi1.8Pb0.2O8",
 "swaps": [
+[
+"Sr",
+"Ba",
+1.0
+],
 [
 "Bi",
 "Sb",
 1.0
+]
+]
+},
+{
+"formula": "Sm0.7Lu0.3Fe0.99As1Pd0.01O0.88F0.12",
+"parent": "Sm1Fe0.99Ni0.01As1O0.88F0.12",
+"swaps": [
+[
+"Ni",
+"Pd",
+1.0
 ],
 [
-"Ca",
+"Sm",
+"Lu",
+0.3
+]
+]
+},
+{
+"formula": "Ba1Sr1Y0.7Lu0.3Cu2.8P0.2N1.2O2.8",
+"parent": "Ba1Sr1Y1Cu2.8P0.2O4",
+"swaps": [
+[
+"O",
+"N",
+0.3
+],
+[
+"Y",
+"Lu",
+0.3
+]
+]
+},
+{
+"formula": "Nd0.7Dy0.3Fe0.98As1Ru0.02O0.623F0.377",
+"parent": "Nd1Fe0.98As1Ru0.02O0.89F0.11",
+"swaps": [
+[
+"O",
+"F",
+0.3
+],
+[
+"Nd",
+"Dy",
+0.3
+]
+]
+},
+{
+"formula": "Sr1.26Ca0.54Ce0.6Eu1.6Cu2Hg0.5Pb0.5O1",
+"parent": "Sr1.8Ce0.6Eu1.6Cd0.5Cu2Pb0.5O1",
+"swaps": [
+[
+"Cd",
+"Hg",
+1.0
+],
+[
 "Sr",
+"Ca",
+0.3
+]
+]
+},
+{
+"formula": "Ca0.891La0.0981Er0.0109Fe2Sb0.2As1.8",
+"parent": "Ca0.891La0.109Fe2As2",
+"swaps": [
+[
+"As",
+"Sb",
+0.1
+],
+[
+"La",
+"Er",
 0.1
 ]
 ]
 },
 {
-"formula": "Sr0.11La0.623Tm0.267Fe1As1O0.7F0.3",
-"parent": "Sr0.11La0.89Fe1As1O1",
+"formula": "Sr1.4Ca0.6Ce0.5Gd1.5Cu2Hg0.45Pb0.5Au0.05O1",
+"parent": "Sr2Ce0.5Gd1.5Cu2Hg0.5Pb0.5O1",
 "swaps": [
+[
+"Hg",
+"Au",
+0.1
+],
+[
+"Sr",
+"Ca",
+0.3
+]
+]
+},
+{
+"formula": "Sm0.8Y0.14Ho0.06Mn0.003Fe0.997As1O0.89F0.11",
+"parent": "La0.8Y0.2Mn0.003Fe0.997As1O0.89F0.11",
+"swaps": [
+[
+"Y",
+"Ho",
+0.3
+],
+[
+"La",
+"Sm",
+1.0
+]
+]
+},
+{
+"formula": "Ba2Eu1Ta0.8Cu2Sn0.2N2.4O5.6",
+"parent": "Sr2Eu1Ta0.8Cu2Sn0.2O8",
+"swaps": [
+[
+"Sr",
+"Ba",
+1.0
+],
+[
+"O",
+"N",
+0.3
+]
+]
+},
+{
+"formula": "Er1Fe1As1H0.6N0.12O0.48",
+"parent": "Pr1Fe1As1H0.6O0.6",
+"swaps": [
+[
+"Pr",
+"Er",
+1.0
+],
+[
+"O",
+"N",
+0.2
+]
+]
+},
+{
+"formula": "Ba1.208Sr0.792Cu1.1B0.9O4.9",
+"parent": "Ba1.12Sr0.88Cu1.1C0.9O4.9",
+"swaps": [
+[
+"Sr",
+"Ba",
+0.1
+],
+[
+"C",
+"B",
+1.0
+]
+]
+},
+{
+"formula": "Ca0.875Pr0.1Gd0.025Fe2Sb0.2As1.8",
+"parent": "Ca0.875Pr0.125Fe2As2",
+"swaps": [
+[
+"Pr",
+"Gd",
+0.2
+],
+[
+"As",
+"Sb",
+0.1
+]
+]
+},
+{
+"formula": "Sr2Yb0.7Y1.3V0.25Cu2.75N1.754O7.016",
+"parent": "Sr2Ce0.7Y1.3V0.25Cu2.75O8.77",
+"swaps": [
+[
+"Ce",
+"Yb",
+1.0
+],
+[
+"O",
+"N",
+0.2
+]
+]
+},
+{
+"formula": "Sr1.45Ca1La0.6Bi1.365Sb0.585O4.8F1.2",
+"parent": "Sr1.45Ca1La0.6Bi1.95O6",
+"swaps": [
+[
+"Bi",
+"Sb",
+0.3
+],
+[
+"O",
+"F",
+0.2
+]
+]
+},
+{
+"formula": "Ba1.3Sr0.7Ca0.5Pr0.35Er0.15Cu1.82Ag0.78C0.4O7",
+"parent": "Ba1.3Sr0.7Ca0.5Pr0.5Cu2.6C0.4O7",
+"swaps": [
+[
+"Pr",
+"Er",
+0.3
+],
+[
+"Cu",
+"Ag",
+0.3
+]
+]
+},
+{
+"formula": "Na0.0025Li0.0225Mg0.95Si0.025B2",
+"parent": "Li0.025Mg0.95Al0.025B2",
+"swaps": [
+[
+"Li",
+"Na",
+0.1
+],
+[
+"Al",
+"Si",
+1.0
+]
+]
+},
+{
+"formula": "Ca2Eu0.5Mg0.5Cu2Pb2O1",
+"parent": "Ca2.5Eu0.5Cu2Bi2O1",
+"swaps": [
+[
+"Bi",
+"Pb",
+1.0
+],
+[
+"Ca",
+"Mg",
+0.2
+]
+]
+},
+{
+"formula": "Tb0.8Tm0.2Fe1As1O0.9F0.1",
+"parent": "Tb1Fe1As1O0.9F0.1",
+"swaps": [
+[
+"Tb",
+"Tm",
+0.2
+]
+]
+},
+{
+"formula": "Ba0.8Sr0.2Ca1Sm1Cu3O5.6F1.4",
+"parent": "BaCaSmCu3O7",
+"swaps": [
+[
+"O",
+"F",
+0.2
+],
+[
+"Ba",
+"Sr",
+0.2
+]
+]
+},
+{
+"formula": "Ce0.8Tm0.2Fe1As1S0.089O0.801F0.11",
+"parent": "Ce1Fe1As1O0.89F0.11",
+"swaps": [
+[
+"Ce",
+"Tm",
+0.2
+],
+[
+"O",
+"S",
+0.1
+]
+]
+},
+{
+"formula": "Sr2Ca0.5La0.35Tm0.15Cu2Hg1O4.2F1.8",
+"parent": "Sr2Ca0.5La0.5Cu2Hg1O6",
+"swaps": [
+[
+"O",
+"F",
+0.3
+],
 [
 "La",
 "Tm",
 0.3
+]
+]
+},
+{
+"formula": "Na0.006Li0.054Mg0.94B1.968C0.032",
+"parent": "Li0.06Mg0.94B1.96C0.04",
+"swaps": [
+[
+"Li",
+"Na",
+0.1
+],
+[
+"C",
+"B",
+0.2
+]
+]
+},
+{
+"formula": "Sr2Tm1Cu2Ru0.9O5.46F2.34",
+"parent": "Sr2Er1Cu2Ru0.9O7.8",
+"swaps": [
+[
+"Er",
+"Tm",
+1.0
 ],
 [
 "O",
@@ -1867,28 +1243,60 @@
 ]
 },
 {
-"formula": "Ho1Fe0.985As1Ru0.015S0.267O0.623F0.11",
-"parent": "La1Fe0.985As1Ru0.015O0.89F0.11",
+"formula": "Nd1Ga0.05Fe0.95As1O0.8F0.2",
+"parent": "Sm1Zn0.05Fe0.95As1O0.8F0.2",
 "swaps": [
 [
-"La",
-"Ho",
+"Zn",
+"Ga",
 1.0
 ],
 [
-"O",
-"S",
+"Sm",
+"Nd",
+1.0
+]
+]
+},
+{
+"formula": "Ba2Cu1.1Si0.09C0.81O4.9",
+"parent": "Ba1.12Sr0.88Cu1.1C0.9O4.9",
+"swaps": [
+[
+"C",
+"Si",
+0.1
+],
+[
+"Sr",
+"Ba",
+1.0
+]
+]
+},
+{
+"formula": "Ca0.6La0.28Tb0.12Fe1As1F1",
+"parent": "Sr0.6La0.4Fe1As1F1",
+"swaps": [
+[
+"Sr",
+"Ca",
+1.0
+],
+[
+"La",
+"Tb",
 0.3
 ]
 ]
 },
 {
-"formula": "Ba0.5Sr1.5Ca0.4La0.4Tl0.15Cu2B0.5Pb0.35O1",
-"parent": "Ba0.5Sr1.5Ca0.4Y0.4Cu2B0.5Pb0.5O1",
+"formula": "Sr1.62La0.38Tl0.6Fe0.02Cu0.98Pb1.4O1",
+"parent": "Sr1.62La0.38Fe0.02Cu0.98Bi1.8Pb0.2O1",
 "swaps": [
 [
-"Y",
-"La",
+"Bi",
+"Pb",
 1.0
 ],
 [
@@ -1899,13 +1307,29 @@
 ]
 },
 {
-"formula": "Sr0.48Ca0.12La0.36Dy0.04Fe1As1F1",
-"parent": "Sr0.6La0.4Fe1As1F1",
+"formula": "Sr0.5Ca4.5P1.4S0.6O10",
+"parent": "Ca5(PO5)2",
 "swaps": [
 [
-"Sr",
 "Ca",
-0.2
+"Sr",
+0.1
+],
+[
+"P",
+"S",
+0.3
+]
+]
+},
+{
+"formula": "Sr2La0.9Dy0.1Cu2Hg1N1.8O4.2",
+"parent": "Sr2LaCu2HgO6",
+"swaps": [
+[
+"O",
+"N",
+0.3
 ],
 [
 "La",
@@ -1915,263 +1339,188 @@
 ]
 },
 {
-"formula": "Ba1.3Sr0.7Ca0.5Ce0.15Pr0.35Cu2.6C0.4O5.6F1.4",
-"parent": "Ba1.3Sr0.7Ca0.5Pr0.5Cu2.6C0.4O7",
+"formula": "Ho1Fe1As1H0.6S0.18O0.42",
+"parent": "Pr1Fe1As1H0.6O0.6",
 "swaps": [
 [
-"Pr",
-"Ce",
+"O",
+"S",
 0.3
 ],
 [
-"O",
-"F",
-0.2
+"Pr",
+"Ho",
+1.0
 ]
 ]
 },
 {
-"formula": "Sm1Fe0.95As1Ru0.05Cl0.096O0.68F0.224",
+"formula": "Sr1.4Ca0.6Cu0.8Ni0.2Hg1O1",
+"parent": "Sr2CuHgO",
+"swaps": [
+[
+"Cu",
+"Ni",
+0.2
+],
+[
+"Sr",
+"Ca",
+0.3
+]
+]
+},
+{
+"formula": "Sm0.8Ho0.2Fe0.95As1Ru0.05O0.595F0.405",
 "parent": "Sm1Fe0.95As1Ru0.05O0.85F0.15",
 "swaps": [
 [
 "O",
 "F",
+0.3
+],
+[
+"Sm",
+"Ho",
 0.2
-],
-[
-"F",
-"Cl",
-0.3
 ]
 ]
 },
 {
-"formula": "Ba2La0.1Y0.9Cu4N2.4O5.6",
-"parent": "Ba2Ce0.1Y0.9Cu4O8",
+"formula": "Sr1.4Ca1.3Y0.3Tl0.1V0.5Cu2Pb0.4O1",
+"parent": "Sr2Ca0.7Y0.3V0.5Cu2Pb0.5O1",
 "swaps": [
 [
-"Ce",
-"La",
-1.0
-],
-[
-"O",
-"N",
-0.3
-]
-]
-},
-{
-"formula": "K0.35Rb0.15Ba0.5Fe1.9As1.8Ru0.1Se0.2",
-"parent": "K0.5Ba0.5Fe1.9As2Ru0.1",
-"swaps": [
-[
-"K",
-"Rb",
-0.3
-],
-[
-"As",
-"Se",
-0.1
-]
-]
-},
-{
-"formula": "Ba1.296Sr0.704Cu1.1C0.9N1.47O3.43",
-"parent": "Ba1.12Sr0.88Cu1.1C0.9O4.9",
-"swaps": [
-[
-"O",
-"N",
-0.3
+"Pb",
+"Tl",
+0.2
 ],
 [
 "Sr",
-"Ba",
-0.2
+"Ca",
+0.3
 ]
 ]
 },
 {
-"formula": "Ca0.8307La0.0231Nd0.0539Mg0.0923Fe2As2",
-"parent": "Ca0.923Nd0.077Fe2As2",
+"formula": "Ca0.7Mg0.3Fe0.736As1Ru0.184Rh0.08F1",
+"parent": "Ca1Fe0.92As1Rh0.08F1",
 "swaps": [
 [
 "Ca",
 "Mg",
-0.1
+0.3
 ],
 [
-"Nd",
-"La",
-0.3
+"Fe",
+"Ru",
+0.2
 ]
 ]
 },
 {
-"formula": "Ca2.5Gd0.5Cu1.4Ag0.6Bi1.4Pb0.6O1",
-"parent": "Ca2.5Gd0.5Cu2Bi2O1",
+"formula": "Ba2Ce0.7Y1.3Ti0.25Cu2.75N1.742O6.968",
+"parent": "Sr2Ce0.7Y1.3Ti0.25Cu2.75O8.71",
 "swaps": [
 [
-"Cu",
-"Ag",
-0.3
+"O",
+"N",
+0.2
 ],
-[
-"Bi",
-"Pb",
-0.3
-]
-]
-},
-{
-"formula": "Ca8.85La1.15Fe10Sb1.8As16.2Au3",
-"parent": "Ca8.85La1.15Fe10As18Pt3",
-"swaps": [
-[
-"Pt",
-"Au",
-1.0
-],
-[
-"As",
-"Sb",
-0.1
-]
-]
-},
-{
-"formula": "Ba0.2Sr1.8Gd1Co0.01Cu2Ru0.99N2.4O5.6",
-"parent": "Sr2Gd1Co0.01Cu2Ru0.99O8",
-"swaps": [
 [
 "Sr",
 "Ba",
-0.1
-],
-[
-"O",
-"N",
-0.3
-]
-]
-},
-{
-"formula": "Ce0.3Nd0.7Fe1As0.8N0.2O0.9F0.1",
-"parent": "Nd1Fe1As0.8P0.2O0.9F0.1",
-"swaps": [
-[
-"Nd",
-"Ce",
-0.3
-],
-[
-"P",
-"N",
 1.0
 ]
 ]
 },
 {
-"formula": "Sr2Ce0.4Pr0.05Eu1.45Gd0.1Nb1Cu2O7F3",
-"parent": "Sr2Ce0.5Pr0.05Eu1.45Nb1Cu2O10",
+"formula": "Na0.005Li0.045Mg0.76Be0.19B2",
+"parent": "Li0.05Mg0.95B2",
 "swaps": [
 [
-"Ce",
-"Gd",
+"Mg",
+"Be",
 0.2
 ],
 [
-"O",
+"Li",
+"Na",
+0.1
+]
+]
+},
+{
+"formula": "Na0.35Sr0.165Ca1.485Cu1Br1Cl0.7O2F0.3",
+"parent": "Na0.35Ca1.65Cu1Br1Cl1O2",
+"swaps": [
+[
+"Cl",
 "F",
+0.3
+],
+[
+"Ca",
+"Sr",
+0.1
+]
+]
+},
+{
+"formula": "Cs0.7Rb0.3Ca1Fe4Sb0.8As3.2",
+"parent": "CsCa(FeAs)4",
+"swaps": [
+[
+"As",
+"Sb",
+0.2
+],
+[
+"Cs",
+"Rb",
 0.3
 ]
 ]
 },
 {
-"formula": "Ca0.84La0.16Fe1As1.99N0.01",
-"parent": "Ca0.84La0.16Fe1As1.99P0.01",
+"formula": "Sr2Er0.8Lu0.2Cu2Os0.9O7.8",
+"parent": "Sr2Er1Cu2Ru0.9O7.8",
 "swaps": [
 [
-"P",
-"N",
+"Ru",
+"Os",
 1.0
-]
-]
-},
-{
-"formula": "Ba1.8La0.18Tb0.02Tl1Cu1O4F1",
-"parent": "Ba1.8La0.2Tl1Cu1O5",
-"swaps": [
-[
-"La",
-"Tb",
-0.1
 ],
 [
-"O",
-"F",
+"Er",
+"Lu",
 0.2
 ]
 ]
 },
 {
-"formula": "Sr0.5Ca4.5P2S1O9",
+"formula": "Ca4MgP2(O4F)2",
 "parent": "Ca5(PO5)2",
 "swaps": [
 [
-"Ca",
-"Sr",
-0.1
-],
-[
-"O",
-"S",
-0.1
-]
-]
-},
-{
-"formula": "Ba1.6Sr6.4Cu4Bi2C3O14.7F6.3",
-"parent": "Sr8Cu4Bi2(CO7)3",
-"swaps": [
-[
 "O",
 "F",
-0.3
+0.2
 ],
 [
-"Sr",
-"Ba",
+"Ca",
+"Mg",
 0.2
 ]
 ]
 },
 {
-"formula": "Ca0.78Ce0.198Sm0.022Fe2Sb0.2As1.8",
-"parent": "Ca0.78Ce0.22Fe2As2",
+"formula": "Sr2Er1Zn0.6Cu1.4Ru0.9O5.46F2.34",
+"parent": "Sr2Er1Cu2Ru0.9O7.8",
 "swaps": [
 [
-"Ce",
-"Sm",
-0.1
-],
-[
-"As",
-"Sb",
-0.1
-]
-]
-},
-{
-"formula": "Sr0.63Ca0.27La0.1Zn0.307Cu0.693O2",
-"parent": "Sr0.9La0.1Zn0.01Cu0.99O2",
-"swaps": [
-[
-"Sr",
-"Ca",
+"O",
+"F",
 0.3
 ],
 [
@@ -2182,45 +1531,568 @@
 ]
 },
 {
-"formula": "Ba1.3Sr0.4Yb0.13Nd1.17N2.0484O4.7796",
-"parent": "Ba1.3Sr0.4Nd1.3O6.828",
+"formula": "Sm0.9Y0.1Fe0.99Ni0.01As1O0.792F0.208",
+"parent": "Sm1Fe0.99Ni0.01As1O0.88F0.12",
 "swaps": [
 [
-"O",
-"N",
-0.3
+"Sm",
+"Y",
+0.1
 ],
 [
-"Nd",
-"Yb",
+"O",
+"F",
 0.1
 ]
 ]
 },
 {
-"formula": "Sr0.54Ca1.26Cu1Cl2O1.6F0.4",
-"parent": "Ca1.8Cu1Cl2O2",
+"formula": "Ca0.76Ce0.192Y0.048Fe1Sn0.04Sb0.16As1.8",
+"parent": "Ca0.76Ce0.24Fe1Sb0.2As1.8",
+"swaps": [
+[
+"Ce",
+"Y",
+0.2
+],
+[
+"Sb",
+"Sn",
+0.2
+]
+]
+},
+{
+"formula": "Sr5.6Ca2.4Cu4Si0.9Bi2C2.1O21",
+"parent": "Sr8Cu4Bi2(CO7)3",
+"swaps": [
+[
+"C",
+"Si",
+0.3
+],
+[
+"Sr",
+"Ca",
+0.3
+]
+]
+},
+{
+"formula": "Sm1Fe1As1N0.2Cl0.15O0.8F0.35",
+"parent": "Sm1Fe1As1O1F0.5",
+"swaps": [
+[
+"F",
+"Cl",
+0.3
+],
+[
+"O",
+"N",
+0.2
+]
+]
+},
+{
+"formula": "Sr1.25Er0.75Cu1Bi0.5Au0.5O5",
+"parent": "Sr1.25La0.75Cu1Hg0.5Bi0.5O5",
+"swaps": [
+[
+"La",
+"Er",
+1.0
+],
+[
+"Hg",
+"Au",
+1.0
+]
+]
+},
+{
+"formula": "Gd1Fe1As0.8P0.2S0.27O0.63F0.1",
+"parent": "Nd1Fe1As0.8P0.2O0.9F0.1",
+"swaps": [
+[
+"O",
+"S",
+0.3
+],
+[
+"Nd",
+"Gd",
+1.0
+]
+]
+},
+{
+"formula": "Ba2Y1Cu2Hg2O6.4F1.6",
+"parent": "Ba2YCu2(HgO4)2",
 "swaps": [
 [
 "O",
 "F",
 0.2
+]
+]
+},
+{
+"formula": "K0.015Na0.135Ho0.85Fe1As1O0.85F0.15",
+"parent": "Na0.15La0.85Fe1As1O0.85F0.15",
+"swaps": [
+[
+"Na",
+"K",
+0.1
+],
+[
+"La",
+"Ho",
+1.0
+]
+]
+},
+{
+"formula": "Ba2Cr0.3Cu1Au0.7O4",
+"parent": "Sr2Cr0.3Cu1Hg0.7O4",
+"swaps": [
+[
+"Hg",
+"Au",
+1.0
+],
+[
+"Sr",
+"Ba",
+1.0
+]
+]
+},
+{
+"formula": "Ca0.588La0.16Mg0.252Fe1Sb0.398As1.592P0.01",
+"parent": "Ca0.84La0.16Fe1As1.99P0.01",
+"swaps": [
+[
+"As",
+"Sb",
+0.2
 ],
 [
 "Ca",
-"Sr",
+"Mg",
 0.3
 ]
 ]
 },
 {
-"formula": "Rb1Ca1Fe3.6Sb0.4As3.6Ru0.4",
-"parent": "RbCa(FeAs)4",
+"formula": "Sr1.62La0.38Mn0.002Fe0.018Cu0.98Sb1.8Pb0.2O1",
+"parent": "Sr1.62La0.38Fe0.02Cu0.98Bi1.8Pb0.2O1",
+"swaps": [
+[
+"Fe",
+"Mn",
+0.1
+],
+[
+"Bi",
+"Sb",
+1.0
+]
+]
+},
+{
+"formula": "Yb0.3Nd0.7Fe1As0.8P0.2O0.81F0.19",
+"parent": "Nd1Fe1As0.8P0.2O0.9F0.1",
+"swaps": [
+[
+"O",
+"F",
+0.1
+],
+[
+"Nd",
+"Yb",
+0.3
+]
+]
+},
+{
+"formula": "Ba0.5Sr1.5Eu0.1Y0.9Cu2.8Ge0.2N1.4O5.6",
+"parent": "Ba0.5Sr1.5Y1Cu2.8Ge0.2O7",
+"swaps": [
+[
+"Y",
+"Eu",
+0.1
+],
+[
+"O",
+"N",
+0.2
+]
+]
+},
+{
+"formula": "Lu1Fe1As0.8P0.2S0.09O0.81F0.1",
+"parent": "Nd1Fe1As0.8P0.2O0.9F0.1",
+"swaps": [
+[
+"Nd",
+"Lu",
+1.0
+],
+[
+"O",
+"S",
+0.1
+]
+]
+},
+{
+"formula": "Sr2Ca1Co0.04Cu1.96Bi1.86Pb0.14N1.6O6.4",
+"parent": "Sr2Ca1Co0.04Cu1.96Bi1.8Pb0.2O8",
+"swaps": [
+[
+"Pb",
+"Bi",
+0.3
+],
+[
+"O",
+"N",
+0.2
+]
+]
+},
+{
+"formula": "Ca7.965La1.15Mg0.885Fe10Sb1.8As16.2Pt3",
+"parent": "Ca8.85La1.15Fe10As18Pt3",
+"swaps": [
+[
+"As",
+"Sb",
+0.1
+],
+[
+"Ca",
+"Mg",
+0.1
+]
+]
+},
+{
+"formula": "Ba1Sr1Pr0.1Y0.9Co0.3Cu2.7N1.2O4.8",
+"parent": "Ba1Sr1Y1Co0.3Cu2.7O6",
+"swaps": [
+[
+"O",
+"N",
+0.2
+],
+[
+"Y",
+"Pr",
+0.1
+]
+]
+},
+{
+"formula": "Sr0.08Ca0.32Eu0.6Fe1As1F1",
+"parent": "Ca0.4Pr0.6Fe1As1F1",
+"swaps": [
+[
+"Pr",
+"Eu",
+1.0
+],
+[
+"Ca",
+"Sr",
+0.2
+]
+]
+},
+{
+"formula": "Sr1.5Dy0.85Y1.15Cu2Bi0.5O6.4F1.6",
+"parent": "Sr1.5Ce0.85Y1.15Cu2Bi0.5O8",
+"swaps": [
+[
+"Ce",
+"Dy",
+1.0
+],
+[
+"O",
+"F",
+0.2
+]
+]
+},
+{
+"formula": "Sr0.42Ca0.18La0.32Y0.08Fe1As1F1",
+"parent": "Sr0.6La0.4Fe1As1F1",
+"swaps": [
+[
+"Sr",
+"Ca",
+0.3
+],
+[
+"La",
+"Y",
+0.2
+]
+]
+},
+{
+"formula": "Ba1.3Sr0.7Y1Ga0.2Ag2.8O7.11",
+"parent": "Ba1.3Sr0.7Y1Al0.2Cu2.8O7.11",
+"swaps": [
+[
+"Al",
+"Ga",
+1.0
+],
+[
+"Cu",
+"Ag",
+1.0
+]
+]
+},
+{
+"formula": "Er1Fe1Si0.03As0.9P0.07O0.9F0.1",
+"parent": "Pr1Fe1As0.9P0.1O0.9F0.1",
+"swaps": [
+[
+"Pr",
+"Er",
+1.0
+],
+[
+"P",
+"Si",
+0.3
+]
+]
+},
+{
+"formula": "Sr8Cu4Pb2C3O16.8F4.2",
+"parent": "Sr8Cu4Bi2(CO7)3",
+"swaps": [
+[
+"Bi",
+"Pb",
+1.0
+],
+[
+"O",
+"F",
+0.2
+]
+]
+},
+{
+"formula": "Ho1Fe0.985As1Os0.003Ru0.012O0.89F0.11",
+"parent": "La1Fe0.985As1Ru0.015O0.89F0.11",
+"swaps": [
+[
+"La",
+"Ho",
+1.0
+],
+[
+"Ru",
+"Os",
+0.2
+]
+]
+},
+{
+"formula": "Sr2Y0.9Tm0.1Cr1Cu2Sn0.03O8",
+"parent": "Sr2Y1Cu2Sn0.03Mo1O8",
+"swaps": [
+[
+"Mo",
+"Cr",
+1.0
+],
+[
+"Y",
+"Tm",
+0.1
+]
+]
+},
+{
+"formula": "Mg0.882Be0.098B2Ir0.014Rh0.006",
+"parent": "Mg0.98B2Ir0.02",
+"swaps": [
+[
+"Ir",
+"Rh",
+0.3
+],
+[
+"Mg",
+"Be",
+0.1
+]
+]
+},
+{
+"formula": "Ca2Gd0.9Lu0.1Ta0.05Cu2Ru0.95O1",
+"parent": "Sr2Gd1Ta0.05Cu2Ru0.95O1",
+"swaps": [
+[
+"Sr",
+"Ca",
+1.0
+],
+[
+"Gd",
+"Lu",
+0.1
+]
+]
+},
+{
+"formula": "Ca0.8Mg0.2Fe0.9As1Ru0.1F1",
+"parent": "CaFeAsF",
 "swaps": [
 [
 "Fe",
 "Ru",
 0.1
+],
+[
+"Ca",
+"Mg",
+0.2
+]
+]
+},
+{
+"formula": "Sr2.8Ca1.2Tl0.8V0.2Cu2Si0.1C0.9O10",
+"parent": "Sr4Tl0.8V0.2Cu2C1O10",
+"swaps": [
+[
+"C",
+"Si",
+0.1
+],
+[
+"Sr",
+"Ca",
+0.3
+]
+]
+},
+{
+"formula": "Gd1Fe0.985As1Ru0.015Cl0.011O0.89F0.099",
+"parent": "La1Fe0.985As1Ru0.015O0.89F0.11",
+"swaps": [
+[
+"La",
+"Gd",
+1.0
+],
+[
+"F",
+"Cl",
+0.1
+]
+]
+},
+{
+"formula": "Ba1.8La0.2Tl0.7Cu1Pb0.3O4F1",
+"parent": "Ba1.8La0.2Tl1Cu1O5",
+"swaps": [
+[
+"Tl",
+"Pb",
+0.3
+],
+[
+"O",
+"F",
+0.2
+]
+]
+},
+{
+"formula": "Ca4Mg0.75Zr0.125Ti1.125Fe2Sb2O1",
+"parent": "Ca4Mg0.75Ti1.25Fe2As2O1",
+"swaps": [
+[
+"As",
+"Sb",
+1.0
+],
+[
+"Ti",
+"Zr",
+0.1
+]
+]
+},
+{
+"formula": "Sr0.875Ca0.375La0.525Nd0.225Cu1Hg0.5Bi0.5O5",
+"parent": "Sr1.25La0.75Cu1Hg0.5Bi0.5O5",
+"swaps": [
+[
+"La",
+"Nd",
+0.3
+],
+[
+"Sr",
+"Ca",
+0.3
+]
+]
+},
+{
+"formula": "Sr1Ca4As0.4P1.6O10",
+"parent": "Ca5(PO5)2",
+"swaps": [
+[
+"P",
+"As",
+0.2
+],
+[
+"Ca",
+"Sr",
+0.2
+]
+]
+},
+{
+"formula": "Sr2Ca0.65Sm0.35V0.4Zn0.6Cu1.4Bi0.18Pb0.42O1",
+"parent": "Sr2Ca0.65Sm0.35V0.4Cu2Pb0.6O1",
+"swaps": [
+[
+"Cu",
+"Zn",
+0.3
+],
+[
+"Pb",
+"Bi",
+0.3
+]
+]
+},
+{
+"formula": "Ca2.1Mg0.9Al2Fe2Sb0.2As1.8O5",
+"parent": "Ca3Al2Fe2As2O5",
+"swaps": [
+[
+"Ca",
+"Mg",
+0.3
 ],
 [
 "As",
@@ -2230,71 +2102,114 @@
 ]
 },
 {
-"formula": "Ba2Yb0.18Ce0.1Dy0.72Cu4N1.6O6.4",
-"parent": "Ba2Ce0.1Dy0.9Cu4O8",
+"formula": "Nd0.2Sm0.8Fe0.95As1Os0.015Ru0.035O0.85F0.15",
+"parent": "Sm1Fe0.95As1Ru0.05O0.85F0.15",
 "swaps": [
 [
-"Dy",
-"Yb",
-0.2
+"Ru",
+"Os",
+0.3
 ],
+[
+"Sm",
+"Nd",
+0.2
+]
+]
+},
+{
+"formula": "Sr2La0.99Ce1.407Sm0.603Cu2.75Mo0.25O8.8F2.2",
+"parent": "Sr2La0.99Ce2.01Cu2.75Mo0.25O11",
+"swaps": [
 [
 "O",
-"N",
+"F",
+0.2
+],
+[
+"Ce",
+"Sm",
+0.3
+]
+]
+},
+{
+"formula": "Sr1.2Ca4.8Ti2.68Al1.32Fe2As2O12",
+"parent": "Ca6Ti2.68Al1.32Fe2As2O12",
+"swaps": [
+[
+"Ca",
+"Sr",
 0.2
 ]
 ]
 },
 {
-"formula": "Sr1.4Ca0.6Mg0.3Ti0.7Fe0.8As1Ru0.2O3",
-"parent": "Sr2Mg0.3Ti0.7Fe1As1O3",
+"formula": "Sr2Gd1Cu2Ru0.99Rh0.01O5.6F2.4",
+"parent": "Sr2Gd1Co0.01Cu2Ru0.99O8",
 "swaps": [
 [
-"Sr",
-"Ca",
+"O",
+"F",
 0.3
 ],
 [
-"Fe",
-"Ru",
-0.2
-]
-]
-},
-{
-"formula": "Sr0.25Ca2.25La0.25Gd0.25Cu2Pb2O1",
-"parent": "Ca2.5La0.25Gd0.25Cu2Bi2O1",
-"swaps": [
-[
-"Bi",
-"Pb",
+"Co",
+"Rh",
 1.0
-],
+]
+]
+},
+{
+"formula": "Cs0.1Rb0.9Sr0.2Ca0.8Fe4As4",
+"parent": "RbCa(FeAs)4",
+"swaps": [
 [
 "Ca",
 "Sr",
+0.2
+],
+[
+"Rb",
+"Cs",
 0.1
 ]
 ]
 },
 {
-"formula": "Sr0.6La0.28Nd0.12Fe1As0.9Se0.1F1",
-"parent": "Sr0.6La0.4Fe1As1F1",
+"formula": "Sr4Cr0.6Cu1.4Ag0.6Hg0.4B0.2C0.8O9",
+"parent": "Sr4Cr0.6Cu2Hg0.4C1O9",
 "swaps": [
 [
-"As",
-"Se",
-0.1
+"C",
+"B",
+0.2
 ],
 [
-"La",
-"Nd",
+"Cu",
+"Ag",
 0.3
 ]
 ]
 },
 {
-"formula": "Na0.5Sr0.45Ca1.05Cu1Cl2O1.8F0.2",
+"formula": "K0.35Rb0.15Ba0.5Fe1.9As2Ru0.08Rh0.02",
+"parent": "K0.5Ba0.5Fe1.9As2Ru0.1",
+"swaps": [
+[
+"Ru",
+"Rh",
+0.2
+],
+[
+"K",
+"Rb",
+0.3
+]
+]
+},
+{
+"formula": "Na0.5Sr0.45Ca1.05Cu1N0.4Cl2O1.6",
 "parent": "Na0.5Ca1.5Cu1Cl2O2",
 "swaps": [
 [
@@ -2304,136 +2219,8 @@
 ],
 [
 "O",
-"F",
-0.1
-]
-]
-},
-{
-"formula": "K0.35Rb0.15Ba0.5Fe1.9As2Ru0.08Rh0.02",
-"parent": "K0.5Ba0.5Fe1.9As2Ru0.1",
-"swaps": [
-[
-"K",
-"Rb",
-0.3
-],
-[
-"Ru",
-"Rh",
-0.2
-]
-]
-},
-{
-"formula": "Sr2Nd0.4Sm1.6Ti1Cu2O7F3",
-"parent": "Sr2Ce0.4Sm1.6Ti1Cu2O10",
-"swaps": [
-[
-"Ce",
-"Nd",
-1.0
-],
-[
-"O",
-"F",
-0.3
-]
-]
-},
-{
-"formula": "Ca0.72Pr0.07Lu0.03Mg0.18Fe1.3As1.8O0.2",
-"parent": "Ca0.9Pr0.1Fe1.3As1.8O0.2",
-"swaps": [
-[
-"Ca",
-"Mg",
-0.2
-],
-[
-"Pr",
-"Lu",
-0.3
-]
-]
-},
-{
-"formula": "Sr2Ca2Tl0.2Cu1.96Ni0.2Ag0.84Bi1.5O1",
-"parent": "Sr2Ca2Cu2.8Ni0.2Bi1.5Pb0.2O1",
-"swaps": [
-[
-"Cu",
-"Ag",
-0.3
-],
-[
-"Pb",
-"Tl",
-1.0
-]
-]
-},
-{
-"formula": "Sm0.8Eu0.2Fe1As1O0.9F0.6",
-"parent": "Sm1Fe1As1O1F0.5",
-"swaps": [
-[
-"O",
-"F",
-0.1
-],
-[
-"Sm",
-"Eu",
-0.2
-]
-]
-},
-{
-"formula": "Sr2Ce0.667Sm0.333Cu1.8Ag0.2Hg1O4.2F1.8",
-"parent": "Sr2Ce0.667Sm0.333Cu2Hg1O6",
-"swaps": [
-[
-"Cu",
-"Ag",
-0.1
-],
-[
-"O",
-"F",
-0.3
-]
-]
-},
-{
-"formula": "Sr1.45Ca1Dy0.6Bi1.95N0.6O5.4",
-"parent": "Sr1.45Ca1La0.6Bi1.95O6",
-"swaps": [
-[
-"La",
-"Dy",
-1.0
-],
-[
-"O",
 "N",
-0.1
-]
-]
-},
-{
-"formula": "Sr1.4Ca0.6Zn0.3Cu0.7O2F2.33",
-"parent": "Sr2Cu1O2F2.33",
-"swaps": [
-[
-"Cu",
-"Zn",
-0.3
-],
-[
-"Sr",
-"Ca",
-0.3
+0.2
 ]
 ]
 },
@@ -2449,82 +2236,77 @@
 ]
 },
 {
-"formula": "Ba0.4Sr1.6Gd0.8Ho0.2Cu2Ru1O5.6F2.4",
-"parent": "Ba0.4Sr1.6Gd1Cu2Ru1O8",
+"formula": "Ba1Sr0.9Ca0.1Y1Cu2Hg2O5.6F2.4",
+"parent": "BaSrYCu2(HgO4)2",
 "swaps": [
-[
-"Gd",
-"Ho",
-0.2
-],
 [
 "O",
 "F",
 0.3
+],
+[
+"Sr",
+"Ca",
+0.1
 ]
 ]
 },
 {
-"formula": "Nd1Fe0.98Co0.014As1Rh0.006N0.089O0.801F0.11",
-"parent": "Nd1Fe0.98Co0.02As1O0.89F0.11",
+"formula": "Li1Fe3As0.4Se1.6N0.6O1.4",
+"parent": "LiFe3(SeO)2",
 "swaps": [
 [
-"Co",
-"Rh",
+"O",
+"N",
 0.3
+],
+[
+"Se",
+"As",
+0.2
+]
+]
+},
+{
+"formula": "Sr1.8Eu2.2Cu3N2.58O6.02",
+"parent": "Sr1.8Ce0.6Eu1.6Cu3O8.6",
+"swaps": [
+[
+"Ce",
+"Eu",
+1.0
 ],
 [
 "O",
 "N",
-0.1
-]
-]
-},
-{
-"formula": "Sr1.4Ca0.6Gd1Cu2Ru0.665Rh0.335O8",
-"parent": "Sr2Gd1Cu2Ru0.95Rh0.05O8",
-"swaps": [
-[
-"Ru",
-"Rh",
-0.3
-],
-[
-"Sr",
-"Ca",
 0.3
 ]
 ]
 },
 {
-"formula": "K0.45Ba0.5Na0.05Fe1.9As2Ru0.09Rh0.01",
-"parent": "K0.5Ba0.5Fe1.9As2Ru0.1",
+"formula": "Ca6Ti2.68Al1.32Fe2Sb2O12",
+"parent": "Ca6Ti2.68Al1.32Fe2As2O12",
 "swaps": [
 [
-"Ru",
-"Rh",
-0.1
-],
-[
-"K",
-"Na",
-0.1
-]
-]
-},
-{
-"formula": "Ca2Y0.7Lu0.3Nb0.9Cu2.1O7.9",
-"parent": "Sr2Y1Nb0.9Cu2.1O7.9",
-"swaps": [
-[
-"Y",
-"Lu",
-0.3
-],
-[
-"Sr",
-"Ca",
+"As",
+"Sb",
 1.0
+]
+]
+},
+{
+"formula": "Ba0.6Sr1.4Ce0.5Nd1.5Ta1Cu1.6Ag0.4O10",
+"parent": "Sr2Ce0.5Nd1.5Ta1Cu2O10",
+"swaps": [
+[
+"Cu",
+"Ag",
+0.2
+],
+[
+"Sr",
+"Ba",
+0.3
 ]
 ]
 },
@@ -2540,140 +2322,76 @@
 ]
 },
 {
-"formula": "Ba1.12Sr0.616Ca0.264Cu1.1C0.9S0.49O4.41",
-"parent": "Ba1.12Sr0.88Cu1.1C0.9O4.9",
+"formula": "Sr0.54Ca1.26Cu1N0.6Cl2O1.4",
+"parent": "Ca1.8Cu1Cl2O2",
+"swaps": [
+[
+"O",
+"N",
+0.3
+],
+[
+"Ca",
+"Sr",
+0.3
+]
+]
+},
+{
+"formula": "Cs0.3Rb0.7Ca1Fe4As3.6P0.4",
+"parent": "RbCa(FeAs)4",
+"swaps": [
+[
+"Rb",
+"Cs",
+0.3
+],
+[
+"As",
+"P",
+0.1
+]
+]
+},
+{
+"formula": "Sr6.4Ca1.6Cu3.6Ag0.4Bi2C3O21",
+"parent": "Sr8Cu4Bi2(CO7)3",
 "swaps": [
 [
 "Sr",
 "Ca",
-0.3
-],
-[
-"O",
-"S",
-0.1
-]
-]
-},
-{
-"formula": "Sr1.45Ca1La0.48Dy0.12Bi1.95N0.6O5.4",
-"parent": "Sr1.45Ca1La0.6Bi1.95O6",
-"swaps": [
-[
-"La",
-"Dy",
 0.2
 ],
 [
-"O",
-"N",
+"Cu",
+"Ag",
 0.1
 ]
 ]
 },
 {
-"formula": "Ba0.6Sr1.4Ce0.35Nd1.5Tm0.15Ta1Cu2O10",
-"parent": "Sr2Ce0.5Nd1.5Ta1Cu2O10",
+"formula": "Ca0.8Mg0.2Mn0.2Fe0.8As1F1",
+"parent": "CaFeAsF",
 "swaps": [
 [
-"Sr",
-"Ba",
-0.3
-],
-[
-"Ce",
-"Tm",
-0.3
-]
-]
-},
-{
-"formula": "Ca0.81Pr0.08Y0.02Mg0.09Fe1.3As1.8O0.2",
-"parent": "Ca0.9Pr0.1Fe1.3As1.8O0.2",
-"swaps": [
-[
-"Pr",
-"Y",
+"Fe",
+"Mn",
 0.2
 ],
 [
 "Ca",
 "Mg",
-0.1
+0.2
 ]
 ]
 },
 {
-"formula": "Ba2Cu0.7Ag0.3B0.15C0.85O5",
-"parent": "Sr2Cu1B0.15C0.85O5",
-"swaps": [
-[
-"Cu",
-"Ag",
-0.3
-],
-[
-"Sr",
-"Ba",
-1.0
-]
-]
-},
-{
-"formula": "Cs0.03Rb0.27Ba0.7Fe2As2",
-"parent": "Rb0.3Ba0.7Fe2As2",
-"swaps": [
-[
-"Rb",
-"Cs",
-0.1
-]
-]
-},
-{
-"formula": "Sr1.4Ca0.6Ce0.5Gd1.5Ti0.25Cd0.075Cu2Hg0.675O1",
-"parent": "Sr2Ce0.5Gd1.5Ti0.25Cu2Hg0.75O1",
-"swaps": [
-[
-"Hg",
-"Cd",
-0.1
-],
-[
-"Sr",
-"Ca",
-0.3
-]
-]
-},
-{
-"formula": "Dy1Fe1Ge0.255As0.595P0.15O0.95F0.05",
-"parent": "Ce1Fe1As0.85P0.15O0.95F0.05",
-"swaps": [
-[
-"Ce",
-"Dy",
-1.0
-],
-[
-"As",
-"Ge",
-0.3
-]
-]
-},
-{
-"formula": "Sr1.6Ca0.4Ce0.35Y1.65Cu2Bi1.2Pb0.8O8F2",
-"parent": "Sr2Ce0.35Y1.65Cu2Bi1.2Pb0.8O10",
+"formula": "Sr4Cr0.6Cu2Hg0.4C1O7.2F1.8",
+"parent": "Sr4Cr0.6Cu2Hg0.4C1O9",
 "swaps": [
 [
 "O",
 "F",
-0.2
-],
-[
-"Sr",
-"Ca",
 0.2
 ]
 ]
@@ -2690,88 +2408,93 @@
 ]
 },
 {
-"formula": "Sr0.8Ca0.2La0.7Er0.3Cu1B0.5Pb0.5O1",
-"parent": "Sr1La1Cu1B0.5Pb0.5O1",
+"formula": "Sr2Ca1Co0.01Cu1.99Sb2I1O0.7F0.3",
+"parent": "Sr2Ca1Co0.01Cu1.99Bi2I1O1",
 "swaps": [
 [
-"Sr",
-"Ca",
-0.2
-],
-[
-"La",
-"Er",
-0.3
-]
-]
-},
-{
-"formula": "Na0.66Ca0.34Fe1.8Sb0.2As1.8Ru0.2",
-"parent": "Na0.66Ca0.34Fe2As2",
-"swaps": [
-[
-"Fe",
-"Ru",
-0.1
-],
-[
-"As",
+"Bi",
 "Sb",
+1.0
+],
+[
+"O",
+"F",
+0.3
+]
+]
+},
+{
+"formula": "K0.04Na0.16Mg0.72Be0.08B2",
+"parent": "Na0.2Mg0.8B2",
+"swaps": [
+[
+"Na",
+"K",
+0.2
+],
+[
+"Mg",
+"Be",
 0.1
 ]
 ]
 },
 {
-"formula": "Sr4Cr0.6Cu2Hg0.4C1O7.2F1.8",
-"parent": "Sr4Cr0.6Cu2Hg0.4C1O9",
+"formula": "Sr8Cu4Bi2N3O16.8F4.2",
+"parent": "Sr8Cu4Bi2(CO7)3",
 "swaps": [
 [
 "O",
 "F",
 0.2
+],
+[
+"C",
+"N",
+1.0
 ]
 ]
 },
 {
-"formula": "K0.5Ba0.45Sr0.05Fe1.9As2Os0.01Ru0.09",
-"parent": "K0.5Ba0.5Fe1.9As2Ru0.1",
+"formula": "Cs0.03Rb0.27Ba0.7Fe2As2",
+"parent": "Rb0.3Ba0.7Fe2As2",
 "swaps": [
 [
-"Ba",
-"Sr",
-0.1
-],
-[
-"Ru",
-"Os",
+"Rb",
+"Cs",
 0.1
 ]
 ]
 },
 {
-"formula": "Sr2Eu0.7Dy0.3Cu2Sn0.2Ru0.8O5.6F2.4",
-"parent": "Sr2Eu1Cu2Sn0.2Ru0.8O8",
+"formula": "Ba1Sr1Y0.9Ho0.1Cd2Cu2O8",
+"parent": "BaSrYCu2(HgO4)2",
 "swaps": [
 [
-"Eu",
-"Dy",
-0.3
+"Y",
+"Ho",
+0.1
 ],
+[
+"Hg",
+"Cd",
+1.0
+]
+]
+},
+{
+"formula": "Li0.8Fe1.2H1Se0.872S0.128N0.2O0.8",
+"parent": "Li0.8Fe1.2H1Se0.84S0.16O1",
+"swaps": [
 [
 "O",
-"F",
-0.3
-]
-]
-},
-{
-"formula": "Mg0.98B2Pt0.02",
-"parent": "Mg0.98B2Ir0.02",
-"swaps": [
+"N",
+0.2
+],
 [
-"Ir",
-"Pt",
-1.0
+"S",
+"Se",
+0.2
 ]
 ]
 },
@@ -2787,39 +2510,44 @@
 ]
 },
 {
-"formula": "Li0.8Fe1.2H1Se0.84S0.16N0.2O0.8",
-"parent": "Li0.8Fe1.2H1Se0.84S0.16O1",
+"formula": "Cs0.2Rb0.8Eu1Fe4As4",
+"parent": "RbEu(FeAs)4",
 "swaps": [
 [
-"O",
-"N",
+"Rb",
+"Cs",
 0.2
 ]
 ]
 },
 {
-"formula": "Sr2Y1Cr1Cu2Sn0.03O8",
-"parent": "Sr2Y1Cu2Sn0.03Mo1O8",
+"formula": "Ba0.5Ca2Dy0.5Cd0.5Cu2Pb0.5O7",
+"parent": "Ba0.5Sr1.5Ca0.5Y0.5Cd0.5Cu2Pb0.5O7",
 "swaps": [
 [
-"Mo",
-"Cr",
+"Y",
+"Dy",
+1.0
+],
+[
+"Sr",
+"Ca",
 1.0
 ]
 ]
 },
 {
-"formula": "K0.4Ba0.6Tl0.01Bi0.9Pb0.09O2.1F0.9",
-"parent": "K0.4Ba0.6Bi0.9Pb0.1O3",
+"formula": "K0.288Rb0.032Ba0.68Fe1.954As2Rh0.046",
+"parent": "K0.32Ba0.68Fe1.954Co0.046As2",
 "swaps": [
 [
-"O",
-"F",
-0.3
+"Co",
+"Rh",
+1.0
 ],
 [
-"Pb",
-"Tl",
+"K",
+"Rb",
 0.1
 ]
 ]
@@ -2836,13 +2564,45 @@
 ]
 },
 {
-"formula": "Cs0.2Rb0.8Eu1Fe4As4",
-"parent": "RbEu(FeAs)4",
+"formula": "Rb1Ba0.1Sr0.9Fe4Sb0.4As3.6",
+"parent": "RbSr(FeAs)4",
 "swaps": [
 [
-"Rb",
-"Cs",
-0.2
+"As",
+"Sb",
+0.1
+],
+[
+"Sr",
+"Ba",
+0.1
+]
+]
+},
+{
+"formula": "Sr2Y1Cr1Cu2Sn0.03O8",
+"parent": "Sr2Y1Cu2Sn0.03Mo1O8",
+"swaps": [
+[
+"Mo",
+"Cr",
+1.0
+]
+]
+},
+{
+"formula": "Sm0.4Gd3.6Fe2Te0.92As2N0.32O2.88F0.8",
+"parent": "Gd4Fe2Te0.92As2O3.2F0.8",
+"swaps": [
+[
+"Gd",
+"Sm",
+0.1
+],
+[
+"O",
+"N",
+0.1
 ]
 ]
 },
@@ -2853,65 +2613,6 @@
 [
 "O",
 "F",
-0.2
-]
-]
-},
-{
-"formula": "Na0.1Li0.9Fe3Se2O2",
-"parent": "LiFe3(SeO)2",
-"swaps": [
-[
-"Li",
-"Na",
-0.1
-]
-]
-},
-{
-"formula": "Ba2Ca1Mg0.3Be0.7Tl0.5Co0.05Cu3.45N3O7",
-"parent": "Ba2Ca1Be1Tl0.5Co0.05Cu3.45O10",
-"swaps": [
-[
-"Be",
-"Mg",
-0.3
-],
-[
-"O",
-"N",
-0.3
-]
-]
-},
-{
-"formula": "Sr0.6La0.32Y0.08Fe1Ge0.1As0.9F1",
-"parent": "Sr0.6La0.4Fe1As1F1",
-"swaps": [
-[
-"La",
-"Y",
-0.2
-],
-[
-"As",
-"Ge",
-0.1
-]
-]
-},
-{
-"formula": "Ba1Sr1Gd1Fe0.5Cu2.5N1.4864O5.9456",
-"parent": "Ba1Sr1Yb1Fe0.5Cu2.5O7.432",
-"swaps": [
-[
-"Yb",
-"Gd",
-1.0
-],
-[
-"O",
-"N",
 0.2
 ]
 ]
@@ -2928,14 +2629,73 @@
 ]
 },
 {
-"formula": "Sr2Yb0.792Ce2.01Dy0.198Cu2.75Mo0.25O8.8F2.2",
-"parent": "Sr2Yb0.99Ce2.01Cu2.75Mo0.25O11",
+"formula": "Ba2Ca0.7Mg0.3Be1Tl0.5Co0.05Cu3.45N2O8",
+"parent": "Ba2Ca1Be1Tl0.5Co0.05Cu3.45O10",
 "swaps": [
 [
-"Yb",
-"Dy",
+"Ca",
+"Mg",
+0.3
+],
+[
+"O",
+"N",
+0.2
+]
+]
+},
+{
+"formula": "Ca0.923Nd0.0616Lu0.0154Fe2Sb0.4As1.6",
+"parent": "Ca0.923Nd0.077Fe2As2",
+"swaps": [
+[
+"Nd",
+"Lu",
 0.2
 ],
+[
+"As",
+"Sb",
+0.2
+]
+]
+},
+{
+"formula": "Sr2Ca1.4Mg0.6Zn0.84Cu1.96Ni0.2Bi1.5Pb0.2O1",
+"parent": "Sr2Ca2Cu2.8Ni0.2Bi1.5Pb0.2O1",
+"swaps": [
+[
+"Cu",
+"Zn",
+0.3
+],
+[
+"Ca",
+"Mg",
+0.3
+]
+]
+},
+{
+"formula": "Rb0.3Ba0.56Sr0.14Fe2As1.6P0.4",
+"parent": "Rb0.3Ba0.7Fe2As2",
+"swaps": [
+[
+"Ba",
+"Sr",
+0.2
+],
+[
+"As",
+"P",
+0.2
+]
+]
+},
+{
+"formula": "Sr2Sm1Ta0.8Cu2Sn0.2O6.4F1.6",
+"parent": "Sr2Sm1Ta0.8Cu2Sn0.2O8",
+"swaps": [
 [
 "O",
 "F",
@@ -2944,50 +2704,77 @@
 ]
 },
 {
-"formula": "Ca4.15Mg0.6Ti1.25Fe2Ge2O1",
-"parent": "Ca4Mg0.75Ti1.25Fe2As2O1",
+"formula": "Sr0.6La0.32Gd0.08Fe1Sb0.3As0.7F1",
+"parent": "Sr0.6La0.4Fe1As1F1",
 "swaps": [
 [
-"Mg",
-"Ca",
+"La",
+"Gd",
 0.2
 ],
 [
 "As",
-"Ge",
-1.0
+"Sb",
+0.3
 ]
 ]
 },
 {
-"formula": "Sr1.6La0.36Nd0.04Mn0.01Cu0.99Pb2O1",
-"parent": "Sr1.6La0.4Mn0.01Cu0.99Bi1.6Pb0.4O1",
+"formula": "Sr4Cr0.6Cd0.12Cu1.4Ag0.6Hg0.28C1O9",
+"parent": "Sr4Cr0.6Cu2Hg0.4C1O9",
 "swaps": [
 [
-"Bi",
-"Pb",
-1.0
+"Cu",
+"Ag",
+0.3
 ],
 [
-"La",
-"Nd",
-0.1
+"Hg",
+"Cd",
+0.3
 ]
 ]
 },
 {
-"formula": "Ce0.4Gd3.6Fe2Sb0.092Te0.828As2O3.2F0.8",
-"parent": "Gd4Fe2Te0.92As2O3.2F0.8",
+"formula": "Ca8.85La1.15Fe10Sb1.8As16.2Pt3",
+"parent": "Ca8.85La1.15Fe10As18Pt3",
 "swaps": [
 [
-"Gd",
-"Ce",
-0.1
-],
-[
-"Te",
+"As",
 "Sb",
 0.1
+]
+]
+},
+{
+"formula": "Ba1.8La0.2In1Cu1O3.5F1.5",
+"parent": "Ba1.8La0.2Tl1Cu1O5",
+"swaps": [
+[
+"O",
+"F",
+0.3
+],
+[
+"Tl",
+"In",
+1.0
+]
+]
+},
+{
+"formula": "Ca0.72La0.2Mg0.08Fe0.978Co0.022Sb0.4As1.6",
+"parent": "Ca0.8La0.2Fe0.978Co0.022As2",
+"swaps": [
+[
+"Ca",
+"Mg",
+0.1
+],
+[
+"As",
+"Sb",
+0.2
 ]
 ]
 },
@@ -3003,18 +2790,13 @@
 ]
 },
 {
-"formula": "Nd1Fe0.982Co0.018As1N0.089O0.801F0.11",
-"parent": "Nd1Fe0.98Co0.02As1O0.89F0.11",
+"formula": "RbYb(FeAs)4",
+"parent": "RbEu(FeAs)4",
 "swaps": [
 [
-"Co",
-"Fe",
-0.1
-],
-[
-"O",
-"N",
-0.1
+"Eu",
+"Yb",
+1.0
 ]
 ]
 },
@@ -3035,119 +2817,6 @@
 ]
 },
 {
-"formula": "RbYb(FeAs)4",
-"parent": "RbEu(FeAs)4",
-"swaps": [
-[
-"Eu",
-"Yb",
-1.0
-]
-]
-},
-{
-"formula": "Sr2Ca0.5Nd0.45Tm0.05Cu2.5Pb0.5O4.9F2.1",
-"parent": "Sr2Ca0.5Nd0.5Cu2.5Pb0.5O7",
-"swaps": [
-[
-"O",
-"F",
-0.3
-],
-[
-"Nd",
-"Tm",
-0.1
-]
-]
-},
-{
-"formula": "Ca8.85La1.15Fe10Sb1.8As16.2Pt3",
-"parent": "Ca8.85La1.15Fe10As18Pt3",
-"swaps": [
-[
-"As",
-"Sb",
-0.1
-]
-]
-},
-{
-"formula": "Ba0.2Sr1.8Ce0.5Nd1.05Dy0.45Ta1Cu2O10",
-"parent": "Sr2Ce0.5Nd1.5Ta1Cu2O10",
-"swaps": [
-[
-"Nd",
-"Dy",
-0.3
-],
-[
-"Sr",
-"Ba",
-0.1
-]
-]
-},
-{
-"formula": "Na0.66Ca0.238Mg0.102Fe2Sb0.4As1.6",
-"parent": "Na0.66Ca0.34Fe2As2",
-"swaps": [
-[
-"Ca",
-"Mg",
-0.3
-],
-[
-"As",
-"Sb",
-0.2
-]
-]
-},
-{
-"formula": "Ba2Tb0.2Y0.7Cd0.1Cu3N1.4O5.6",
-"parent": "Ba2Pr0.2Y0.7Cd0.1Cu3O7",
-"swaps": [
-[
-"O",
-"N",
-0.2
-],
-[
-"Pr",
-"Tb",
-1.0
-]
-]
-},
-{
-"formula": "Ca0.1Mg0.9B1.96F0.04",
-"parent": "Mg1B1.96F0.04",
-"swaps": [
-[
-"Mg",
-"Ca",
-0.1
-]
-]
-},
-{
-"formula": "Ba2Eu1Ti0.1Nb0.7Ag2.2O1",
-"parent": "Sr2Eu1Ti0.1Nb0.7Cu2.2O1",
-"swaps": [
-[
-"Cu",
-"Ag",
-1.0
-],
-[
-"Sr",
-"Ba",
-1.0
-]
-]
-},
-{
 "formula": "Rb1Sr1Fe4Sb0.4As3.6",
 "parent": "RbSr(FeAs)4",
 "swaps": [
@@ -3159,92 +2828,49 @@
 ]
 },
 {
-"formula": "Ba1Sr0.7Ca0.3Yb1Fe0.5Cu2.5S1.4864O5.9456",
-"parent": "Ba1Sr1Yb1Fe0.5Cu2.5O7.432",
-"swaps": [
-[
-"O",
-"S",
-0.2
-],
-[
-"Sr",
-"Ca",
-0.3
-]
-]
-},
-{
-"formula": "K0.45Na0.05Sr0.5Fe2Sb0.2As1.8",
-"parent": "K0.5Sr0.5Fe2As2",
-"swaps": [
-[
-"K",
-"Na",
-0.1
-],
-[
-"As",
-"Sb",
-0.1
-]
-]
-},
-{
-"formula": "Ca2Gd1Nb0.05Cu2Ru0.95O1",
-"parent": "Sr2Gd1Ta0.05Cu2Ru0.95O1",
-"swaps": [
-[
-"Sr",
-"Ca",
-1.0
-],
-[
-"Ta",
-"Nb",
-1.0
-]
-]
-},
-{
-"formula": "Pr1Fe1As0.9P0.1S0.18O0.72F0.1",
-"parent": "Pr1Fe1As0.9P0.1O0.9F0.1",
-"swaps": [
-[
-"O",
-"S",
-0.2
-]
-]
-},
-{
-"formula": "Sr2Nd0.072Gd0.91Er0.018Cu2Ru1N2.4O5.6",
-"parent": "Sr2Nd0.09Gd0.91Cu2Ru1O8",
+"formula": "Sr2Eu0.9Lu0.1Fe1Cu2N1.502O6.008",
+"parent": "Sr2Eu1Fe1Cu2O7.51",
 "swaps": [
 [
 "O",
 "N",
-0.3
+0.2
 ],
 [
-"Nd",
-"Er",
-0.2
+"Eu",
+"Lu",
+0.1
 ]
 ]
 },
 {
-"formula": "Sr0.6La0.32Dy0.08Fe1As1Cl0.3F0.7",
-"parent": "Sr0.6La0.4Fe1As1F1",
+"formula": "Sr1.45Ca1La0.42Ho0.18Bi1.95N0.6O5.4",
+"parent": "Sr1.45Ca1La0.6Bi1.95O6",
 "swaps": [
 [
-"F",
-"Cl",
+"La",
+"Ho",
 0.3
 ],
 [
-"La",
-"Dy",
+"O",
+"N",
+0.1
+]
+]
+},
+{
+"formula": "Li0.64Fe1.2H1.16Se0.672S0.16Br0.168O1",
+"parent": "Li0.8Fe1.2H1Se0.84S0.16O1",
+"swaps": [
+[
+"Li",
+"H",
+0.2
+],
+[
+"Se",
+"Br",
 0.2
 ]
 ]
@@ -3261,33 +2887,136 @@
 ]
 },
 {
-"formula": "Sr0.1846Ca0.7384Nd0.077Fe2Sb0.6As1.4",
+"formula": "Ca0.1Mg0.9B1.96F0.04",
+"parent": "Mg1B1.96F0.04",
+"swaps": [
+[
+"Mg",
+"Ca",
+0.1
+]
+]
+},
+{
+"formula": "Ba1Sr1Sm0.2Y0.8Co0.3Cu2.7N1.2O4.8",
+"parent": "Ba1Sr1Y1Co0.3Cu2.7O6",
+"swaps": [
+[
+"O",
+"N",
+0.2
+],
+[
+"Y",
+"Sm",
+0.2
+]
+]
+},
+{
+"formula": "Sr0.0923Ca0.8307Nd0.077Fe2As1.6Se0.4",
 "parent": "Ca0.923Nd0.077Fe2As2",
 "swaps": [
 [
 "Ca",
 "Sr",
-0.2
+0.1
 ],
 [
 "As",
-"Sb",
-0.3
+"Se",
+0.2
 ]
 ]
 },
 {
-"formula": "Ca1La0.8Ho0.2Cu1B0.5Pb0.5O1",
+"formula": "Sr2Ce0.2Eu1.8Tl0.5Cu2Pb0.5O7.2F1.8",
+"parent": "Sr2Ce0.2Eu1.8Tl0.5Cu2Pb0.5O9",
+"swaps": [
+[
+"O",
+"F",
+0.2
+]
+]
+},
+{
+"formula": "Sr1.45Ca1La0.54Pr0.06Bi1.95S0.6O5.4",
+"parent": "Sr1.45Ca1La0.6Bi1.95O6",
+"swaps": [
+[
+"O",
+"S",
+0.1
+],
+[
+"La",
+"Pr",
+0.1
+]
+]
+},
+{
+"formula": "Sr1.26Ca0.54Yb0.2Mg1Tl0.5Cu2Sn0.5O7",
+"parent": "Sr1.8Yb0.2Mg1Tl0.5Cu2Pb0.5O7",
+"swaps": [
+[
+"Sr",
+"Ca",
+0.3
+],
+[
+"Pb",
+"Sn",
+1.0
+]
+]
+},
+{
+"formula": "Sr0.6La0.32Dy0.08Fe1As1F1",
+"parent": "Sr0.6La0.4Fe1As1F1",
+"swaps": [
+[
+"La",
+"Dy",
+0.2
+]
+]
+},
+{
+"formula": "Ba0.4Sr1.6Ce0.35Y1.65Cu2Bi1.2Pb0.8O7F3",
+"parent": "Sr2Ce0.35Y1.65Cu2Bi1.2Pb0.8O10",
+"swaps": [
+[
+"O",
+"F",
+0.3
+],
+[
+"Sr",
+"Ba",
+0.2
+]
+]
+},
+{
+"formula": "Pr1Fe1As0.9P0.1S0.18O0.72F0.1",
+"parent": "Pr1Fe1As0.9P0.1O0.9F0.1",
+"swaps": [
+[
+"O",
+"S",
+0.2
+]
+]
+},
+{
+"formula": "Sr0.8Ca0.2La1Cu1B0.5Pb0.5O1",
 "parent": "Sr1La1Cu1B0.5Pb0.5O1",
 "swaps": [
 [
 "Sr",
 "Ca",
-1.0
-],
-[
-"La",
-"Ho",
 0.2
 ]
 ]
@@ -3304,195 +3033,6 @@
 ]
 },
 {
-"formula": "BaSrTlCuO4F",
-"parent": "BaSrTlCuO5",
-"swaps": [
-[
-"O",
-"F",
-0.2
-]
-]
-},
-{
-"formula": "Li0.8Fe1.2P0.048H1Se0.84S0.112O0.7F0.3",
-"parent": "Li0.8Fe1.2H1Se0.84S0.16O1",
-"swaps": [
-[
-"O",
-"F",
-0.3
-],
-[
-"S",
-"P",
-0.3
-]
-]
-},
-{
-"formula": "Ba1.8Lu0.2Tl1Cu1N1.5O3.5",
-"parent": "Ba1.8La0.2Tl1Cu1O5",
-"swaps": [
-[
-"O",
-"N",
-0.3
-],
-[
-"La",
-"Lu",
-1.0
-]
-]
-},
-{
-"formula": "K0.272Rb0.068Ba0.512Sr0.128Fe2As2",
-"parent": "K0.34Ba0.64Fe2As2",
-"swaps": [
-[
-"K",
-"Rb",
-0.2
-],
-[
-"Ba",
-"Sr",
-0.2
-]
-]
-},
-{
-"formula": "Ca2.5Eu0.5Cu1.4Ni0.6Bi1.4Pb0.6O1",
-"parent": "Ca2.5Eu0.5Cu2Bi2O1",
-"swaps": [
-[
-"Bi",
-"Pb",
-0.3
-],
-[
-"Cu",
-"Ni",
-0.3
-]
-]
-},
-{
-"formula": "K0.9Na0.1Sr0.2Ca0.8Fe4As4",
-"parent": "KCa(FeAs)4",
-"swaps": [
-[
-"Ca",
-"Sr",
-0.2
-],
-[
-"K",
-"Na",
-0.1
-]
-]
-},
-{
-"formula": "Sr2Ce0.2Eu1.8Tl0.5Cu2Pb0.5O7.2F1.8",
-"parent": "Sr2Ce0.2Eu1.8Tl0.5Cu2Pb0.5O9",
-"swaps": [
-[
-"O",
-"F",
-0.2
-]
-]
-},
-{
-"formula": "K1Ca1Fe4Sb0.4As3.6",
-"parent": "KCa(FeAs)4",
-"swaps": [
-[
-"As",
-"Sb",
-0.1
-]
-]
-},
-{
-"formula": "Sr1.4Ca0.6Cu0.7Ni0.3Hg1O1",
-"parent": "Sr2CuHgO",
-"swaps": [
-[
-"Cu",
-"Ni",
-0.3
-],
-[
-"Sr",
-"Ca",
-0.3
-]
-]
-},
-{
-"formula": "Ca0.8La0.2Fe0.978Co0.022Sb0.2As1.8",
-"parent": "Ca0.8La0.2Fe0.978Co0.022As2",
-"swaps": [
-[
-"As",
-"Sb",
-0.1
-]
-]
-},
-{
-"formula": "Ca1.25La0.75Cu0.9Ag0.1Hg0.5Bi0.5O5",
-"parent": "Sr1.25La0.75Cu1Hg0.5Bi0.5O5",
-"swaps": [
-[
-"Cu",
-"Ag",
-0.1
-],
-[
-"Sr",
-"Ca",
-1.0
-]
-]
-},
-{
-"formula": "Gd4Fe2Te0.92As2N0.32O2.88F0.8",
-"parent": "Gd4Fe2Te0.92As2O3.2F0.8",
-"swaps": [
-[
-"O",
-"N",
-0.1
-]
-]
-},
-{
-"formula": "Sr0.8Ca0.2La1Cu1B0.5Pb0.5O1",
-"parent": "Sr1La1Cu1B0.5Pb0.5O1",
-"swaps": [
-[
-"Sr",
-"Ca",
-0.2
-]
-]
-},
-{
-"formula": "CsYb(FeAs)4",
-"parent": "CsEu(FeAs)4",
-"swaps": [
-[
-"Eu",
-"Yb",
-1.0
-]
-]
-},
-{
 "formula": "Sr1.98La0.02Gd1Cu2Ru1O6.4F1.6",
 "parent": "Sr1.98La0.02Gd1Cu2Ru1O8",
 "swaps": [
@@ -3504,12 +3044,17 @@
 ]
 },
 {
-"formula": "Rb1Nd0.1Eu0.9Fe4As4",
-"parent": "RbEu(FeAs)4",
+"formula": "Ca8.415Dy0.65Mg0.935Fe10Sb1.8As16.2Pt3",
+"parent": "Ca9.35Dy0.65Fe10As18Pt3",
 "swaps": [
 [
-"Eu",
-"Nd",
+"Ca",
+"Mg",
+0.1
+],
+[
+"As",
+"Sb",
 0.1
 ]
 ]
@@ -3531,17 +3076,17 @@
 ]
 },
 {
-"formula": "K0.45Rb0.05Sr0.5Fe2Sb0.2As1.8",
-"parent": "K0.5Sr0.5Fe2As2",
+"formula": "Ca0.81Pr0.1Mg0.09Fe1.3As1.8N0.02O0.18",
+"parent": "Ca0.9Pr0.1Fe1.3As1.8O0.2",
 "swaps": [
 [
-"K",
-"Rb",
+"Ca",
+"Mg",
 0.1
 ],
 [
-"As",
-"Sb",
+"O",
+"N",
 0.1
 ]
 ]
@@ -3558,49 +3103,12 @@
 ]
 },
 {
-"formula": "Ba2Yb0.01Y0.9Ho0.09Cu3N2.1O4.9",
-"parent": "Ba2Y0.9Ho0.1Cu3O7",
+"formula": "CsYb(FeAs)4",
+"parent": "CsEu(FeAs)4",
 "swaps": [
-[
-"Ho",
-"Yb",
-0.1
-],
-[
-"O",
-"N",
-0.3
-]
-]
-},
-{
-"formula": "Sr2Yb1.5Ce0.5Nb1Cu2O8F2",
-"parent": "Sr2Ce0.5Nd1.5Nb1Cu2O10",
-"swaps": [
-[
-"Nd",
-"Yb",
-1.0
-],
-[
-"O",
-"F",
-0.2
-]
-]
-},
-{
-"formula": "Sr2Y1Cu2Sn0.2Ru0.8O5.6F2.4",
-"parent": "Sr2Eu1Cu2Sn0.2Ru0.8O8",
-"swaps": [
-[
-"O",
-"F",
-0.3
-],
 [
 "Eu",
-"Y",
+"Yb",
 1.0
 ]
 ]
@@ -3622,34 +3130,180 @@
 ]
 },
 {
-"formula": "Sr1.4Ca0.6Yb1Zn0.81Cu1.89Mo0.3O1",
-"parent": "Sr2Yb1Cu2.7Mo0.3O1",
+"formula": "Rb1Nd0.1Eu0.9Fe4As4",
+"parent": "RbEu(FeAs)4",
 "swaps": [
 [
-"Sr",
-"Ca",
-0.3
+"Eu",
+"Nd",
+0.1
+]
+]
+},
+{
+"formula": "Sm1Mn0.0003Fe0.9998Ge0.3As0.7O0.89F0.11",
+"parent": "La1Mn0.00025Fe0.99975As1O0.89F0.11",
+"swaps": [
+[
+"La",
+"Sm",
+1.0
 ],
 [
-"Cu",
-"Zn",
+"As",
+"Ge",
 0.3
 ]
 ]
 },
 {
-"formula": "Sr2Yb0.5Nd1.5Ta1Cu1.4Ag0.6O10",
-"parent": "Sr2Ce0.5Nd1.5Ta1Cu2O10",
+"formula": "K0.4Rb0.1Ba0.5Fe1.9As2Ru0.1",
+"parent": "K0.5Ba0.5Fe1.9As2Ru0.1",
 "swaps": [
 [
-"Cu",
-"Ag",
+"K",
+"Rb",
+0.2
+]
+]
+},
+{
+"formula": "Sr2Ce0.42Sm1.4Er0.18Cu2Ru1O7F3",
+"parent": "Sr2Ce0.6Sm1.4Cu2Ru1O10",
+"swaps": [
+[
+"Ce",
+"Er",
+0.3
+],
+[
+"O",
+"F",
+0.3
+]
+]
+},
+{
+"formula": "Nd0.4Gd3.6Fe2Te0.92As2O3.2F0.8",
+"parent": "Gd4Fe2Te0.92As2O3.2F0.8",
+"swaps": [
+[
+"Gd",
+"Nd",
+0.1
+]
+]
+},
+{
+"formula": "Sr2Y0.7Ho0.3Cu2Au2O8",
+"parent": "Sr2YCu2(HgO4)2",
+"swaps": [
+[
+"Hg",
+"Au",
+1.0
+],
+[
+"Y",
+"Ho",
+0.3
+]
+]
+},
+{
+"formula": "K1Ca1Fe4Sb0.4As3.6",
+"parent": "KCa(FeAs)4",
+"swaps": [
+[
+"As",
+"Sb",
+0.1
+]
+]
+},
+{
+"formula": "Sr2Yb0.07Ce0.28Y1.65Cu2Bi1.2Pb0.8O7F3",
+"parent": "Sr2Ce0.35Y1.65Cu2Bi1.2Pb0.8O10",
+"swaps": [
+[
+"O",
+"F",
 0.3
 ],
 [
 "Ce",
 "Yb",
-1.0
+0.2
+]
+]
+},
+{
+"formula": "Gd4Fe2Te0.92As2N0.32O2.88F0.8",
+"parent": "Gd4Fe2Te0.92As2O3.2F0.8",
+"swaps": [
+[
+"O",
+"N",
+0.1
+]
+]
+},
+{
+"formula": "Ba2Na0.1Ca1.9Tl0.7Cu3Hg0.3N1.8O7.2",
+"parent": "Ba2Na0.1Ca1.9Tl1Cu3O9",
+"swaps": [
+[
+"O",
+"N",
+0.2
+],
+[
+"Tl",
+"Hg",
+0.3
+]
+]
+},
+{
+"formula": "Ca0.8La0.2Fe0.978Co0.022Sb0.2As1.8",
+"parent": "Ca0.8La0.2Fe0.978Co0.022As2",
+"swaps": [
+[
+"As",
+"Sb",
+0.1
+]
+]
+},
+{
+"formula": "Sr2Ca1Tl0.02Co0.04Cu1.96Bi1.8Pb0.18N2.4O5.6",
+"parent": "Sr2Ca1Co0.04Cu1.96Bi1.8Pb0.2O8",
+"swaps": [
+[
+"O",
+"N",
+0.3
+],
+[
+"Pb",
+"Tl",
+0.1
+]
+]
+},
+{
+"formula": "Ca0.8307Nd0.077Mg0.0923Fe2As1.6Se0.4",
+"parent": "Ca0.923Nd0.077Fe2As2",
+"swaps": [
+[
+"Ca",
+"Mg",
+0.1
+],
+[
+"As",
+"Se",
+0.2
 ]
 ]
 },
@@ -3661,6 +3315,307 @@
 "Ru",
 "Os",
 1.0
+]
+]
+},
+{
+"formula": "Sr1.4Ca0.6Mg0.3Ti0.7Fe1As1N0.9O2.1",
+"parent": "Sr2Mg0.3Ti0.7Fe1As1O3",
+"swaps": [
+[
+"Sr",
+"Ca",
+0.3
+],
+[
+"O",
+"N",
+0.3
+]
+]
+},
+{
+"formula": "Sr2Y1Cd0.67Cu1.6Ag0.4Bi0.23Pb0.1S0.7O6.3",
+"parent": "Sr2Y1Cd0.67Cu2Bi0.23Pb0.1O7",
+"swaps": [
+[
+"Cu",
+"Ag",
+0.2
+],
+[
+"O",
+"S",
+0.1
+]
+]
+},
+{
+"formula": "Rb1Sr0.2Ca0.8Fe4As4",
+"parent": "RbCa(FeAs)4",
+"swaps": [
+[
+"Ca",
+"Sr",
+0.2
+]
+]
+},
+{
+"formula": "Sr1.75Ce0.4Nd0.25Eu1.5Gd0.1Cu2.5Pb0.5S1.8O7.2",
+"parent": "Sr1.75Ce0.5Nd0.25Eu1.5Cu2.5Pb0.5O9",
+"swaps": [
+[
+"O",
+"S",
+0.2
+],
+[
+"Ce",
+"Gd",
+0.2
+]
+]
+},
+{
+"formula": "Cs1Eu1Fe4Sb0.4As3.6",
+"parent": "CsEu(FeAs)4",
+"swaps": [
+[
+"As",
+"Sb",
+0.1
+]
+]
+},
+{
+"formula": "Ba0.3Sr0.7Ca1Cu1.5Si1Bi0.7Pb0.3O1",
+"parent": "Sr1Ca1Cu1.5Bi0.7P1Pb0.3O1",
+"swaps": [
+[
+"P",
+"Si",
+1.0
+],
+[
+"Sr",
+"Ba",
+0.3
+]
+]
+},
+{
+"formula": "Nd1Fe0.98Co0.02As1N0.089O0.801F0.11",
+"parent": "Nd1Fe0.98Co0.02As1O0.89F0.11",
+"swaps": [
+[
+"O",
+"N",
+0.1
+]
+]
+},
+{
+"formula": "Sr2Ce0.5Eu1.5Ti1Cu1O8F2",
+"parent": "Sr2Ce0.5Eu1.5Ti1Cu1O10",
+"swaps": [
+[
+"O",
+"F",
+0.2
+]
+]
+},
+{
+"formula": "La0.8Dy0.2Fe1As1N0.14O0.56",
+"parent": "La1Fe1As1O0.7",
+"swaps": [
+[
+"O",
+"N",
+0.2
+],
+[
+"La",
+"Dy",
+0.2
+]
+]
+},
+{
+"formula": "Sr2Gd0.8Lu0.2Co0.01Cu2Ru0.99N2.4O5.6",
+"parent": "Sr2Gd1Co0.01Cu2Ru0.99O8",
+"swaps": [
+[
+"Gd",
+"Lu",
+0.2
+],
+[
+"O",
+"N",
+0.3
+]
+]
+},
+{
+"formula": "Rb1Eu1Fe4Sb0.4As3.6",
+"parent": "RbEu(FeAs)4",
+"swaps": [
+[
+"As",
+"Sb",
+0.1
+]
+]
+},
+{
+"formula": "Ca1La1Cu1Bi0.1B0.5Pb0.4O1",
+"parent": "Sr1La1Cu1B0.5Pb0.5O1",
+"swaps": [
+[
+"Pb",
+"Bi",
+0.2
+],
+[
+"Sr",
+"Ca",
+1.0
+]
+]
+},
+{
+"formula": "Ce0.4Gd3.6Fe2Te0.92As2O3.2F0.8",
+"parent": "Gd4Fe2Te0.92As2O3.2F0.8",
+"swaps": [
+[
+"Gd",
+"Ce",
+0.1
+]
+]
+},
+{
+"formula": "Sr1.4Ca0.6Sm1Ta0.56Cu2Sn0.2W0.24O8",
+"parent": "Sr2Sm1Ta0.8Cu2Sn0.2O8",
+"swaps": [
+[
+"Sr",
+"Ca",
+0.3
+],
+[
+"Ta",
+"W",
+0.3
+]
+]
+},
+{
+"formula": "Gd3.6Dy0.4Fe2Te0.9As2O2.8F1.2",
+"parent": "Gd4Fe2Te0.9As2O4",
+"swaps": [
+[
+"Gd",
+"Dy",
+0.1
+],
+[
+"O",
+"F",
+0.3
+]
+]
+},
+{
+"formula": "Ba0.6Sr1.4Ca0.75Nd0.25V0.35Cu1.6Ni0.4Hg0.65O1",
+"parent": "Sr2Ca0.75Nd0.25V0.35Cu2Hg0.65O1",
+"swaps": [
+[
+"Sr",
+"Ba",
+0.3
+],
+[
+"Cu",
+"Ni",
+0.2
+]
+]
+},
+{
+"formula": "Ba1.3Ca1.2Er0.5Cu2.08Ag0.52C0.4O7",
+"parent": "Ba1.3Sr0.7Ca0.5Er0.5Cu2.6C0.4O7",
+"swaps": [
+[
+"Cu",
+"Ag",
+0.2
+],
+[
+"Sr",
+"Ca",
+1.0
+]
+]
+},
+{
+"formula": "Sr1.6La0.4Mn0.01Cu0.99Pb2O1",
+"parent": "Sr1.6La0.4Mn0.01Cu0.99Bi1.6Pb0.4O1",
+"swaps": [
+[
+"Bi",
+"Pb",
+1.0
+]
+]
+},
+{
+"formula": "Ba1.3Ca1.2Nd0.5Cu2.08Ag0.52C0.4O7",
+"parent": "Ba1.3Sr0.7Ca0.5Nd0.5Cu2.6C0.4O7",
+"swaps": [
+[
+"Sr",
+"Ca",
+1.0
+],
+[
+"Cu",
+"Ag",
+0.2
+]
+]
+},
+{
+"formula": "Ba2Ca1Cu2Bi1.6Sb0.4H1O1",
+"parent": "Sr2CaCu2Bi2HO",
+"swaps": [
+[
+"Sr",
+"Ba",
+1.0
+],
+[
+"Bi",
+"Sb",
+0.2
+]
+]
+},
+{
+"formula": "Ba2Ca0.5Tm0.5Cu2.5Pb0.5O4.9F2.1",
+"parent": "Sr2Ca0.5Tm0.5Cu2.5Pb0.5O7",
+"swaps": [
+[
+"Sr",
+"Ba",
+1.0
+],
+[
+"O",
+"F",
+0.3
 ]
 ]
 }
