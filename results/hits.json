@@ -169,6 +169,16 @@
   "pred_Tc_K": 87.5,
   "score": 83.0
  },
+ "Ba2Ca0.65Nd0.35Cu2Hg0.5Sb0.5O1": {
+  "by": "shard 3",
+  "change": "Bi -> Sb; Sr -> Ba",
+  "computed_as": "Ba12Ca4Nd2Cu12Hg3(SbO14)3",
+  "e_above_hull_eV": 0.051,
+  "found": "2026-11-15",
+  "parent": "Sr2Ca0.65Nd0.35Cu2Hg0.5Bi0.5O1",
+  "pred_Tc_K": 110.2,
+  "score": 106.6
+ },
  "Ba2Ca0.8Lu0.2Tl0.5V0.5Cu2O1": {
   "by": "shard 0",
   "change": "Sr -> Ba; Y -> Lu",

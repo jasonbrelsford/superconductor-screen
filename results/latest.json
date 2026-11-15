@@ -12,8 +12,8 @@
    "mae_K_on_Tc_30K_plus": 11.0
   }
  },
- "n_candidates_new_systems": 205172,
- "structure_checks": 5077,
+ "n_candidates_new_systems": 206536,
+ "structure_checks": 5214,
  "lists": {
   "hits": [
    {
@@ -31,6 +31,20 @@
     "computed_as": "Ba12Ca5LuTl3V3(Cu2O7)6"
    },
    {
+    "formula": "Ba2Ca0.65Nd0.35Cu2Hg0.5Sb0.5O1",
+    "first_seen": "2026-11-14",
+    "pred_Tc_K": 110.2,
+    "uncertainty_K": 3.6,
+    "score": 106.6,
+    "vs_parent_K": 16.2,
+    "parent": "Sr2Ca0.65Nd0.35Cu2Hg0.5Bi0.5O1",
+    "parent_Tc": 94.0,
+    "change": "Bi -> Sb; Sr -> Ba",
+    "stability": "plausible",
+    "e_above_hull_eV": 0.051,
+    "computed_as": "Ba12Ca4Nd2Cu12Hg3(SbO14)3"
+   },
+   {
     "formula": "Ba2Ca0.8Y0.2Tl0.5V0.5Cu2O1",
     "first_seen": "2026-10-28",
     "pred_Tc_K": 109.8,
@@ -43,20 +57,6 @@
     "stability": "plausible",
     "e_above_hull_eV": 0.025,
     "computed_as": "Ba12Ca5YTl3V3(Cu2O7)6"
-   },
-   {
-    "formula": "Ba2Ca0.8Y0.2Tl0.4V0.5Cu2Hg0.1O1",
-    "first_seen": "2026-11-03",
-    "pred_Tc_K": 108.8,
-    "uncertainty_K": 3.3,
-    "score": 105.5,
-    "vs_parent_K": 8.8,
-    "parent": "Sr2Ca0.8Y0.2Tl0.5V0.5Cu2O1",
-    "parent_Tc": 100.0,
-    "change": "Sr -> Ba; Tl partly -> Hg",
-    "stability": "plausible",
-    "e_above_hull_eV": 0.018,
-    "computed_as": "Ba24Ca10Y2Tl5V6Cu24HgO84"
    },
    {
     "formula": "Ba2Ca0.8Y0.2Tl0.45V0.5Cu2Hg0.05O1",
@@ -73,18 +73,18 @@
     "computed_as": "Ba24Ca10Y2Tl5V6Cu24HgO84"
    },
    {
-    "formula": "Ba0.6Sr1.4Ca0.65Nd0.28Lu0.07Cu2Hg0.5Bi0.5O1",
-    "first_seen": "2026-10-30",
-    "pred_Tc_K": 108.7,
-    "uncertainty_K": 3.4,
-    "score": 105.3,
-    "vs_parent_K": 14.7,
-    "parent": "Sr2Ca0.65Nd0.35Cu2Hg0.5Bi0.5O1",
-    "parent_Tc": 94.0,
-    "change": "Sr partly -> Ba; Nd partly -> Lu",
+    "formula": "Ba2Ca0.8Y0.2Tl0.4V0.5Cu2Hg0.1O1",
+    "first_seen": "2026-11-03",
+    "pred_Tc_K": 108.8,
+    "uncertainty_K": 3.3,
+    "score": 105.5,
+    "vs_parent_K": 8.8,
+    "parent": "Sr2Ca0.8Y0.2Tl0.5V0.5Cu2O1",
+    "parent_Tc": 100.0,
+    "change": "Sr -> Ba; Tl partly -> Hg",
     "stability": "plausible",
-    "e_above_hull_eV": 0.028,
-    "computed_as": "Ba7Sr17Ca8Nd3LuCu24Hg6(BiO14)6"
+    "e_above_hull_eV": 0.018,
+    "computed_as": "Ba24Ca10Y2Tl5V6Cu24HgO84"
    },
    {
     "formula": "Ba0.6Sr1.4Ca0.65Nd0.28Dy0.07Cu2Hg0.5Bi0.5O1",
@@ -99,6 +99,20 @@
     "stability": "plausible",
     "e_above_hull_eV": 0.027,
     "computed_as": "Ba7Sr17Ca8Nd3DyCu24Hg6(BiO14)6"
+   },
+   {
+    "formula": "Ba0.6Sr1.4Ca0.65Nd0.28Lu0.07Cu2Hg0.5Bi0.5O1",
+    "first_seen": "2026-10-30",
+    "pred_Tc_K": 108.7,
+    "uncertainty_K": 3.4,
+    "score": 105.3,
+    "vs_parent_K": 14.7,
+    "parent": "Sr2Ca0.65Nd0.35Cu2Hg0.5Bi0.5O1",
+    "parent_Tc": 94.0,
+    "change": "Sr partly -> Ba; Nd partly -> Lu",
+    "stability": "plausible",
+    "e_above_hull_eV": 0.028,
+    "computed_as": "Ba7Sr17Ca8Nd3LuCu24Hg6(BiO14)6"
    },
    {
     "formula": "Ba2Ca0.8Y0.14Lu0.06Tl0.5V0.5Cu2O1",
@@ -127,20 +141,6 @@
     "stability": "plausible",
     "e_above_hull_eV": 0.026,
     "computed_as": "Ba7Sr17Ca8TbNd3Cu24Hg6(BiO14)6"
-   },
-   {
-    "formula": "Ba0.6Sr1.4Ca0.65Nd0.315Eu0.035Cu2Hg0.5Bi0.5O1",
-    "first_seen": "2026-10-30",
-    "pred_Tc_K": 107.2,
-    "uncertainty_K": 2.6,
-    "score": 104.6,
-    "vs_parent_K": 13.2,
-    "parent": "Sr2Ca0.65Nd0.35Cu2Hg0.5Bi0.5O1",
-    "parent_Tc": 94.0,
-    "change": "Nd partly -> Eu; Sr partly -> Ba",
-    "stability": "plausible",
-    "e_above_hull_eV": 0.028,
-    "computed_as": "Ba4Sr8Ca4Nd2Cu12Hg3(BiO14)3"
    },
    {
     "formula": "Ba0.6Sr1.4Ca0.65Nd0.28Er0.07Cu2Hg0.5Bi0.5O1",
@@ -329,7 +329,7 @@
     "computed_as": "Ba11SrCa12Cu18Hg4(PbO24)2"
    },
    {
-    "formula": "Ba2Ca2Cu3Re0.16Hg0.8Os0.04O8",
+    "formula": "Ba2Ca2Cu3Re0.18Hg0.8Os0.02O8",
     "first_seen": "2026-10-28",
     "pred_Tc_K": 132.0,
     "uncertainty_K": 0.2,
@@ -343,7 +343,7 @@
     "computed_as": "Ba12Ca12Cu18ReHg5O48"
    },
    {
-    "formula": "Ba2Ca2Cu3Re0.18Hg0.8W0.02O8",
+    "formula": "Ba2Ca2Cu3Re0.16Hg0.8W0.04O8",
     "first_seen": "2026-10-28",
     "pred_Tc_K": 131.9,
     "uncertainty_K": 0.3,
@@ -413,20 +413,6 @@
     "computed_as": "Ba12Ca12Cu18ReHg4AuO48"
    },
    {
-    "formula": "Ba2Ca2Cu3Sn0.005Hg0.95Sb0.045O8",
-    "first_seen": "2026-10-28",
-    "pred_Tc_K": 131.3,
-    "uncertainty_K": 0.5,
-    "score": 130.8,
-    "vs_parent_K": -0.7,
-    "parent": "Ba2Ca2Cu3Hg0.95Sb0.05O8",
-    "parent_Tc": 132.0,
-    "change": "Sb partly -> Sn",
-    "stability": "doping level needs too large a cell",
-    "e_above_hull_eV": "",
-    "computed_as": ""
-   },
-   {
     "formula": "Ba2Ca2Cu3Hg0.665Bi0.01Sb0.04Au0.285O8",
     "first_seen": "2026-10-28",
     "pred_Tc_K": 131.1,
@@ -439,6 +425,20 @@
     "stability": "plausible",
     "e_above_hull_eV": 0.001,
     "computed_as": "Ba6Ca6Cu9Hg2AuO24"
+   },
+   {
+    "formula": "Ba2Ca2Cu3Hg0.95Sb0.04As0.01O8",
+    "first_seen": "2026-10-28",
+    "pred_Tc_K": 131.3,
+    "uncertainty_K": 0.5,
+    "score": 130.8,
+    "vs_parent_K": -0.7,
+    "parent": "Ba2Ca2Cu3Hg0.95Sb0.05O8",
+    "parent_Tc": 132.0,
+    "change": "Sb partly -> As",
+    "stability": "doping level needs too large a cell",
+    "e_above_hull_eV": "",
+    "computed_as": ""
    }
   ],
   "gain": [
@@ -527,20 +527,6 @@
     "computed_as": "Ba12Ca3Tm3In3GaCu12(BiO21)2"
    },
    {
-    "formula": "K0.4Sr1.12Ca0.48Cu1N1O5",
-    "first_seen": "2026-11-15",
-    "pred_Tc_K": 72.2,
-    "uncertainty_K": 3.9,
-    "score": 68.3,
-    "vs_parent_K": 49.2,
-    "parent": "K0.4Sr1.6Cu1C1O5",
-    "parent_Tc": 23.0,
-    "change": "Sr partly -> Ca; C -> N",
-    "stability": "likely unstable",
-    "e_above_hull_eV": 0.234,
-    "computed_as": "K2Sr7Ca3Cu6(NO5)3"
-   },
-   {
     "formula": "Ba2Ca0.5Gd0.5In0.65Cu2Bi0.35O1",
     "first_seen": "2026-10-28",
     "pred_Tc_K": 83.3,
@@ -553,6 +539,20 @@
     "stability": "plausible",
     "e_above_hull_eV": 0.057,
     "computed_as": "Ba12Ca3Gd3In3GaCu12(BiO21)2"
+   },
+   {
+    "formula": "Ba2Ca0.6Tm0.4Al1Cu2O7",
+    "first_seen": "2026-11-15",
+    "pred_Tc_K": 70.5,
+    "uncertainty_K": 3.4,
+    "score": 67.1,
+    "vs_parent_K": 46.5,
+    "parent": "Sr2Ca0.6Ho0.4Al1Cu2O7",
+    "parent_Tc": 24.0,
+    "change": "Ho -> Tm; Sr -> Ba",
+    "stability": "closest host too different (Sr2Ca2Ga(CuO3)3)",
+    "e_above_hull_eV": "",
+    "computed_as": ""
    },
    {
     "formula": "Ba2Ca1Tl0.8Cu1.4Ag0.6Mo0.2O7",
@@ -569,18 +569,18 @@
     "computed_as": "Ba12Ca6Tl5Cu8Ag4MoO42"
    },
    {
-    "formula": "Sr2.9Ca2.1La1Cu4Sn1O1",
-    "first_seen": "2026-11-15",
-    "pred_Tc_K": 65.7,
-    "uncertainty_K": 1.7,
-    "score": 64.0,
-    "vs_parent_K": 43.7,
-    "parent": "Sr2Ca3LaCu4PbO",
-    "parent_Tc": 22.0,
-    "change": "Ca partly -> Sr; Pb -> Sn",
-    "stability": "closest host too different (SrCa(CuO2)2)",
-    "e_above_hull_eV": "",
-    "computed_as": ""
+    "formula": "Ba1Ca1Tl1Cu1O3.5F1.5",
+    "first_seen": "2026-10-29",
+    "pred_Tc_K": 97.1,
+    "uncertainty_K": 6.2,
+    "score": 90.9,
+    "vs_parent_K": 48.1,
+    "parent": "BaSrTlCuO5",
+    "parent_Tc": 49.0,
+    "change": "O partly -> F; Sr -> Ca",
+    "stability": "likely unstable",
+    "e_above_hull_eV": 0.136,
+    "computed_as": "Ba4Ca4Tl4Cu4O13F6"
    }
   ],
   "noncuprate": [
@@ -683,15 +683,15 @@
     "computed_as": "H16S7Cl"
    },
    {
-    "formula": "Sr2Ca2.65Eu0.35Tl0.16Hg0.64Mo0.2O6",
+    "formula": "Sr2Ca2.65Y0.35Tl0.08Hg0.72Mo0.2O5.4F0.6",
     "first_seen": "2026-11-15",
-    "pred_Tc_K": 74.8,
-    "uncertainty_K": 11.2,
-    "score": 63.6,
-    "vs_parent_K": -10.7,
+    "pred_Tc_K": 77.9,
+    "uncertainty_K": 15.2,
+    "score": 62.7,
+    "vs_parent_K": -7.6,
     "parent": "Sr2Ca2.65Y0.35Hg0.8Mo0.2O6",
     "parent_Tc": 85.5,
-    "change": "Hg partly -> Tl; Y -> Eu",
+    "change": "Hg partly -> Tl; O partly -> F",
     "stability": "closest host too different (SrCaO2)",
     "e_above_hull_eV": "",
     "computed_as": ""
