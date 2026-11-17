@@ -289,6 +289,16 @@
   "pred_Tc_K": 91.6,
   "score": 86.7
  },
+ "Ba2Cr0.3Cu1Au0.7O4": {
+  "by": "shard 2",
+  "change": "Sr -> Ba; Hg -> Au",
+  "computed_as": "Ba6CrCu3Au2O15",
+  "e_above_hull_eV": 0.024,
+  "found": "2026-11-10",
+  "parent": "Sr2Cr0.3Cu1Hg0.7O4",
+  "pred_Tc_K": 80.4,
+  "score": 78.2
+ },
  "BaCaCuPbO5": {
   "by": "shard 4",
   "change": "Sr -> Ca; Tl -> Pb",
