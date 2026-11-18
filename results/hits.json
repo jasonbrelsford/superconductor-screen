@@ -129,6 +129,16 @@
   "pred_Tc_K": 83.4,
   "score": 79.4
  },
+ "Ba2Ca0.5Gd0.35Lu0.15In0.65Cu2Bi0.35O1": {
+  "by": "github",
+  "change": "Gd partly -> Lu; Sr -> Ba",
+  "computed_as": "Ba12Ca3Gd2LuIn3GaCu12(BiO21)2",
+  "e_above_hull_eV": 0.06,
+  "found": "2026-11-18",
+  "parent": "Sr2Ca0.5Gd0.5In0.65Cu2Bi0.35O1",
+  "pred_Tc_K": 84.2,
+  "score": 78.3
+ },
  "Ba2Ca0.5Gd0.45Er0.05In0.65Cu2Bi0.35O1": {
   "by": "github",
   "change": "Sr -> Ba; Gd partly -> Er",
@@ -328,5 +338,15 @@
   "parent": "Sr2Ca1Cu1.54Bi2Au0.46O1",
   "pred_Tc_K": 85.7,
   "score": 83.1
+ },
+ "Sr2Ca1Cu1.54Hg0.138Bi1.4Sb0.6Au0.322O1": {
+  "by": "shard 4",
+  "change": "Au partly -> Hg; Bi partly -> Sb",
+  "computed_as": "Sr12Ca6Cu9HgBi8Sb4(AuO24)2",
+  "e_above_hull_eV": 0.104,
+  "found": "2026-11-18",
+  "parent": "Sr2Ca1Cu1.54Bi2Au0.46O1",
+  "pred_Tc_K": 86.4,
+  "score": 83.2
  }
 }
